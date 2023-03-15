@@ -42,7 +42,7 @@ const Home = () => {
 
   // let AIP_KEY = process.env.NEXT_PUBLIC_ANALYTICS_ID;
 
-  let AIP_KEY = "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";
+  let AIP_KEY = "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";
 
   const getData = () => {
     let myHeaders = new Headers();
