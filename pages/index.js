@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Home = () => {
   const [prompt, setPromptData] = useState({
@@ -42,16 +43,50 @@ const Home = () => {
 
   // let AIP_KEY = process.env.NEXT_PUBLIC_ANALYTICS_ID;
 
-  let AIP_KEY = "sk-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"
+  // let AIP_KEY = "sk-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";
+
+  // const getData = () => {
+  //   let myHeaders = new Headers();
+  //   myHeaders.append("Content-Type", "application/json");
+  //   myHeaders.append("Authorization", `Bearer ${AIP_KEY}`);
+
+  //   let userPrompt = `assume you are a content creator. write ${prompt.time} content for a Tiktok/Reel/youtube short on the following topic & factor. topic: ${prompt.title}, description: ${prompt.description}, keyword: ${prompt.keywords}, The tone of voice: ${prompt.tone}, maximum time to read the content: ${prompt.time}, Start the script with 1 sentence hook so that people will want to stop and watch the connect creator, note: make sure to write the concept in bit-size sentences and put each sentence in the next line  `;
+
+  //   let raw = JSON.stringify({
+  //     model: "gpt-3.5-turbo",
+  //     messages: [
+  //       {
+  //         role: "user",
+  //         content: userPrompt,
+  //       },
+  //     ],
+  //     temperature: 0.7,
+  //   });
+
+  //   let requestOptions = {
+  //     method: "POST",
+  //     headers: myHeaders,
+  //     body: raw,
+  //     redirect: "follow",
+  //   };
+
+  //   fetch("https://api.openai.com/v1/chat/completions", requestOptions)
+  //     .then((response) => response.json())
+  //     .then((result) => {
+  //       console.log(result.choices, "choices");
+  //       console.log(result.choices[0], "[0]");
+  //       console.log(result.choices[0].message, "message");
+  //       console.log(result.choices[0].message.content, "content");
+  //       setData(result.choices[0].message.content);
+  //       setLoading(false);
+  //     })
+  //     .catch((error) => console.log("error", error));
+  // };
 
   const getData = () => {
-    let myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Authorization", `Bearer ${AIP_KEY}`);
-
     let userPrompt = `assume you are a content creator. write ${prompt.time} content for a Tiktok/Reel/youtube short on the following topic & factor. topic: ${prompt.title}, description: ${prompt.description}, keyword: ${prompt.keywords}, The tone of voice: ${prompt.tone}, maximum time to read the content: ${prompt.time}, Start the script with 1 sentence hook so that people will want to stop and watch the connect creator, note: make sure to write the concept in bit-size sentences and put each sentence in the next line  `;
 
-    let raw = JSON.stringify({
+    let data = JSON.stringify({
       model: "gpt-3.5-turbo",
       messages: [
         {
@@ -62,24 +97,28 @@ const Home = () => {
       temperature: 0.7,
     });
 
-    let requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
+    let config = {
+      method: "post",
+      maxBodyLength: Infinity,
+      url: "https://api.openai.com/v1/chat/completions",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization:
+          "Bearer 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",
+      },
+      data: data,
     };
 
-    fetch("https://api.openai.com/v1/chat/completions", requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result.choices, "choices");
-        console.log(result.choices[0], "[0]");
-        console.log(result.choices[0].message, "message");
-        console.log(result.choices[0].message.content, "content");
-        setData(result.choices[0].message.content);
+    axios
+      .request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+        setData(response.data.choices[0].message.content);
         setLoading(false);
       })
-      .catch((error) => console.log("error", error));
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const handleApi = (e) => {
