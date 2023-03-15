@@ -86,25 +86,40 @@ const Home = () => {
   const getData = () => {
     let userPrompt = `assume you are a content creator. write ${prompt.time} content for a Tiktok/Reel/youtube short on the following topic & factor. topic: ${prompt.title}, description: ${prompt.description}, keyword: ${prompt.keywords}, The tone of voice: ${prompt.tone}, maximum time to read the content: ${prompt.time}, Start the script with 1 sentence hook so that people will want to stop and watch the connect creator, note: make sure to write the concept in bit-size sentences and put each sentence in the next line  `;
 
+    // let data = JSON.stringify({
+    //   model: "gpt-3.5-turbo",
+    //   messages: [
+    //     {
+    //       role: "user",
+    //       content: userPrompt,
+    //     },
+    //   ],
+    //   temperature: 0.7,
+    // });
+
     let data = JSON.stringify({
-      model: "gpt-3.5-turbo",
-      messages: [
-        {
-          role: "user",
-          content: userPrompt,
-        },
-      ],
-      temperature: 0.7,
+      question: userPrompt,
     });
 
-    let config = {
-      method: "post",
-      maxBodyLength: Infinity,
-      url: "https://api.openai.com/v1/chat/completions",
+    // let config = {
+    //   method: "post",
+    //   maxBodyLength: Infinity,
+    //   url: "https://api.openai.com/v1/chat/completions",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Authorization:
+    //       "Bearer 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",
+    //   },
+    //   data: data,
+    // };
+
+    const config = {
+      method: "POST",
+      url: "https://simple-chatgpt-api.p.rapidapi.com/ask",
       headers: {
-        "Content-Type": "application/json",
-        Authorization:
-          "Bearer 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",
+        "content-type": "application/json",
+        "X-RapidAPI-Key": "8f75fdd009mshcaef63a7370fa74p17a97ajsn1c67d1c2b2d8",
+        "X-RapidAPI-Host": "simple-chatgpt-api.p.rapidapi.com",
       },
       data: data,
     };
@@ -113,7 +128,7 @@ const Home = () => {
       .request(config)
       .then((response) => {
         console.log(JSON.stringify(response.data));
-        setData(response.data.choices[0].message.content);
+        setData(response.data.answer);
         setLoading(false);
       })
       .catch((error) => {
