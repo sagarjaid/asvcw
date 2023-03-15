@@ -2,102 +2,102 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 
 const Home = () => {
-
   const [prompt, setPromptData] = useState({
     title: "",
     description: "",
     keywords: "",
     language: "",
     tone: "",
-    time: ""
-  })
+    time: "",
+  });
 
-  const [data, setData] = useState()
-  const [isLoading, setLoading] = useState(false)
+  const [data, setData] = useState();
+  const [isLoading, setLoading] = useState(false);
 
+  const handleTitle = (e) => {
+    setPromptData({ ...prompt, title: e.target.value });
+  };
 
-  const handleTitle = (e)=>{
-    setPromptData({...prompt, title: e.target.value })
-  }
+  const handleDescription = (e) => {
+    setPromptData({ ...prompt, description: e.target.value });
+  };
 
-  const handleDescription = (e)=>{
-    setPromptData({...prompt, description: e.target.value })
-  }
+  const handleKeywords = (e) => {
+    setPromptData({ ...prompt, keywords: e.target.value });
+  };
 
-  const handleKeywords = (e)=>{
-    setPromptData({...prompt, keywords: e.target.value })
-  }
+  const handleLanguage = (e) => {
+    setPromptData({ ...prompt, language: e.target.value });
+  };
 
- const handleLanguage = (e)=>{
-  setPromptData({...prompt, language: e.target.value })
-}
+  const handleTone = (e) => {
+    setPromptData({ ...prompt, tone: e.target.value });
+  };
 
-  const handleTone = (e)=>{
-    setPromptData({...prompt, tone: e.target.value })
-  }
+  const handleTime = (e) => {
+    setPromptData({ ...prompt, time: e.target.value });
+  };
 
- const handleTime = (e)=>{
-  setPromptData({...prompt, time: e.target.value })
-}
+  // API CALL to chatGPT
 
-// API CALL to chatGPT
+  let AIP_KEY = process.env.NEXT_PUBLIC_ANALYTICS_ID;
 
-const getData = ()=>{
-let myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Authorization", "Bearer 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");
+  // "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";
 
-let userPrompt = `assume you are a content creator. write ${prompt.time} content for a Tiktok/Reel/youtube short on the following topic & factor. topic: ${prompt.title}, description: ${prompt.description}, keyword: ${prompt.keywords}, The tone of voice: ${prompt.tone}, maximum time to read the content: ${prompt.time}, Start the script with 1 sentence hook so that people will want to stop and watch the connect creator, note: make sure to write the concept in bit-size sentences and put each sentence in the next line  `
+  const getData = () => {
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Authorization", `Bearer ${AIP_KEY}`);
 
-let raw = JSON.stringify({
-  "model": "gpt-3.5-turbo",
-  "messages": [
-    {
-      "role": "user",
-      "content": userPrompt
-    }
-  ],
-  "temperature": 0.7
-});
+    let userPrompt = `assume you are a content creator. write ${prompt.time} content for a Tiktok/Reel/youtube short on the following topic & factor. topic: ${prompt.title}, description: ${prompt.description}, keyword: ${prompt.keywords}, The tone of voice: ${prompt.tone}, maximum time to read the content: ${prompt.time}, Start the script with 1 sentence hook so that people will want to stop and watch the connect creator, note: make sure to write the concept in bit-size sentences and put each sentence in the next line  `;
 
-let requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: raw,
-  redirect: 'follow'
-};
+    let raw = JSON.stringify({
+      model: "gpt-3.5-turbo",
+      messages: [
+        {
+          role: "user",
+          content: userPrompt,
+        },
+      ],
+      temperature: 0.7,
+    });
 
-  fetch("https://api.openai.com/v1/chat/completions", requestOptions)
-  .then(response => response.json())
-  .then(result => {
-    console.log(result.choices, "choices")
-    console.log(result.choices[0], "[0]")
-    console.log(result.choices[0].message, "message")
-    console.log(result.choices[0].message.content, "content")
-    setData(result.choices[0].message.content)
-    setLoading(false)
-  })
-  .catch(error => console.log('error', error));
+    let requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
 
+    fetch("https://api.openai.com/v1/chat/completions", requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result.choices, "choices");
+        console.log(result.choices[0], "[0]");
+        console.log(result.choices[0].message, "message");
+        console.log(result.choices[0].message.content, "content");
+        setData(result.choices[0].message.content);
+        setLoading(false);
+      })
+      .catch((error) => console.log("error", error));
+  };
 
-}
+  const handleApi = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    getData();
+  };
 
-const handleApi = (e)=>{
-  e.preventDefault();
-  setLoading(true)
-  getData()
-}
-
-useEffect(()=>{
-  setPromptData({
-    title: "",
-    description: "",
-    keywords: "",
-    language: "English",
-    tone: "Professional",
-    time: "30-to-60 seconds"
-  })
-}, [])
+  useEffect(() => {
+    setPromptData({
+      title: "",
+      description: "",
+      keywords: "",
+      language: "English",
+      tone: "Professional",
+      time: "30-to-60 seconds",
+    });
+  }, []);
 
   return (
     <>
@@ -111,15 +111,15 @@ useEffect(()=>{
         <div className="flex flex-col items-center w-full h-screen text-sm">
           <div className="w-full bg-black text-white p-4">
             <div className="flex items-center gap-1">
-            <svg
-            className="w-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path d="M15.98 1.804a1 1 0 00-1.96 0l-.24 1.192a1 1 0 01-.784.785l-1.192.238a1 1 0 000 1.962l1.192.238a1 1 0 01.785.785l.238 1.192a1 1 0 001.962 0l.238-1.192a1 1 0 01.785-.785l1.192-.238a1 1 0 000-1.962l-1.192-.238a1 1 0 01-.785-.785l-.238-1.192zM6.949 5.684a1 1 0 00-1.898 0l-.683 2.051a1 1 0 01-.633.633l-2.051.683a1 1 0 000 1.898l2.051.684a1 1 0 01.633.632l.683 2.051a1 1 0 001.898 0l.683-2.051a1 1 0 01.633-.633l2.051-.683a1 1 0 000-1.898l-2.051-.683a1 1 0 01-.633-.633L6.95 5.684zM13.949 13.684a1 1 0 00-1.898 0l-.184.551a1 1 0 01-.632.633l-.551.183a1 1 0 000 1.898l.551.183a1 1 0 01.633.633l.183.551a1 1 0 001.898 0l.184-.551a1 1 0 01.632-.633l.551-.183a1 1 0 000-1.898l-.551-.184a1 1 0 01-.633-.632l-.183-.551z" />
-            </svg>
+              <svg
+                className="w-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path d="M15.98 1.804a1 1 0 00-1.96 0l-.24 1.192a1 1 0 01-.784.785l-1.192.238a1 1 0 000 1.962l1.192.238a1 1 0 01.785.785l.238 1.192a1 1 0 001.962 0l.238-1.192a1 1 0 01.785-.785l1.192-.238a1 1 0 000-1.962l-1.192-.238a1 1 0 01-.785-.785l-.238-1.192zM6.949 5.684a1 1 0 00-1.898 0l-.683 2.051a1 1 0 01-.633.633l-2.051.683a1 1 0 000 1.898l2.051.684a1 1 0 01.633.632l.683 2.051a1 1 0 001.898 0l.683-2.051a1 1 0 01.633-.633l2.051-.683a1 1 0 000-1.898l-2.051-.683a1 1 0 01-.633-.633L6.95 5.684zM13.949 13.684a1 1 0 00-1.898 0l-.184.551a1 1 0 01-.632.633l-.551.183a1 1 0 000 1.898l.551.183a1 1 0 01.633.633l.183.551a1 1 0 001.898 0l.184-.551a1 1 0 01.632-.633l.551-.183a1 1 0 000-1.898l-.551-.184a1 1 0 01-.633-.632l-.183-.551z" />
+              </svg>
               Ai Short Video Content Writer
             </div>
           </div>
@@ -130,7 +130,7 @@ useEffect(()=>{
                 <textarea
                   placeholder="Please enter title of the short video"
                   type="text"
-                  className="w-full border rounded-md p-1 text-xs placeholder:text-[8px] placeholder:text-gray-600" 
+                  className="w-full border rounded-md p-1 text-xs placeholder:text-[8px] placeholder:text-gray-600"
                   rows="2"
                   value={prompt.title}
                   onChange={handleTitle}
@@ -167,10 +167,13 @@ useEffect(()=>{
               <div className="flex gap-4 items-center  w-full">
                 <div className="flex flex-col gap-1 ">
                   <div className="text-xs">Language</div>
-                  <select 
+                  <select
                     onChange={handleLanguage}
-                   className="rounded-md border w-full outline-none p-1 px-2">
-                    <option value="English" defaultValue>English</option>
+                    className="rounded-md border w-full outline-none p-1 px-2"
+                  >
+                    <option value="English" defaultValue>
+                      English
+                    </option>
                     <option value="Spanish">Spanish</option>
                     <option value="French">French</option>
                     <option value="Hindi">Hindi</option>
@@ -179,9 +182,12 @@ useEffect(()=>{
                 <div className="flex flex-col gap-1 ">
                   <div className="text-xs">Tone</div>
                   <select
-                  onChange={handleTone}
-                   className="rounded-md border w-full outline-none p-1 px-2">
-                    <option value="Professional" defaultValue>Professional</option>
+                    onChange={handleTone}
+                    className="rounded-md border w-full outline-none p-1 px-2"
+                  >
+                    <option value="Professional" defaultValue>
+                      Professional
+                    </option>
                     <option value="Informative">Informative</option>
                     <option value="Convincing">Convincing</option>
                     <option value="Enthusiastic">Enthusiastic</option>
@@ -198,25 +204,32 @@ useEffect(()=>{
 
               <div className="flex gap-1  items-center">
                 <div className="">Time :</div>
-                <select onChange={handleTime} className="rounded-md border-none outline-none p-1 px-2">
-                  <option value="French" defaultValue>30-to-60 seconds</option>
+                <select
+                  onChange={handleTime}
+                  className="rounded-md border-none outline-none p-1 px-2"
+                >
+                  <option value="French" defaultValue>
+                    30-to-60 seconds
+                  </option>
                   <option value="English">30 seconds</option>
                   <option value="Spanish">60 seconds</option>
                 </select>
               </div>
 
-              <button 
+              <button
                 onClick={handleApi}
                 className="rounded-md border mx-auto w-full outline-none p-2 text-white bg-blue-400"
-                >
-                    {isLoading ? "Loading..." : "Generate script"}
+              >
+                {isLoading ? "Loading..." : "Generate script"}
               </button>
             </div>
             <div className="w-full flex flex-col gap-2 bg-stone-100 p-4">
               <div className="ml-1">Title: {prompt.title} </div>
               <div>
                 <textarea
-                  onChange={(e)=>{ setData(e.target.value)}}
+                  onChange={(e) => {
+                    setData(e.target.value);
+                  }}
                   placeholder="AI will write content here!"
                   className="w-full border rounded-md p-2 h-[70vh] focus:outline-none placeholder:text-[8px] placeholder:text-gray-600"
                   type="text"
@@ -237,7 +250,6 @@ useEffect(()=>{
       </main>
     </>
   );
-}
-
+};
 
 export default Home;
