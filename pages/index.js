@@ -40,9 +40,9 @@ const Home = () => {
 
   // API CALL to chatGPT
 
-  let AIP_KEY = process.env.NEXT_PUBLIC_ANALYTICS_ID;
+  // let AIP_KEY = process.env.NEXT_PUBLIC_ANALYTICS_ID;
 
-  // "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";
+  let AIP_KEY = "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";
 
   const getData = () => {
     let myHeaders = new Headers();
@@ -208,11 +208,11 @@ const Home = () => {
                   onChange={handleTime}
                   className="rounded-md border-none outline-none p-1 px-2"
                 >
-                  <option value="French" defaultValue>
+                  <option value="30-to-60 seconds" defaultValue>
                     30-to-60 seconds
                   </option>
-                  <option value="English">30 seconds</option>
-                  <option value="Spanish">60 seconds</option>
+                  <option value="30 seconds">30 seconds</option>
+                  <option value="60 seconds">60 seconds</option>
                 </select>
               </div>
 
