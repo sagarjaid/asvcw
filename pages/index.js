@@ -2,11 +2,6 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const configuration = new Configuration({
-  apiKey: "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",
-});
-const openai = new OpenAIApi(configuration);
-
 const Home = () => {
   const [prompt, setPromptData] = useState({
     title: "",
