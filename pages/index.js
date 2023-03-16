@@ -45,97 +45,97 @@ const Home = () => {
 
   // let AIP_KEY = "sk-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";
 
-  const getData = () => {
-    // let myHeaders = new Headers();
-    // myHeaders.append("Content-Type", "application/json");
-    // myHeaders.append("Authorization", `Bearer ${AIP_KEY}`);
-
-    let userPrompt = `assume you are a content creator. write ${prompt.time} content for a Tiktok/Reel/youtube short on the following topic & factor. topic: ${prompt.title}, description: ${prompt.description}, keyword: ${prompt.keywords}, The tone of voice: ${prompt.tone}, maximum time to read the content: ${prompt.time}, Start the script with 1 sentence hook so that people will want to stop and watch the connect creator, note: make sure to write the concept in bit-size sentences and put each sentence in the next line  `;
-
-    let raw = JSON.stringify({
-      model: "gpt-3.5-turbo",
-      messages: [
-        {
-          role: "user",
-          content: userPrompt,
-        },
-      ],
-      temperature: 0.7,
-    });
-
-    let requestOptions = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization:
-          "Bearer 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",
-      },
-      body: raw,
-      redirect: "follow",
-    };
-
-    fetch("https://api.openai.com/v1/chat/completions", requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result.choices[0].message, "message");
-        setData(result.choices[0].message.content);
-        setLoading(false);
-      })
-      .catch((error) => console.log("error", error));
-  };
-
   // const getData = () => {
-  //   let userPrompt = `assume you are a content creator. write ${prompt.time} content for a Tiktok/Reel/youtube short on the following topic & factor. topic: ${prompt.title}, description: ${prompt.description}, keyword: ${prompt.keywords}, The tone of voice: ${prompt.tone}, maximum time to read the content: ${prompt.time}, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, note: make sure to write the concept in bit-size sentences and put each sentence in the next line  `;
+  //   // let myHeaders = new Headers();
+  //   // myHeaders.append("Content-Type", "application/json");
+  //   // myHeaders.append("Authorization", `Bearer ${AIP_KEY}`);
 
-  //   // let data = JSON.stringify({
-  //   //   model: "gpt-3.5-turbo",
-  //   //   messages: [
-  //   //     {
-  //   //       role: "user",
-  //   //       content: userPrompt,
-  //   //     },
-  //   //   ],
-  //   //   temperature: 0.7,
-  //   // });
+  //   let userPrompt = `assume you are a content creator. write ${prompt.time} content for a Tiktok/Reel/youtube short on the following topic & factor. topic: ${prompt.title}, description: ${prompt.description}, keyword: ${prompt.keywords}, The tone of voice: ${prompt.tone}, maximum time to read the content: ${prompt.time}, Start the script with 1 sentence hook so that people will want to stop and watch the connect creator, note: make sure to write the concept in bit-size sentences and put each sentence in the next line  `;
 
-  //   let data = JSON.stringify({
-  //     question: userPrompt,
+  //   let raw = JSON.stringify({
+  //     model: "gpt-3.5-turbo",
+  //     messages: [
+  //       {
+  //         role: "user",
+  //         content: userPrompt,
+  //       },
+  //     ],
+  //     temperature: 0.7,
   //   });
 
-  //   // let config = {
-  //   //   method: "post",
-  //   //   maxBodyLength: Infinity,
-  //   //   url: "https://api.openai.com/v1/chat/completions",
-  //   //   headers: {
-  //   //     "Content-Type": "application/json",
-  //   //     Authorization:
-  //   //       "Bearer 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",
-  //   //   },
-  //   //   data: data,
-  //   // };
-
-  //   const config = {
+  //   let requestOptions = {
   //     method: "POST",
-  //     url: "https://simple-chatgpt-api.p.rapidapi.com/ask",
   //     headers: {
-  //       "content-type": "application/json",
-  //       "X-RapidAPI-Key": "8f75fdd009mshcaef63a7370fa74p17a97ajsn1c67d1c2b2d8",
-  //       "X-RapidAPI-Host": "simple-chatgpt-api.p.rapidapi.com",
+  //       "Content-Type": "application/json",
+  //       Authorization:
+  //         "Bearer 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",
   //     },
-  //     data: data,
+  //     body: raw,
+  //     redirect: "follow",
   //   };
 
-  //   axios
-  //     .request(config)
-  //     .then((response) => {
-  //       console.log(JSON.stringify(response.data));
-  //       setData(response.data.answer);
+  //   fetch("https://api.openai.com/v1/chat/completions", requestOptions)
+  //     .then((response) => response.json())
+  //     .then((result) => {
+  //       console.log(result.choices[0].message, "message");
+  //       setData(result.choices[0].message.content);
   //       setLoading(false);
   //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
+  //     .catch((error) => console.log("error", error));
   // };
+
+  const getData = () => {
+    let userPrompt = `assume you are a content creator. write ${prompt.time} content for a Tiktok/Reel/youtube short on the following topic & factor. topic: ${prompt.title}, description: ${prompt.description}, keyword: ${prompt.keywords}, The tone of voice: ${prompt.tone}, maximum time to read the content: ${prompt.time}, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, note: make sure to write the concept in bit-size sentences and put each sentence in the next line  `;
+
+    // let data = JSON.stringify({
+    //   model: "gpt-3.5-turbo",
+    //   messages: [
+    //     {
+    //       role: "user",
+    //       content: userPrompt,
+    //     },
+    //   ],
+    //   temperature: 0.7,
+    // });
+
+    let data = JSON.stringify({
+      question: userPrompt,
+    });
+
+    // let config = {
+    //   method: "post",
+    //   maxBodyLength: Infinity,
+    //   url: "https://api.openai.com/v1/chat/completions",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Authorization:
+    //       "Bearer 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",
+    //   },
+    //   data: data,
+    // };
+
+    const config = {
+      method: "POST",
+      url: "https://simple-chatgpt-api.p.rapidapi.com/ask",
+      headers: {
+        "content-type": "application/json",
+        "X-RapidAPI-Key": "8f75fdd009mshcaef63a7370fa74p17a97ajsn1c67d1c2b2d8",
+        "X-RapidAPI-Host": "simple-chatgpt-api.p.rapidapi.com",
+      },
+      data: data,
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+        setData(response.data.answer);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   const handleApi = (e) => {
     e.preventDefault();
