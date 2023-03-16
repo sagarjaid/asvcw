@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
   apiKey: "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",
