@@ -4,10 +4,11 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
- 
+
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
-  ],theme: {
+  ],
+  theme: {
     screens: {
       s: "0px",
       // => @media (min-width: 375px) { ... }
@@ -25,6 +26,9 @@ module.exports = {
       // => @media (min-width: 640px) { ... }
 
       md: "768px",
+      // => @media (min-width: 768px) { ... }
+
+      mdx: "868px",
       // => @media (min-width: 768px) { ... }
 
       lg: "1024px",

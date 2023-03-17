@@ -183,7 +183,7 @@ const App = () => {
         <title>Scrip AI — AI TikTok, Reel & YT Shorts Script Writer</title>
         <meta
           name="description"
-          content="10X faster & better way to write viral 30 sec short video script for instagram reel, TikTok and youtube shorts"
+          content="10X faster & better way to write viral 30 sec short video script for Instagram reel, TikTok and youtube shorts"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />

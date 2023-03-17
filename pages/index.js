@@ -47,24 +47,23 @@ const Home = () => {
           </div>
         </nav>
         <div className="flex flex-col items-center justify-center gap-6 py-20 p-2 ">
-          <div className="flex flex-col gap-3 text-5xl text-center line font-bold ">
+          <div className="flex flex-col text-base sm:gap-3 xs:text-lg  sdm:text-3xl md:text-4xl mdx:text-5xl text-center line font-bold ">
             <span> 10X faster & better way to write viral </span>
             <span> 30 sec short video script for </span>
-            {/* <span>IG Reels, TikTok, YT Shorts</span> */}
             <spn className="text-rose-500">
               <Typewriter
                 options={{
-                  strings: ["Instgarm Reels", "TikToks", "Youtube Shorts"],
+                  strings: ["Instagram Reels", "TikTok", "Youtube Shorts"],
                   autoStart: true,
                   loop: true,
                 }}
               />
             </spn>
           </div>
-          <p className="text-center">
+          <p className="text-center text-xs sm:text-base">
             Create short videos 30-sec to 60-sec scripts in 1 minutes!
           </p>
-          <div className="bg-rose-600 p-2 px-4 w-fit flex justify-around shadow-xl items-center	hover:bg-rose-500 text-white rounded-full ">
+          <div className="bg-rose-600 p-2 animate-bounce px-4 w-fit flex justify-around shadow-xl items-center	hover:bg-rose-500 text-white rounded-full ">
             <a href="/app">Start Creating for free!</a>
             <svg
               className="w-6"
@@ -83,21 +82,20 @@ const Home = () => {
             </svg>
           </div>
           <p></p>
-          <img src="/trs-2.png" className="w-[30%] py-4"></img>
+          <img src="/trs.png" className="w-[30%] py-6"></img>
           {/* <img
             className="w-11/12 border-rose-500 border-2 rounded-lg shadow-2xl hover:shadow-xl"
             src="/app.png"
           ></img> */}
           <video
-            className="w-11/12 border-rose-500 border-4 rounded-lg shadow-2xl hover:shadow-xl"
+            className="w-11/12 border-rose-500 bg-rose-500 border-4 rounded-2xl shadow-2xl hover:shadow-xl"
             src="/scrip-ai.mp4"
             controls
             muted
             autoPlay={"autoplay"}
             preLoad="auto"
             loop
-          >
-          </video>
+          ></video>
         </div>
       </main>
     </>
