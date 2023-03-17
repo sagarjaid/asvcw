@@ -192,7 +192,7 @@ const App = () => {
         <div className="flex flex-col items-center w-full h-screen text-sm">
           <nav className="flex w-full justify-between p-4 items-center border-b">
             <a href="/">
-              <img src="/scrip.svg" className="w-[60px]"></img>
+              <img src="/scrip.svg" className="w-[80px]"></img>
             </a>
             <div>
               <ul className="flex gap-4 text-xs items-center">

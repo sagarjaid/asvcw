@@ -17,7 +17,7 @@ const Home = () => {
       <main className="flex flex-col m-auto max-w-5xl px-4">
         <nav className="flex justify-between py-4 items-center">
           <a href="/">
-            <img src="/scrip.svg" className="w-[60px]"></img>
+            <img src="/scrip.svg" className="w-[80px]"></img>
           </a>
           <div>
             <ul className="flex gap-4 text-xs items-center">
