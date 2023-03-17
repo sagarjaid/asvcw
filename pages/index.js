@@ -48,8 +48,10 @@ const Home = () => {
         </nav>
         <div className="flex flex-col items-center justify-center gap-6 p-2 py-20 ">
           <div className="line flex flex-col text-center text-base  font-bold xs:text-lg sdm:text-3xl sm:gap-3 md:text-4xl mdx:text-5xl ">
-            <span> 10X faster & better way to write viral </span>
-            <span> 30 sec short video script for </span>
+            {/* <span> 10X faster & better way to write viral </span>
+            <span> 30 sec short video script for </span> */}
+            <span>10X faster way to write </span>
+            <span>short video script for </span>
             <spn className="text-rose-500">
               <Typewriter
                 options={{
@@ -64,7 +66,7 @@ const Home = () => {
             Create short videos 30-sec to 60-sec scripts in 1 minutes!
           </p>
           <div className="flex w-fit animate-bounce items-center justify-around rounded-full bg-rose-600 p-2 px-4	text-white shadow-xl hover:bg-rose-500 ">
-            <a href="/app">Start Creating for free!</a>
+            <a href="/app">Start for Free!</a>
             <svg
               className="w-6"
               fill="none"
@@ -81,7 +83,9 @@ const Home = () => {
               />
             </svg>
           </div>
-          <p></p>
+          <div className="text-center text-xs text-gray-600 sm:text-base">
+            ❌ no credit card & login is required
+          </div>
           <img src="/trs.png" className="w-[30%] py-6"></img>
           {/* <img
             className="w-11/12 border-rose-500 border-2 rounded-lg shadow-2xl hover:shadow-xl"

@@ -318,7 +318,7 @@ const App = () => {
                 onClick={handleApi}
                 className="mx-auto w-full rounded-full border bg-rose-500 p-2 text-white outline-none"
               >
-                {isLoading ? "Loading..." : "Generate script"}
+                {isLoading ? "Loading..." : "Generate Script"}
               </button>
             </div>
             <div className="flex h-screen w-full flex-col gap-2 bg-stone-50 p-4">
@@ -335,6 +335,8 @@ const App = () => {
                           {el} <br></br>
                         </p>
                       ))
+                    : isLoading
+                    ? "AI is Working..."
                     : "AI will write content here!"}
                 </WindupChildren>
               </div>
