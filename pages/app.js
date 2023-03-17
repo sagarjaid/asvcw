@@ -189,16 +189,16 @@ const App = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
-        <div className="flex flex-col items-center w-full h-screen text-sm">
-          <nav className="flex w-full justify-between p-4 items-center border-b">
+        <div className="flex h-screen w-full flex-col items-center text-sm">
+          <nav className="flex w-full items-center justify-between border-b p-4">
             <a href="/">
               <img src="/scrip.svg" className="w-[80px]"></img>
             </a>
             <div>
-              <ul className="flex gap-4 text-xs items-center">
-                <li className="cursor-pointer">Pricing</li>
+              <ul className="flex items-center gap-4 text-xs">
+                {/* <li className="cursor-pointer">Pricing</li> */}
                 {/* <ll>What's new</ll> */}
-                <li className="bg-rose-500 p-1 px-3 w-fit flex gap-1 shadow-sm items-center cursor-pointer text-white rounded-full ">
+                <li className="flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-500 p-1 px-3 text-white shadow-sm ">
                   <a href="/">Home</a>
                   <a href="/">
                     <svg
@@ -221,14 +221,14 @@ const App = () => {
               </ul>
             </div>
           </nav>
-          <div className="flex flex-col sm:flex-row justify-between w-full">
-            <div className="flex flex-col gap-6 w-full sm:w-3/12 p-4 ">
+          <div className="flex w-full flex-col justify-between sm:flex-row">
+            <div className="flex w-full flex-col gap-6 p-4 sm:w-3/12 ">
               <div className="flex flex-col gap-1 ">
                 <div className="text-xs">Video title</div>
                 <textarea
                   placeholder="Please enter title of the short video"
                   type="text"
-                  className="w-full border rounded-md p-1 text-xs placeholder:text-[8px] placeholder:text-gray-600"
+                  className="w-full rounded-md border p-1 text-xs placeholder:text-[8px] placeholder:text-gray-600"
                   rows="2"
                   value={prompt.title}
                   onChange={handleTitle}
@@ -243,7 +243,7 @@ const App = () => {
                 <textarea
                   type="text"
                   placeholder="Please enter video description if you want"
-                  className="w-full border rounded-md p-1 text-xs placeholder:text-[8px] placeholder:text-gray-600"
+                  className="w-full rounded-md border p-1 text-xs placeholder:text-[8px] placeholder:text-gray-600"
                   rows="5"
                   value={prompt.description}
                   onChange={handleDescription}
@@ -256,18 +256,18 @@ const App = () => {
                 </div>
                 <input
                   type="text"
-                  className="w-full border rounded-md p-2"
+                  className="w-full rounded-md border p-2"
                   value={prompt.keywords}
                   onChange={handleKeywords}
                 />
               </div>
 
-              <div className="flex gap-4 items-center  w-full">
+              <div className="flex w-full items-center  gap-4">
                 <div className="flex flex-col gap-1 ">
                   <div className="text-xs">Language</div>
                   <select
                     onChange={handleLanguage}
-                    className="rounded-md border w-full outline-none p-1 px-2 text-xs"
+                    className="w-full rounded-md border p-1 px-2 text-xs outline-none"
                   >
                     <option value="English" defaultValue>
                       English
@@ -281,7 +281,7 @@ const App = () => {
                   <div className="text-xs">Tone</div>
                   <select
                     onChange={handleTone}
-                    className="rounded-md border w-full outline-none p-1 px-2 text-xs"
+                    className="w-full rounded-md border p-1 px-2 text-xs outline-none"
                   >
                     <option value="Professional" defaultValue>
                       Professional
@@ -300,11 +300,11 @@ const App = () => {
                 </div>
               </div>
 
-              <div className="flex gap-1  items-center">
+              <div className="flex items-center  gap-1">
                 <div className="text-xs">Time :</div>
                 <select
                   onChange={handleTime}
-                  className="rounded-md border-none outline-none p-1 px-2 text-xs"
+                  className="rounded-md border-none p-1 px-2 text-xs outline-none"
                 >
                   <option value="30-to-60 seconds" defaultValue>
                     30-to-60 seconds
@@ -316,17 +316,17 @@ const App = () => {
 
               <button
                 onClick={handleApi}
-                className="rounded-full border mx-auto w-full outline-none p-2 text-white bg-rose-500"
+                className="mx-auto w-full rounded-full border bg-rose-500 p-2 text-white outline-none"
               >
                 {isLoading ? "Loading..." : "Generate script"}
               </button>
             </div>
-            <div className="w-full flex flex-col gap-2 h-screen bg-stone-50 p-4">
+            <div className="flex h-screen w-full flex-col gap-2 bg-stone-50 p-4">
               {/* <div className="ml-1">Title: {prompt.title} </div> */}
               <div
                 id="copy"
                 contenteditable="true"
-                className="w-full border bg-white rounded-md p-4 h-[80vh] focus:outline-none placeholder:text-[8px] placeholder:text-gray-600"
+                className="h-[80vh] w-full rounded-md border bg-white p-4 placeholder:text-[8px] placeholder:text-gray-600 focus:outline-none"
               >
                 <WindupChildren>
                   {data?.length
@@ -338,15 +338,15 @@ const App = () => {
                     : "AI will write content here!"}
                 </WindupChildren>
               </div>
-              <div className="flex justify-center sm:justify-end gap-4">
+              <div className="flex justify-center gap-4 sm:justify-end">
                 <button
-                  className='class="px-2 py-1 cursor-pointer mb-1 border rounded-full bg-rose-500 text-white p-2'
+                  className='class="px-2 mb-1 cursor-pointer rounded-full border bg-rose-500 p-2 py-1 text-white'
                   onClick={handleCopyText}
                 >
                   {textCopy ? "Text copied" : "Copy to Clipboard"}
                 </button>
                 <button
-                  className='class="px-2 py-1 cursor-pointer mb-1 border rounded-full bg-rose-500 text-white p-2'
+                  className='class="px-2 mb-1 cursor-pointer rounded-full border bg-rose-500 p-2 py-1 text-white'
                   onClick={handleClearText}
                 >
                   Clear
