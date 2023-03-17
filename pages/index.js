@@ -54,7 +54,7 @@ const Home = () => {
             <spn className="text-rose-500">
               <Typewriter
                 options={{
-                  strings: ["Instgarm Reels", "TikTok videos", "Youtube Short"],
+                  strings: ["Instgarm Reels", "TikToks", "Youtube Shorts"],
                   autoStart: true,
                   loop: true,
                 }}
@@ -62,9 +62,9 @@ const Home = () => {
             </spn>
           </div>
           <p className="text-center">
-            Create short videos 30 sec to 60 sec scripts in 1 minutes!
+            Create short videos 30-sec to 60-sec scripts in 1 minutes!
           </p>
-          <div className="bg-rose-500 p-2 px-4 w-fit flex justify-around shadow-xl items-center	hover:bg-rose-600 text-white rounded-full ">
+          <div className="bg-rose-600 p-2 px-4 w-fit flex justify-around shadow-xl items-center	hover:bg-rose-500 text-white rounded-full ">
             <a href="/app">Start Creating for free!</a>
             <svg
               className="w-6"
@@ -84,10 +84,20 @@ const Home = () => {
           </div>
           <p></p>
           <img src="/trs-2.png" className="w-[30%] py-4"></img>
-          <img
+          {/* <img
             className="w-11/12 border-rose-500 border-2 rounded-lg shadow-2xl hover:shadow-xl"
             src="/app.png"
-          ></img>
+          ></img> */}
+          <video
+            className="w-11/12 border-rose-500 border-4 rounded-lg shadow-2xl hover:shadow-xl"
+            src="/scrip-ai.mp4"
+            controls
+            muted
+            autoPlay={"autoplay"}
+            preLoad="auto"
+            loop
+          >
+          </video>
         </div>
       </main>
     </>
