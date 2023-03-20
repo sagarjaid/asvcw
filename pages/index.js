@@ -15,7 +15,10 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
 
-        <meta name="google-site-verification" content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk" />
+        <meta
+          name="google-site-verification"
+          content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
+        />
 
         {/* <Script
         id="google-analytics"
@@ -29,10 +32,9 @@ const Home = () => {
           gtag("config", "G-4ZWBVE0WB");
         }}
         /> */}
-
       </Head>
       <main className="m-auto flex max-w-5xl flex-col px-4">
-      {/* <div className=" p-2 w-full text-center bg-yellow-400">NOTE: Due to overwhelming response we are out of capacity right now 🔥🔥🔥 please check us after 4 hours</div> */}
+        {/* <div className=" p-2 w-full text-center bg-yellow-400">NOTE: Due to overwhelming response we are out of capacity right now 🔥🔥🔥 please check us after 4 hours</div> */}
         <nav className="flex items-center justify-between py-4">
           <a href="/">
             <img src="/scrip.svg" className="w-[80px]"></img>
@@ -41,6 +43,17 @@ const Home = () => {
             <ul className="flex items-center gap-4 text-xs">
               {/* <li className="cursor-pointer">Pricing</li> */}
               {/* <ll>What's new</ll> */}
+              <li>
+                <a
+                  href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
+                  target="_blank"
+                >
+                  <img
+                    className="w-36"
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
+                  />
+                </a>
+              </li>
               <li className="flex w-fit items-center gap-1 rounded-full bg-rose-500 p-1 px-3	 text-white shadow-sm ">
                 <a href="/app">Try for free!</a>
                 <a href="/app">

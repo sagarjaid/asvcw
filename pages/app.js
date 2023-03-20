@@ -134,6 +134,17 @@ const App = () => {
               <ul className="flex items-center gap-4 text-xs">
                 {/* <li className="cursor-pointer">Pricing</li> */}
                 {/* <ll>What's new</ll> */}
+                <li>
+                <a
+                  href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
+                  target="_blank"
+                >
+                  <img
+                    className="w-36"
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
+                  />
+                </a>
+              </li>
                 <li className="flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-500 p-1 px-3 text-white shadow-sm ">
                   <a href="/">Home</a>
                   <a href="/">
