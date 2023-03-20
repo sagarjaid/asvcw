@@ -266,6 +266,7 @@ const App = () => {
               </div>
 
               <button
+                disabled={isLoading}
                 onClick={handleApi}
                 className="mx-auto w-full rounded-full border bg-rose-500 p-2 text-white outline-none"
               >
