@@ -32,7 +32,7 @@ const Home = () => {
 
       </Head>
       <main className="m-auto flex max-w-5xl flex-col px-4">
-      {/* <div className=" p-2 w-full text-center bg-yellow-400">NOTE: Due to overwhelming response we are out of capacity right now 🔥🔥🔥 please check us after 4 hours</div> */}
+      <div className=" p-2 w-full text-center bg-yellow-400">NOTE: Due to overwhelming response we are out of capacity right now 🔥🔥🔥 please check us after 4 hours</div>
         <nav className="flex items-center justify-between py-4">
           <a href="/">
             <img src="/scrip.svg" className="w-[80px]"></img>
