@@ -2,7 +2,6 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { WindupChildren } from "windups";
-import Script from "next/script";
 
 const App = () => {
   const [prompt, setPromptData] = useState({
