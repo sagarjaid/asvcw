@@ -1,24 +1,23 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { Configuration, OpenAIApi } from "openai";
+import { Configuration, OpenAIApi } from 'openai';
 
-const handler = async (req, res) => {
-  // const configuration = new Configuration({
-  //   apiKey: process.env.OPENAI_API_KEY,
-  // });
+const configuration = new Configuration({
+  apiKey: "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"
+});
+const openai = new OpenAIApi(configuration);
 
-  const configuration = new Configuration({
-    apiKey: "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",
+export default async function handler(
+  req,
+  res
+) {
+  const completion = await openai.createCompletion({
+    model: 'text-davinci-003',
+    prompt: req.body.text,
+    temperature: 0.7,
+    top_p: 1,
+    frequency_penalty: 0,
+    presence_penalty: 0,
+    max_tokens: 256,
   });
-
-  const openai = new OpenAIApi(configuration);
-
-  const completion = await openai.createChatCompletion({
-    model: "gpt-3.5-turbo",
-    messages: [{ role: "user", content: "how are you?" }],
-  });
-  console.log(completion.data.choices[0].message);
-
-  res.status(200).json({ name: completion.data.choices[0].message });
-};
-
-export default handler;
+  console.log(completion.data);
+  res.status(200).json({ result: completion.data.choices[0].text});
+}
