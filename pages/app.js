@@ -33,6 +33,12 @@ const App = () => {
     setData();
     let copyText = document.getElementById("copy");
     copyText.innerText = "AI will write content here!";
+
+    setPromptData({
+      title: "",
+      description: "",
+      keywords: "",
+    });
   };
 
   const handleTitle = (e) => {
@@ -78,6 +84,10 @@ const App = () => {
     console.log(DataArr);
     setData(DataArr);
     setLoading(false);
+    setPromptData({
+      description: "",
+      keywords: "",
+    });
   };
 
   const handleApi = (e) => {
