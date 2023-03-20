@@ -125,7 +125,7 @@ const App = () => {
       </Head>
       <main>
         <div className="flex h-screen w-full flex-col items-center text-sm">
-          <div className=" p-2 w-full text-center bg-yellow-400">NOTE: Due to overwhelming response we are out of capacity right now 🔥🔥🔥 please check us after 4 hours</div>
+          {/* <div className=" p-2 w-full text-center bg-yellow-400">NOTE: Due to overwhelming response we are out of capacity right now 🔥🔥🔥 please check us after 4 hours</div> */}
           <nav className="flex w-full items-center justify-between border-b p-4">
             <a href="/">
               <img src="/scrip.svg" className="w-[80px]"></img>
