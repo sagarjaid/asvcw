@@ -16,8 +16,8 @@ const Home = () => {
         <link rel="icon" href="/favicon.png" />
 
         <meta name="google-site-verification" content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk" />
-        
-        <Script
+
+        {/* <Script
         id="google-analytics"
         src="https://www.googletagmanager.com/gtag/js?id=G-4ZWBVE0WB"
         onLoad={() => {
@@ -28,7 +28,7 @@ const Home = () => {
           gtag("js", new Date());
           gtag("config", "G-4ZWBVE0WB");
         }}
-        />
+        /> */}
 
       </Head>
       <main className="m-auto flex max-w-5xl flex-col px-4">
