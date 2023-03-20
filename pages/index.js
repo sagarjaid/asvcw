@@ -19,19 +19,6 @@ const Home = () => {
           name="google-site-verification"
           content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
         />
-
-        {/* <Script
-        id="google-analytics"
-        src="https://www.googletagmanager.com/gtag/js?id=G-4ZWBVE0WB"
-        onLoad={() => {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag("js", new Date());
-          gtag("config", "G-4ZWBVE0WB");
-        }}
-        /> */}
       </Head>
       <main className="m-auto flex max-w-5xl flex-col px-4">
         {/* <div className=" p-2 w-full text-center bg-yellow-400">NOTE: Due to overwhelming response we are out of capacity right now 🔥🔥🔥 please check us after 4 hours</div> */}

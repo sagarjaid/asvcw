@@ -62,23 +62,23 @@ const App = () => {
   const getData = async () => {
     let userPrompt = `assume you are a content creator. write ${prompt.time} content for a Tiktok/Reel/youtube short on the following topic & factor. topic: ${prompt.title}, description: ${prompt.description}, keyword: ${prompt.keywords}, The tone of voice: ${prompt.tone}, maximum time to read the content: ${prompt.time}, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, note: make sure to write the concept in bit-size sentences and put each sentence in the next line`;
 
-      const response = await fetch('/api/hello', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ text: userPrompt }),
-      });
+    const response = await fetch("/api/hello", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ text: userPrompt }),
+    });
 
-      const resData = await response.json();
+    const resData = await response.json();
 
-      console.log(resData, "resData");
+    console.log(resData, "resData");
 
-      const DataArr = resData.result.split("\n");
-      console.log(DataArr);
-      setData(DataArr);
-      setLoading(false);
-  }
+    const DataArr = resData.result.split("\n");
+    console.log(DataArr);
+    setData(DataArr);
+    setLoading(false);
+  };
 
   const handleApi = (e) => {
     e.preventDefault();
@@ -108,24 +108,18 @@ const App = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
 
-        <meta name="google-site-verification" content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk" />
-        
-        {/* <Script
-        id="google-analytics"
-        src="https://www.googletagmanager.com/gtag/js?id=G-4ZWBVE0WB"
-        onLoad={() => {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag("js", new Date());
-          gtag("config", "G-4ZWBVE0WB");
-        }}
-        /> */}
+        <meta
+          name="google-site-verification"
+          content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
+        />
       </Head>
       <main>
         <div className="flex h-screen w-full flex-col items-center text-sm">
-          <div className=" p-2 w-full text-center bg-yellow-400">Due to overwhelming response we are running out of capacity 🔥. few users may get empty/no reply {`:(`} if so please check after 4 hours. 🙏</div>
+          {/* <div className=" w-full bg-yellow-400 p-2 text-center">
+            Due to overwhelming response we are running out of capacity 🔥. few
+            users may get empty/no reply {`:(`} if so please check after 4
+            hours. 🙏
+          </div> */}
           <nav className="flex w-full items-center justify-between border-b p-4">
             <a href="/">
               <img src="/scrip.svg" className="w-[80px]"></img>
@@ -135,16 +129,16 @@ const App = () => {
                 {/* <li className="cursor-pointer">Pricing</li> */}
                 {/* <ll>What's new</ll> */}
                 <li>
-                <a
-                  href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
-                  target="_blank"
-                >
-                  <img
-                    className="w-36"
-                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
-                  />
-                </a>
-              </li>
+                  <a
+                    href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
+                    target="_blank"
+                  >
+                    <img
+                      className="w-36"
+                      src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
+                    />
+                  </a>
+                </li>
                 <li className="flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-500 p-1 px-3 text-white shadow-sm ">
                   <a href="/">Home</a>
                   <a href="/">
@@ -273,7 +267,7 @@ const App = () => {
               <div
                 id="copy"
                 contenteditable="true"
-                className="h-[80vh] w-full rounded-md overflow-y-scroll border bg-white p-4 placeholder:text-[8px] placeholder:text-gray-600 focus:outline-none"
+                className="h-[80vh] w-full overflow-y-scroll rounded-md border bg-white p-4 placeholder:text-[8px] placeholder:text-gray-600 focus:outline-none"
               >
                 <WindupChildren>
                   {data?.length
