@@ -273,7 +273,7 @@ const App = () => {
               <div
                 id="copy"
                 contenteditable="true"
-                className="h-[80vh] w-full rounded-md border bg-white p-4 placeholder:text-[8px] placeholder:text-gray-600 focus:outline-none"
+                className="h-[80vh] w-full rounded-md overflow-y-scroll border bg-white p-4 placeholder:text-[8px] placeholder:text-gray-600 focus:outline-none"
               >
                 <WindupChildren>
                   {data?.length
