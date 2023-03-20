@@ -140,7 +140,7 @@ const App = () => {
       url: "https://simple-chatgpt-api.p.rapidapi.com/ask",
       headers: {
         "content-type": "application/json",
-        'X-RapidAPI-Key': 'fb41272234msha5a3f26f657addfp168157jsn1025a09bf663',
+        'X-RapidAPI-Key': '711dcad9e2msh678c000ca1f6f7dp168646jsnd7ef85d59193',
         'X-RapidAPI-Host': 'simple-chatgpt-api.p.rapidapi.com'
       },
       data: data,
@@ -206,6 +206,7 @@ const App = () => {
       </Head>
       <main>
         <div className="flex h-screen w-full flex-col items-center text-sm">
+          <div className=" p-2 w-full text-center bg-yellow-400">NOTE: Due to overwhelming response we are out of capacity right now 🔥🔥🔥 please check us after 4 hours</div>
           <nav className="flex w-full items-center justify-between border-b p-4">
             <a href="/">
               <img src="/scrip.svg" className="w-[80px]"></img>
