@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
+import Script from "next/script";
 
 const Home = () => {
   return (
@@ -13,6 +14,22 @@ const Home = () => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
+
+        <meta name="google-site-verification" content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk" />
+        
+        <Script
+        id="google-analytics"
+        src="https://www.googletagmanager.com/gtag/js?id=G-4ZWBVE0WB"
+        onLoad={() => {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-4ZWBVE0WB");
+        }}
+        />
+
       </Head>
       <main className="m-auto flex max-w-5xl flex-col px-4">
         <nav className="flex items-center justify-between py-4">

@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { WindupChildren } from "windups";
+import Script from "next/script";
 
 const App = () => {
   const [prompt, setPromptData] = useState({
@@ -183,10 +184,25 @@ const App = () => {
         <title>Scrip AI — AI TikTok, Reel & YT Shorts Script Writer</title>
         <meta
           name="description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram reel, TikTok and youtube shorts"
+          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
+
+        <meta name="google-site-verification" content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk" />
+        
+        <Script
+        id="google-analytics"
+        src="https://www.googletagmanager.com/gtag/js?id=G-4ZWBVE0WB"
+        onLoad={() => {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-4ZWBVE0WB");
+        }}
+        />
       </Head>
       <main>
         <div className="flex h-screen w-full flex-col items-center text-sm">
