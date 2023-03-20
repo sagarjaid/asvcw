@@ -16,6 +16,7 @@ const App = () => {
   //  const arr =  ['', '', '[Hook] Are you looking to become a successful vide…our way to creating engaging content in no time! ', '', 'Step 1: Start with Instagram ', '- Use Instagram to showcase your talents and build a following ', '- Post regularly and utilize hashtags to attract new viewers ', '- Engage with your followers by responding to comments and DMs ', '', 'Step 2: Master Your Equipment ', '- Invest in quality equipment that produces high-quality videos ', '- Experiment with different editing software to find your personal style ', '- Learn how to use your equipment to its fullest potential ', '', 'Step 3: Collaborate & Network ', '- Collaborate with other creators to expand your audience ', '- Attend industry events and connect with other professionals in your field ', '- Build strong relationships with brands to secure sponsored content opportunities ', '', "Remember, Rome wasn't built in a day. Consistency …ed, and never stop learning. Thanks for watching!"]
 
   const [data, setData] = useState();
+  const [err, setErr] = useState(false);
   const [isLoading, setLoading] = useState(false);
   const [textCopy, setTextCopy] = useState(false);
 
@@ -31,14 +32,15 @@ const App = () => {
 
   const handleClearText = (e) => {
     setData();
-    let copyText = document.getElementById("copy");
-    copyText.innerText = "AI will write content here!";
+    window.location.href = "/app";
+    // let copyText = document.getElementById("copy");
+    // copyText.innerText = "AI will write content here!";
 
-    setPromptData({
-      title: "",
-      description: "",
-      keywords: "",
-    });
+    // // setPromptData({
+    // //   title: "",
+    // //   description: "",
+    // //   keywords: "",
+    // // });
   };
 
   const handleTitle = (e) => {
@@ -91,9 +93,14 @@ const App = () => {
   };
 
   const handleApi = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    getData();
+    if (!prompt.title) {
+      setErr(true);
+    }
+    if (prompt.title) {
+      e.preventDefault();
+      setLoading(true);
+      getData();
+    }
   };
 
   useEffect(() => {
@@ -184,6 +191,11 @@ const App = () => {
                   value={prompt.title}
                   onChange={handleTitle}
                 />
+                {err && (
+                  <div className="text-xs text-rose-600">
+                    title is required*
+                  </div>
+                )}
               </div>
 
               <div className="flex flex-col gap-1 ">
@@ -265,20 +277,36 @@ const App = () => {
                 </select>
               </div>
 
-              <button
-                disabled={isLoading}
-                onClick={handleApi}
-                className="mx-auto w-full rounded-full border bg-rose-500 p-2 text-white outline-none"
-              >
-                {isLoading ? "Loading..." : "Generate Script"}
-              </button>
+              {
+                <button
+                  disabled={isLoading}
+                  onClick={handleApi}
+                  className="mx-auto w-full rounded-full border bg-rose-500 p-2 text-white outline-none"
+                >
+                  {isLoading ? "Loading..." : "Generate Script"}
+                </button>
+              }
+              {data?.length && data && (
+                <button
+                  onClick={() => {
+                    setPromptData({
+                      title: "",
+                      description: "",
+                      keywords: "",
+                    });
+                  }}
+                  className="mx-auto w-full rounded-full border p-2 outline-none"
+                >
+                  Clear All Fields
+                </button>
+              )}
             </div>
             <div className="flex h-screen w-full flex-col gap-2 bg-stone-50 p-4">
               {/* <div className="ml-1">Title: {prompt.title} </div> */}
               <div
                 id="copy"
                 contenteditable="true"
-                className="h-[80vh] w-full overflow-y-scroll rounded-md border bg-white p-4 placeholder:text-[8px] placeholder:text-gray-600 focus:outline-none"
+                className="h-[77vh] w-full overflow-y-scroll rounded-md border bg-white p-4 placeholder:text-[8px] placeholder:text-gray-600 focus:outline-none"
               >
                 <WindupChildren>
                   {data?.length
@@ -292,18 +320,32 @@ const App = () => {
                     : "AI will write content here!"}
                 </WindupChildren>
               </div>
-              <div className="flex justify-center gap-4 sm:justify-end">
+              <div className="flex justify-center gap-2 pt-2 sm:justify-end">
                 <button
-                  className='class="px-2 mb-1 cursor-pointer rounded-full border bg-rose-500 p-2 py-1 text-white'
+                  className="mb-1 cursor-pointer rounded-full border bg-gray-700  px-4 py-2 text-white"
                   onClick={handleCopyText}
                 >
                   {textCopy ? "Text copied" : "Copy to Clipboard"}
                 </button>
                 <button
-                  className='class="px-2 mb-1 cursor-pointer rounded-full border bg-rose-500 p-2 py-1 text-white'
+                  className="mb-1 cursor-pointer rounded-full border bg-rose-500 p-2 text-white"
                   onClick={handleClearText}
                 >
-                  Clear
+                  <svg
+                    className="w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+                    />
+                  </svg>
                 </button>
               </div>
             </div>

@@ -65,7 +65,7 @@ const Home = () => {
           </div>
         </nav>
         <div className="flex flex-col items-center justify-center gap-6 p-2 py-20 ">
-          <div className="line flex flex-col text-center text-base  font-bold xs:text-lg sdm:text-3xl sm:gap-3 md:text-4xl mdx:text-5xl ">
+          <div className="line flex flex-col text-center text-base font-extrabold xs:text-lg sdm:text-3xl sm:gap-3 md:text-4xl mdx:text-5xl ">
             {/* <span> 10X faster & better way to write viral </span>
             <span> 30 sec short video script for </span> */}
             <span>10X faster way to write </span>
@@ -83,7 +83,7 @@ const Home = () => {
           <p className="text-center text-xs sm:text-base">
             Create short videos 30-sec to 60-sec scripts in 1 minutes!
           </p>
-          <div className="flex w-fit animate-bounce items-center justify-around rounded-full bg-rose-600 p-2 px-4	text-white shadow-xl hover:bg-rose-500 ">
+          <div className="flex w-fit items-center justify-around rounded-full bg-rose-600 p-2 px-4	text-white shadow-xl hover:bg-rose-700 ">
             <a href="/app">Start for Free!</a>
             <svg
               className="w-6"
@@ -101,8 +101,9 @@ const Home = () => {
               />
             </svg>
           </div>
-          <div className="text-center text-xs text-gray-600 sm:text-base">
-            ❌ no credit card & no login is required
+          <div className="flex flex-col items-center gap-1 text-center text-xs text-gray-600 sm:text-base">
+            <span>✓ No credit card required</span>
+            <span>✓ No login is required</span>
           </div>
           <a
             className="sd:hidden"
@@ -114,11 +115,14 @@ const Home = () => {
               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
             />
           </a>
+          {/* <div className="flex w-full flex-col items-center justify-center">
+            <div className="text-lg font-semibold">Supported platfroms</div> */}
           <img src="/trs.png" className="w-[30%] py-6"></img>
           {/* <img
             className="w-11/12 border-rose-500 border-2 rounded-lg shadow-2xl hover:shadow-xl"
             src="/app.png"
           ></img> */}
+          {/* </div> */}
           <video
             className="w-11/12 rounded-2xl border-4 border-rose-500 bg-rose-500 shadow-2xl hover:shadow-xl"
             src="/scrip-ai.mp4"
@@ -128,6 +132,17 @@ const Home = () => {
             preLoad="auto"
             loop
           ></video>
+          <div className="pt-10">
+            <a
+              onClick={() => {
+                window.open("/app");
+              }}
+              href="https://www.linkedin.com/in/sagarjaid/"
+              target="_blank"
+            >
+              Made with ❤️ by Sagar Jaid
+            </a>
+          </div>
         </div>
       </main>
     </>
