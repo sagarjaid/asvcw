@@ -139,8 +139,8 @@ const App = () => {
       url: "https://simple-chatgpt-api.p.rapidapi.com/ask",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "8f75fdd009mshcaef63a7370fa74p17a97ajsn1c67d1c2b2d8",
-        "X-RapidAPI-Host": "simple-chatgpt-api.p.rapidapi.com",
+        'X-RapidAPI-Key': 'fb41272234msha5a3f26f657addfp168157jsn1025a09bf663',
+        'X-RapidAPI-Host': 'simple-chatgpt-api.p.rapidapi.com'
       },
       data: data,
     };
