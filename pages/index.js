@@ -133,13 +133,7 @@ const Home = () => {
             loop
           ></video>
           <div className="pt-10">
-            <a
-              onClick={() => {
-                window.open("/app");
-              }}
-              href="https://www.linkedin.com/in/sagarjaid/"
-              target="_blank"
-            >
+            <a href="https://www.linkedin.com/in/sagarjaid/" target="_blank">
               Made with ❤️ by Sagar Jaid
             </a>
           </div>
