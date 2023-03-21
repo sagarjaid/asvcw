@@ -124,7 +124,7 @@ const Home = () => {
           ></img> */}
           {/* </div> */}
           <video
-            className="w-11/12 rounded-2xl border-4 border-rose-500 bg-rose-500 shadow-2xl hover:shadow-xl"
+            className="w-11/12 rounded-2xl border-4 border-rose-500 bg-rose-500 shadow-md hover:shadow-xl"
             src="/scrip-ai.mp4"
             controls
             muted
@@ -132,6 +132,36 @@ const Home = () => {
             preLoad="auto"
             loop
           ></video>
+          <div className="pt-10">
+            <div className="xs:text-lg sdm:text-3xl md:text-4xl font-bold text-center">Loved by Creators & Product Hunter</div>
+            <img src="/love.png" className="w-full py-10 hidden md:block "></img>
+            <img src="/love-mobile.png" className="w-full py-10 md:hidden "></img>
+          </div>
+          <div className=" w-[100%] flex flex-col items-center gap-6 xs:text-lg sdm:text-3xl bg-rose-600 text-white py-10 rounded-xl text-center px-2">
+          Stop wasting time & start creating<br/> short video scripts for FREE!
+          <div className="flex w-fit items-center justify-around rounded-full text-lg p-2 px-4 bg-white	text-black ">
+            <a href="/app" className="text-md">Try Scrip!</a>
+            <svg
+              className="w-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+              />
+            </svg>
+          </div>
+          <div className="flex flex-col items-center gap-1 text-center text-xs text-gray-200 ">
+            <span>✓ No credit card required</span>
+            <span>✓ No login is required</span>
+          </div>
+          </div>
           <div className="pt-10">
             <a href="https://www.linkedin.com/in/sagarjaid/" target="_blank">
               Made with ❤️ by Sagar Jaid
