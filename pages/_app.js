@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
       <Script
         strategy="afterInteractive"
         onLoad={() => {
-          console.log("hjar");
+          console.log("nextscale");
         }}
         dangerouslySetInnerHTML={{
           __html: `(function (w,r){w['NextsaleObject']=r;w[r]=w[r]||function(){(w[r].q = w[r].q || []).push(arguments)};})(window, 'nsio')`,
