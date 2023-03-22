@@ -132,7 +132,7 @@ const App = () => {
       </Head>
       <main>
         <div className="flex h-screen w-full flex-col items-center text-sm">
-          <div className=" w-full bg-yellow-400 px-4 p7-2 text-center">
+          <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
             Due to overwhelming response we are running out of capacity 🔥. few
             users may get empty/no reply {`:(`} if so please check after 4
             hours. 🙏
