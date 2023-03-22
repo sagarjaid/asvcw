@@ -17,10 +17,9 @@ export default async function handler(req, res) {
     frequency_penalty: 0,
     presence_penalty: 0,
   });
-  if (res.status(200)) {
-    console.log(response.data.choices[0].text);
-    res.status(200).json({ result: response.data.choices[0].text });
-  }
+  console.log(response.data.choices[0].text);
+  res.status(200).json({ result: response.data.choices[0].text });
+
   if (res.status(504)) {
     console.log("504 error got called");
     res.json({ result: "Oops! We crashed! refresh the page and try gain 🙏" });
