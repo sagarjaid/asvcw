@@ -192,7 +192,7 @@ const App = () => {
                   value={prompt.title}
                   onChange={handleTitle}
                 />
-                 {/* <div className="w-fit rounded-md p-1 text-xs text-gray-800">
+                {/* <div className="w-fit rounded-md p-1 text-xs text-gray-800">
                     <svg
                       className="mr-2 inline w-3"
                       fill="currentColor"
