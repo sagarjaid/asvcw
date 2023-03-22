@@ -230,7 +230,6 @@ const App = () => {
                   onChange={handleDescription}
                 />
               </div>
-
               <div className="flex flex-col gap-1 ">
                 <div className="text-xs">
                   Keywords <span className="text-[8px]">{`(optional)`}</span>{" "}
