@@ -184,7 +184,7 @@ const App = () => {
               <div className="flex flex-col gap-1 ">
                 <div className="text-xs">Video title</div>
                 <textarea
-                  placeholder="Please tart the video title with — How to, 3 steps, etc"
+                  placeholder="Please start the video title with — How to, 3 steps, etc"
                   type="text"
                   className="w-full rounded-md border p-1 text-xs placeholder:text-[9px] placeholder:text-gray-600"
                   rows="2"
