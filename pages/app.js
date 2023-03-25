@@ -117,13 +117,48 @@ const App = () => {
   return (
     <>
       <Head>
-        <title>Scrip AI — AI TikTok, Reel & YT Shorts Script Writer</title>
+        <title>FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI</title>
+        <meta
+          name="title"
+          content="FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
+        />
         <meta
           name="description"
           content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
         />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://scripai.com/" />
+        <meta
+          property="og:title"
+          content="FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
+        />
+        <meta
+          property="og:description"
+          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
+        />
+        <meta
+          property="og:image"
+          content="https://scripai.com/scrip-ai-cover.png"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://scripai.com/" />
+        <meta
+          property="twitter:title"
+          content="FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
+        />
+        <meta
+          property="twitter:description"
+          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
+        />
+        <meta
+          property="twitter:image"
+          content="https://scripai.com/scrip-ai-cover.png"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
+
+        <link rel="icon" href="https://scripai.com/favicon.png" />
 
         <meta
           name="google-site-verification"
