@@ -1,11 +1,24 @@
 import "@/styles/globals.css";
-import { GoogleAnalytics } from "nextjs-google-analytics";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=G-4ZWBVE0WBE`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4ZWBVE0WBE');
+  `}
+      </Script>
+      <Component {...pageProps} />
+      <Analytics />
       <Script
         strategy="afterInteractive"
         onLoad={() => {
@@ -22,25 +35,6 @@ export default function App({ Component, pageProps }) {
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
         }}
       />
-
-      <Script
-        strategy="afterInteractive"
-        onLoad={() => {
-          console.log("nextscale");
-        }}
-        dangerouslySetInnerHTML={{
-          __html: `(function (w,r){w['NextsaleObject']=r;w[r]=w[r]||function(){(w[r].q = w[r].q || []).push(arguments)};})(window, 'nsio')`,
-        }}
-      />
-
-      <Script
-        src="https://sdk.nextsale.io/nextsale.min.js?key=pk_b9846a313b2fe71ca70159baa7ee3e22819c2721"
-        async
-      ></Script>
-
-      <Component {...pageProps} />
-      <GoogleAnalytics />
-      <Analytics />
     </>
   );
 }
