@@ -100,10 +100,10 @@ const WhatsNew = () => {
             </ul>
           </div>
         </nav>
-        <div className="flex flex-col items-start justify-center gap-6 p-2 py-20 ">
+        <div className="flex flex-col items-start justify-center gap-6 p-2 py-10 ">
           <div className="flex flex-col gap-2 text-4xl font-medium">
             What's new!
-            <div className="text-sm">Updated on Mar 9, 2023</div>
+            <div className="text-sm">Updated on 1 April, 2023</div>
           </div>
           <div className="flex w-full flex-col gap-2 rounded-md bg-blue-50 p-4">
             <div className="text-xl"> ✅ 13K+ Users in 13 days!</div>
