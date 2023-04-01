@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { WindupChildren } from "windups";
 
 const App = () => {
@@ -12,8 +11,6 @@ const App = () => {
     tone: "",
     time: "",
   });
-
-  //  const arr =  ['', '', '[Hook] Are you looking to become a successful vide…our way to creating engaging content in no time! ', '', 'Step 1: Start with Instagram ', '- Use Instagram to showcase your talents and build a following ', '- Post regularly and utilize hashtags to attract new viewers ', '- Engage with your followers by responding to comments and DMs ', '', 'Step 2: Master Your Equipment ', '- Invest in quality equipment that produces high-quality videos ', '- Experiment with different editing software to find your personal style ', '- Learn how to use your equipment to its fullest potential ', '', 'Step 3: Collaborate & Network ', '- Collaborate with other creators to expand your audience ', '- Attend industry events and connect with other professionals in your field ', '- Build strong relationships with brands to secure sponsored content opportunities ', '', "Remember, Rome wasn't built in a day. Consistency …ed, and never stop learning. Thanks for watching!"]
 
   const [data, setData] = useState();
   const [err, setErr] = useState(false);
@@ -33,14 +30,6 @@ const App = () => {
   const handleClearText = (e) => {
     setData();
     window.location.href = "/app";
-    // let copyText = document.getElementById("copy");
-    // copyText.innerText = "AI will write content here!";
-
-    // // setPromptData({
-    // //   title: "",
-    // //   description: "",
-    // //   keywords: "",
-    // // });
   };
 
   const handleTitle = (e) => {
@@ -68,9 +57,9 @@ const App = () => {
   };
 
   const getData = async () => {
-    let userPrompt = `assume you are a content creator. write ${prompt.time} content for a Tiktok/Reel/youtube short on the following topic & factor. topic: ${prompt.title}, description: ${prompt.description}, keyword: ${prompt.keywords}, The tone of voice: ${prompt.tone}, maximum time to read the content: ${prompt.time}, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, note: make sure to write the concept in bit-size sentences and put each sentence in the next line`;
+    let userPrompt = `Assume you are a content creator. Write content in ${prompt.language || "English"} for a Tiktok on following. Topic: ${prompt.title}, description: ${prompt.description}, keyword: ${prompt.keywords}, Tone of voice: ${prompt.tone || "Professional"}, Time to read the content: ${prompt.time || "30 Sec"}, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, make sure to write the content in bit-size sentences and put each sentence in the next line.`;
 
-    const response = await fetch("/api/hello", {
+    const response = await fetch("/api/getdata", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -174,12 +163,14 @@ const App = () => {
           </div> */}
           <nav className="flex w-full items-center justify-between border-b p-4">
             <a href="/">
-              <img src="/scrip.svg" className="w-[80px]"></img>
+              <img src="/scrip.svg" className="w-[80px]" />
             </a>
             <div>
-              <ul className="flex items-center gap-4 text-xs">
+              <ul className="flex items-center gap-4 text-sm">
                 {/* <li className="cursor-pointer">Pricing</li> */}
-                {/* <ll>What's new</ll> */}
+                <ll className="rounded-md bg-rose-50 p-1 px-2">
+                  <a href="/new">What's new</a>
+                </ll>
                 <li>
                   <a
                     href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
@@ -289,6 +280,7 @@ const App = () => {
                     </option>
                     <option value="Spanish">Spanish</option>
                     <option value="French">French</option>
+                    <option value="Chinese">Chinese</option>
                     <option value="Hindi">Hindi</option>
                   </select>
                 </div>

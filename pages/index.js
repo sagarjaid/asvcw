@@ -59,12 +59,14 @@ const Home = () => {
         {/* <div className=" p-2 w-full text-center bg-yellow-400">NOTE: Due to overwhelming response we are out of capacity right now 🔥🔥🔥 please check us after 4 hours</div> */}
         <nav className="flex items-center justify-between py-4">
           <a href="/">
-            <img src="/scrip.svg" className="w-[80px]"></img>
+            <img src="/scrip.svg" className="w-[80px]" />
           </a>
           <div>
-            <ul className="flex items-center gap-4 text-xs">
+            <ul className="flex items-center gap-4 text-sm">
               {/* <li className="cursor-pointer">Pricing</li> */}
-              {/* <ll>What's new</ll> */}
+              <ll className="rounded-md bg-rose-50 p-1 px-2">
+                <a href="/new">What's new</a>
+              </ll>
               <li className="hidden sd:inline">
                 <a
                   href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
@@ -150,35 +152,22 @@ const Home = () => {
               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
             />
           </a>
-          {/* <div className="flex w-full flex-col items-center justify-center">
-            <div className="text-lg font-semibold">Supported platfroms</div> */}
-          <img src="/trs.png" className="w-[30%] py-6"></img>
-          {/* <img
-            className="w-11/12 border-rose-500 border-2 rounded-lg shadow-2xl hover:shadow-xl"
-            src="/app.png"
-          ></img> */}
-          {/* </div> */}
-          <video
-            className="w-11/12 rounded-2xl border-4 border-rose-500 bg-rose-500 shadow-md hover:shadow-xl"
-            src="/scrip-ai.mp4"
-            controls
-            muted
-            autoPlay={"autoplay"}
-            preLoad="auto"
-            loop
-          ></video>
+
+          <img src="/trs.png" className="w-[30%] py-6" />
+
+          <iframe
+            className="aspect-video w-11/12 rounded-xl border-4 border-rose-600 bg-rose-600"
+            title="Scrip AI — AI TikTok, Reel &amp; YT Shorts Script Writer"
+            src="https://www.youtube.com/embed/m2Fl9i7CHTY"
+            frameborder="0"
+          ></iframe>
+
           <div className="pt-10">
             <div className="text-center font-bold xs:text-lg sdm:text-3xl md:text-4xl">
               Loved by Creators & Product Hunters
             </div>
-            <img
-              src="/love.png"
-              className="hidden w-full py-10 md:block "
-            ></img>
-            <img
-              src="/love-mobile.png"
-              className="w-full py-10 md:hidden "
-            ></img>
+            <img src="/love.png" className="hidden w-full py-10 md:block " />
+            <img src="/love-mobile.png" className="w-full py-10 md:hidden " />
           </div>
           <div className=" flex w-[100%] flex-col items-center gap-6 rounded-xl bg-rose-600 py-10 px-2 text-center text-white xs:text-lg sdm:text-3xl">
             Stop wasting time & start creating
