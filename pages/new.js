@@ -7,10 +7,10 @@ const WhatsNew = () => {
   return (
     <>
       <Head>
-        <title>Scrip AI — AI TikTok, Reel & YT Shorts Script Writer</title>
+        <title>What's New | FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI</title>
         <meta
           name="title"
-          content="Scrip AI — AI TikTok, Reel & YT Shorts Script Writer"
+          content="What's New | FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
         />
         <meta
           name="description"
@@ -21,7 +21,7 @@ const WhatsNew = () => {
         <meta property="og:url" content="https://scripai.com/" />
         <meta
           property="og:title"
-          content="Scrip AI — AI TikTok, Reel & YT Shorts Script Writer"
+          content="What's New | FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
         />
         <meta
           property="og:description"
@@ -36,7 +36,7 @@ const WhatsNew = () => {
         <meta property="twitter:url" content="https://scripai.com/" />
         <meta
           property="twitter:title"
-          content="Scrip AI — AI TikTok, Reel & YT Shorts Script Writer"
+          content="What's New | FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
         />
         <meta
           property="twitter:description"
