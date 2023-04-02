@@ -20,5 +20,5 @@ export default async function handler(req, res) {
   });
   console.log(response.data, "response.data");
   // res.status(200).json({ result: response.data.choices[0].text });
-  res.status(200).json({ result: response.data });
+  res.send(response.data);
 }
