@@ -159,7 +159,7 @@ const Home = () => {
             className="aspect-video w-11/12 rounded-xl border-4 border-rose-600 bg-rose-600"
             title="Scrip AI — AI TikTok, Reel &amp; YT Shorts Script Writer"
             src="https://www.youtube.com/embed/m2Fl9i7CHTY"
-            frameborder="0"
+            frameBorder="0"
           ></iframe>
 
           <div className="pt-10">

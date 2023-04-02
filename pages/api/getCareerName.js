@@ -6,7 +6,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-export default async function handler(req, res) {
+export default async function getCareerName(req, res) {
   console.log(req.body, "req.body");
   console.log(req.body.text, "req.body.text");
   const response = await openai.createCompletion({
