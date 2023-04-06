@@ -197,9 +197,22 @@ const Home = () => {
               <span>✓ No login is required</span>
             </div>
           </div>
-          <div className="pt-10">
+          <div className="flex items-center gap-2 pt-10">
             <a href="https://www.linkedin.com/in/sagarjaid/" target="_blank">
               Made with ❤️ by Sagar Jaid
+            </a>
+            <span>|</span>
+
+            <a href="https://scripai.com/privacy" target="_blank">
+              Privacy Policy
+            </a>
+            <span>|</span>
+            <a href="https://scripai.com/tc" target="_blank">
+              Terms and Conditions
+            </a>
+            <span>|</span>
+            <a href="https://scripai.com/gdrp" target="_blank">
+              GDRP Policy
             </a>
           </div>
         </div>

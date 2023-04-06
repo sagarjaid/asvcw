@@ -117,7 +117,7 @@ const App = () => {
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://scripai.com/" />
+        <meta property="og:url" content="https://scripai.com/app" />
         <meta
           property="og:title"
           content="FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
