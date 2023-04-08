@@ -20,6 +20,11 @@ export default function App({ Component, pageProps }) {
       <Component {...pageProps} />
       <Analytics />
       <Script
+        async={true}
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        strategy="afterInteractive"
+      />
+      <Script
         strategy="afterInteractive"
         onLoad={() => {
           console.log("hjar");
