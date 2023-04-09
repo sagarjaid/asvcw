@@ -21,8 +21,9 @@ export default function App({ Component, pageProps }) {
       <Analytics />
       <Script
         async={true}
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096102876286946"
         strategy="afterInteractive"
+        crossOrigin="anonymous"
       />
       <Script
         strategy="afterInteractive"
