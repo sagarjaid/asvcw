@@ -70,7 +70,7 @@ const App = () => {
       prompt.time || "30 Sec"
     }, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, make sure to write the content in bit-size sentences and put each sentence in the next line.`;
 
-    const response = await fetch("/api/getdata", {
+    const response = await fetch("/api/getGPTdata", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
