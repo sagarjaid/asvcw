@@ -60,15 +60,11 @@ const App = () => {
   };
 
   const getData = async () => {
-    let userPrompt = `Assume you are a content creator. Write content in ${
-      prompt.language || "English"
-    } for a Tiktok on following. Topic: ${prompt.title}, description: ${
-      prompt.description
-    }, keyword: ${prompt.keywords}, Tone of voice: ${
-      prompt.tone || "Professional"
-    }, Time to read the content: ${
-      prompt.time || "30 Sec"
-    }, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, make sure to write the content in bit-size sentences and put each sentence in the next line.`;
+    let userPrompt = `Assume you are a content creator. Write content in ${prompt.language || "English"
+      } for a Tiktok on following. Topic: ${prompt.title}, description: ${prompt.description
+      }, keyword: ${prompt.keywords}, Tone of voice: ${prompt.tone || "Professional"
+      }, Time to read the content: ${prompt.time || "30 Sec"
+      }, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, make sure to write the content in bit-size sentences and put each sentence in the next line.`;
 
     const response = await fetch("/api/getGPTdata", {
       method: "POST",
@@ -174,11 +170,11 @@ const App = () => {
       </Head>
       <main>
         <div className="flex h-screen w-full flex-col items-center text-sm">
-          {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
+          <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
             Due to overwhelming response we are running out of capacity 🔥. few
-            users may get empty/no reply {`:(`} if so please check after 4
+            users may get empty/no reply {`:(`} if so please check after 24
             hours. 🙏
-          </div> */}
+          </div>
           <nav className="flex w-full items-center justify-between border-b p-4">
             <a href="/">
               <img src="/scrip.svg" className="w-[80px]" />
