@@ -55,8 +55,8 @@ const Home = () => {
           content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
         />
       </Head>
+      <div className=" p-2 w-full text-center bg-yellow-400">NOTE: Due to overwhelming response we are out of capacity right now 🔥🔥🔥 please check us after 24 hours</div>
       <main className="m-auto flex max-w-5xl flex-col px-4">
-        <div className=" p-2 w-full text-center bg-yellow-400">NOTE: Due to overwhelming response we are out of capacity right now 🔥🔥🔥 please check us after 24 hours</div>
         <nav className="flex items-center justify-between py-4">
           <a href="/">
             <img src="/scrip.svg" className="w-[80px]" />
