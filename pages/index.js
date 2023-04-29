@@ -4,6 +4,16 @@ import Typewriter from "typewriter-effect";
 import Script from "next/script";
 
 const Home = () => {
+  const [isMobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth <= 640) {
+      let w = window.innerWidth;
+      console.log(w);
+      setMobile(true);
+    }
+  }, [])
+
   return (
     <>
       <Head>
@@ -55,7 +65,10 @@ const Home = () => {
           content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
         />
       </Head>
-      <div className=" p-2 w-full text-center bg-yellow-400">NOTE: Due to overwhelming response we are out of capacity right now 🔥🔥🔥 please check us after 24 hours</div>
+      <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
+        Due to overwhelming response we are running out of capacity 🔥. Please check us after 24
+        hours. 🙏
+      </div>
       <main className="m-auto flex max-w-5xl flex-col px-4">
         <nav className="flex items-center justify-between py-4">
           <a href="/">
@@ -79,8 +92,8 @@ const Home = () => {
                 </a>
               </li>
               <li className="flex w-fit items-center gap-1 rounded-full bg-rose-500 p-1 px-3	 text-white shadow-sm ">
-                <a href="/app">Try for free!</a>
-                <a href="/app">
+                <a href={isMobile ? "/script" : "/app"}>Try for free!</a>
+                <a href={isMobile ? "/script" : "/app"}>
                   <svg
                     className="w-6"
                     fill="none"
@@ -121,7 +134,7 @@ const Home = () => {
             Create short videos 30-sec to 60-sec scripts in 1 minutes!
           </p>
           <div className="flex w-fit items-center justify-around rounded-full bg-rose-600 p-2 px-4	text-white shadow-xl hover:bg-rose-700 ">
-            <a href="/app">Start for Free!</a>
+            <a href={isMobile ? "/script" : "/app"}>Start for Free!</a>
             <svg
               className="w-6"
               fill="none"
@@ -173,7 +186,7 @@ const Home = () => {
             Stop wasting time & start creating
             <br /> short video scripts for FREE!
             <div className="flex w-fit items-center justify-around rounded-full bg-white p-2 px-4 text-lg	text-black ">
-              <a href="/app" className="text-md">
+              <a href={isMobile ? "/script" : "/app"} className="text-md">
                 Try Scrip!
               </a>
               <svg
