@@ -31,7 +31,7 @@ const Script = () => {
 
   const handleClearText = (e) => {
     setData();
-    window.location.href = "/writer";
+    window.location.href = "/script";
   };
 
   const handleTitle = (e) => {
@@ -212,7 +212,7 @@ const Script = () => {
               </ul>
             </div>
           </nav>
-          <div className="flex w-full flex-col justify-between sm:flex-row">
+          <div className="flex w-full flex-col items-center">
             {!show &&
               <div className="flex w-full flex-col gap-6 p-4 sm:w-3/12 ">
                 <div className="flex flex-col gap-1 ">
