@@ -66,8 +66,7 @@ const Home = () => {
         />
       </Head>
       <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
-        Due to overwhelming response we are running out of capacity 🔥. Please check us after 24
-        hours. 🙏
+        We are LIVE again, Try it 🙏
       </div>
       <main className="m-auto flex max-w-5xl flex-col px-4">
         <nav className="flex items-center justify-between py-4">

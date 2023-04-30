@@ -163,9 +163,13 @@ const Script = () => {
       </Head>
       <main>
         <div className="flex h-screen w-full flex-col items-center text-sm">
-          <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
+          {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
             Due to overwhelming response we are running out of capacity 🔥. Please check us after 24
             hours. 🙏
+            We are LIVE again, Try it 🙏
+          </div> */}
+          <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
+            We are LIVE again, Try it 🙏
           </div>
           <nav className="flex w-full items-center justify-between border-b p-4">
             <a href="/">
