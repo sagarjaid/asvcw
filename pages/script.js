@@ -4,6 +4,7 @@ import { WindupChildren } from "windups";
 
 const Script = () => {
   const [show, setShow] = useState(false);
+  const [isDesktop, setDesktop] = useState(false);
 
   const [prompt, setPromptData] = useState({
     title: "",
@@ -108,7 +109,17 @@ const Script = () => {
       tone: "Professional",
       time: "30-to-60 seconds",
     });
-  }, []);
+
+    if (window.innerWidth >= 640) {
+      let w = window.innerWidth;
+      console.log(w);
+      setDesktop(true);
+    }
+  }, [isDesktop]);
+
+  if (isDesktop) {
+    window.location.href = "/app"
+  }
 
   return (
     <>
@@ -161,16 +172,16 @@ const Script = () => {
           content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
         />
       </Head>
+      <div className=" w-full bg-green-400 px-4 py-2 text-center">
+        We are LIVE again 🙏
+      </div>
       <main>
-        <div className="flex h-screen w-full flex-col items-center text-sm">
-          {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
+        <div className="flex h-screen max-w-5xl m-auto flex-col items-center text-sm">
+          {/* <div className=" w-full bg-green-400 px-4 py-2 text-center">
             Due to overwhelming response we are running out of capacity 🔥. Please check us after 24
             hours. 🙏
-            We are LIVE again, Try it 🙏
+            We are LIVE again 🙏
           </div> */}
-          <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
-            We are LIVE again, Try it 🙏
-          </div>
           <nav className="flex w-full items-center justify-between border-b p-4">
             <a href="/">
               <img src="/scrip.svg" className="w-[80px]" />
@@ -218,7 +229,7 @@ const Script = () => {
           </nav>
           <div className="flex w-full flex-col items-center">
             {!show &&
-              <div className="flex w-full flex-col gap-6 p-4 sm:w-3/12 ">
+              <div className="flex w-full flex-col gap-6 p-4 ">
                 <div className="flex flex-col gap-1 ">
                   <div className="text-xs">Video title</div>
                   <textarea
