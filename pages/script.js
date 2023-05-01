@@ -172,17 +172,17 @@ const Script = () => {
           content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
         />
       </Head>
-      <div className=" w-full bg-green-400 px-4 py-2 text-center">
+      <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
         We are LIVE again 🙏
       </div>
       <main>
         <div className="flex h-screen max-w-5xl m-auto flex-col items-center text-sm">
-          {/* <div className=" w-full bg-green-400 px-4 py-2 text-center">
+          {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
             Due to overwhelming response we are running out of capacity 🔥. Please check us after 24
             hours. 🙏
             We are LIVE again 🙏
           </div> */}
-          <nav className="flex w-full items-center justify-between border-b p-4">
+          <nav className="flex w-full items-center justify-between p-4">
             <a href="/">
               <img src="/scrip.svg" className="w-[80px]" />
             </a>
@@ -229,8 +229,8 @@ const Script = () => {
           </nav>
           <div className="flex w-full flex-col items-center">
             {!show &&
-              <div className="flex w-full flex-col gap-6 p-4 ">
-                <div className="flex flex-col gap-1 ">
+              <div className="flex w-full flex-col gap-6 p-4 pb-2 ">
+                <div className="flex flex-col gap-1">
                   <div className="text-xs">Video title</div>
                   <textarea
                     placeholder="How to..."
