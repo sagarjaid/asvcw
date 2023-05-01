@@ -229,7 +229,7 @@ const Script = () => {
           </nav>
           <div className="flex w-full flex-col items-center">
             {!show &&
-              <div className="flex w-full flex-col gap-6 p-4 pb-2 ">
+              <div className="flex w-full flex-col gap-6 p-4 pb-20 ">
                 <div className="flex flex-col gap-1">
                   <div className="text-xs">Video title</div>
                   <textarea
