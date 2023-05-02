@@ -7,6 +7,12 @@ const Home = () => {
   const [isMobile, setMobile] = useState(false);
 
   const reloadAds = () => {
+    // Remove existing ads
+    const ads = document.querySelectorAll('.adsbygoogle');
+    ads.forEach(ad => {
+      (ad).innerHTML = '';
+    });
+
     // Reload Google Auto Ads
     (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
