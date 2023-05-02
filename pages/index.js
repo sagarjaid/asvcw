@@ -6,12 +6,25 @@ import Script from "next/script";
 const Home = () => {
   const [isMobile, setMobile] = useState(false);
 
+  const reloadAds = () => {
+    // Reload Google Auto Ads
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }
+
+
   useEffect(() => {
     if (window.innerWidth <= 640) {
       let w = window.innerWidth;
       console.log(w);
       setMobile(true);
     }
+
+    // Reload ads every 30 seconds
+
+    const interval = setInterval(() => {
+      reloadAds();
+    }, 15000);
+    return () => clearInterval(interval);
   }, [])
 
   return (
