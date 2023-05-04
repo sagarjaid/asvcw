@@ -26,6 +26,7 @@ export default function App({ Component, pageProps }) {
         crossOrigin="anonymous"
       />
       <Script
+        async={true}
         src="https://fundingchoicesmessages.google.com/i/pub-7096102876286946?ers=1"
         strategy="afterInteractive"
         nonce="rRGNy_8lxB7rOtYtnZFp5w"
