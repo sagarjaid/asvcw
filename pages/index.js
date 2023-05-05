@@ -65,9 +65,9 @@ const Home = () => {
           content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
         />
       </Head>
-      <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
+      {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
         We are LIVE again 🙏
-      </div>
+      </div> */}
       <main className="m-auto flex max-w-5xl flex-col px-4">
         <nav className="flex items-center justify-between py-4">
           <a href="/">
