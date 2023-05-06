@@ -76,10 +76,10 @@ const Home = () => {
           <div>
             <ul className="flex items-center gap-4 text-sm">
               {/* <li className="cursor-pointer">Pricing</li> */}
-              <ll className="rounded-md bg-rose-50 p-1 px-2">
-                <a href="/new">What's new</a>
+              <ll className="rounded-md animate-pulse font-bold border border-rose-500 p-1 px-2">
+                <a href="/ai-tools">FREE AI TOOLS</a>
               </ll>
-              <li className="hidden sd:inline">
+              {/* <li className="hidden sd:inline">
                 <a
                   href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
                   target="_blank"
@@ -89,7 +89,7 @@ const Home = () => {
                     src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
                   />
                 </a>
-              </li>
+              </li> */}
               <li className="flex w-fit items-center gap-1 rounded-full bg-rose-500 p-1 px-3	 text-white shadow-sm ">
                 <a href={isMobile ? "/script" : "/app"}>Try for free!</a>
                 <a href={isMobile ? "/script" : "/app"}>
@@ -155,7 +155,6 @@ const Home = () => {
             <span>✓ No login is required</span>
           </div>
           <a
-            className="sd:hidden"
             href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
             target="_blank"
           >

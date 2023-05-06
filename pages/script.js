@@ -192,7 +192,7 @@ const Script = () => {
                 {/* <ll className="rounded-md bg-rose-50 p-1 px-2">
                   <a href="/new">What's new</a>
                 </ll> */}
-                <li>
+                {/* <li>
                   <a
                     className="hidden sm:inline"
                     href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
@@ -203,7 +203,10 @@ const Script = () => {
                       src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
                     />
                   </a>
-                </li>
+                </li> */}
+                <ll className="rounded-md animate-pulse font-bold border border-rose-500 p-1 px-2">
+                  <a href="/ai-tools">FREE AI TOOLS</a>
+                </ll>
                 <li className="flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-500 p-1 px-3 text-white shadow-sm ">
                   <a href="/">Home</a>
                   <a href="/">
@@ -230,6 +233,11 @@ const Script = () => {
           <div className="flex w-full flex-col items-center">
             {!show &&
               <div className="flex w-full flex-col gap-6 p-4 pb-20 ">
+                <div className="flex flex-col gap-3 ">
+                  <div className="text-xl font-bold text-black ">
+                    AI Short Script</div>
+                  <hr />
+                </div>
                 <div className="flex flex-col gap-1">
                   <div className="text-xs">Video title</div>
                   <textarea
