@@ -50,7 +50,7 @@ const AIHashtagGenerator = () => {
 
     let hashtagDescription = prompt.description ? `context of photo/video: ${prompt.description}` : ""
 
-    let userPrompt = `write 30 ${prompt.platform || "Instagram"} hashtags for keyword "${prompt.hashtag || "[choose any hashtag]"}" in ${prompt.language || "English"}. ${hashtagDescription}`
+    let userPrompt = `write 30 ${prompt.platform || "Instagram"} hashtags for keyword "${prompt.hashtag || "[choose any hashtag]"}" in ${prompt.language || "English"}. ${hashtagDescription}. only hashtag are allowed in your answer`
 
     const response = await fetch("/api/getGPTdata", {
       method: "POST",
@@ -98,25 +98,25 @@ const AIHashtagGenerator = () => {
   return (
     <>
       <Head>
-        <title>FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI</title>
+        <title>FREE AI Hashtag generator for TikTok, Reel & YT Shorts — Scrip AI</title>
         <meta
           name="title"
-          content="FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
+          content="FREE AI Hashtag generator for TikTok, Reel & YT Shorts — Scrip AI"
         />
         <meta
           name="description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
+          content="10X faster wasy to write Hashtag for Instagram Reel, TikTok and Youtube shorts"
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://scripai.com/app" />
+        <meta property="og:url" content="https://scripai.com/hashtag" />
         <meta
           property="og:title"
-          content="FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
+          content="FREE AI Hashtag generator for TikTok, Reel & YT Shorts — Scrip AI"
         />
         <meta
           property="og:description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
+          content="10X faster wasy to write Hashtag for Instagram Reel, TikTok and Youtube shorts"
         />
         <meta
           property="og:image"
@@ -124,14 +124,14 @@ const AIHashtagGenerator = () => {
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://scripai.com/" />
+        <meta property="twitter:url" content="https://scripai.com/hashtag" />
         <meta
           property="twitter:title"
-          content="FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
+          content="FREE AI Hashtag generator for TikTok, Reel & YT Shorts — Scrip AI"
         />
         <meta
           property="twitter:description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
+          content="10X faster wasy to write Hashtag for Instagram Reel, TikTok and Youtube shorts"
         />
         <meta
           property="twitter:image"
@@ -166,7 +166,7 @@ const AIHashtagGenerator = () => {
                 {/* <ll className="rounded-md bg-rose-50 p-1 px-2">
                   <a href="/new">What's new</a>
                 </ll> */}
-                <li>
+                {/* <li>
                   <a
                     className="hidden sm:inline"
                     href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
@@ -177,7 +177,10 @@ const AIHashtagGenerator = () => {
                       src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
                     />
                   </a>
-                </li>
+                </li> */}
+                <ll className="rounded-md animate-pulse font-bold border border-rose-500 p-1 px-2">
+                  <a href="/ai-tools">FREE AI TOOLS</a>
+                </ll>
                 <li className="flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-500 p-1 px-3 text-white shadow-sm ">
                   <a href="/">Home</a>
                   <a href="/">
