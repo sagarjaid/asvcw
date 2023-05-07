@@ -63,23 +63,12 @@ const WhatsNew = () => {
           <div>
             <ul className="flex items-center gap-4 text-sm">
               {/* <li className="cursor-pointer">Pricing</li> */}
-              <ll className="rounded-md bg-rose-50 p-1 px-2">
-                <a href="/new">What's new</a>
+              <ll className="rounded-md animate-pulse font-bold border border-rose-500 p-1 px-2">
+                <a href="/ai-tools">FREE AI TOOLS</a>
               </ll>
-              <li className="hidden sd:inline">
-                <a
-                  href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
-                  target="_blank"
-                >
-                  <img
-                    className="w-36"
-                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
-                  />
-                </a>
-              </li>
               <li className="flex w-fit items-center gap-1 rounded-full bg-rose-500 p-1 px-3	 text-white shadow-sm ">
-                <a href="/app">Try for free!</a>
-                <a href="/app">
+                <a href="/">Home</a>
+                <a href="/">
                   <svg
                     className="w-6"
                     fill="none"
@@ -145,9 +134,26 @@ const WhatsNew = () => {
               shorts 10X faster.
             </div>
           </div>
-          <div className="pt-10">
+          <div className="flex items-center gap-2 py-20">
             <a href="https://www.linkedin.com/in/sagarjaid/" target="_blank">
-              Made with ❤️ by Sagar Jaid
+              by Sagar Jaid
+            </a>
+            <span>|</span>
+
+            <a href="https://scripai.com/privacy" target="_blank">
+              Privacy
+            </a>
+            <span>|</span>
+            <a href="https://scripai.com/tc" target="_blank">
+              T&C
+            </a>
+            <span>|</span>
+            <a href="https://scripai.com/gdrp" target="_blank">
+              GDRP
+            </a>
+            <span>|</span>
+            <a href="https://scripai.com/new" target="_blank">
+              What's New
             </a>
           </div>
         </div>

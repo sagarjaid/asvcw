@@ -7,7 +7,7 @@ const AIHashtagGenerator = () => {
     hashtag: "",
     description: "",
     language: "",
-    platform: "",
+    platform: "Twitter",
   });
 
   const [data, setData] = useState();
@@ -27,7 +27,7 @@ const AIHashtagGenerator = () => {
 
   const handleClearText = (e) => {
     setData();
-    window.location.href = "/hashtag";
+    window.location.href = "/twitter-hashtag";
   };
 
   const handleDescription = (e) => {
@@ -42,15 +42,13 @@ const AIHashtagGenerator = () => {
     setPromptData({ ...prompt, language: e.target.value });
   };
 
-  const handlePlatform = (e) => {
-    setPromptData({ ...prompt, platform: e.target.value });
-  };
-
   const getData = async () => {
 
-    let hashtagDescription = prompt.description ? `context of photo/video: ${prompt.description}` : ""
+    let hashtagDescription = prompt.description && `and context of tweet: ${prompt.description}`
+    let hasHashtag = prompt.hashtag && `tweet topic/keyword ${prompt.hashtag}`
 
-    let userPrompt = `write 30 ${prompt.platform || "Instagram"} hashtags for keyword "${prompt.hashtag || "[choose any hashtag]"}" in ${prompt.language || "English"}. ${hashtagDescription}. only hashtag are allowed in your answer`
+
+    let userPrompt = `write 5 twitter hashtags based on "${hasHashtag}" ${hashtagDescription} in ${prompt.language || "English"}. only hashtag are allowed in your answer`
 
     const response = await fetch("/api/getGPTdata", {
       method: "POST",
@@ -86,7 +84,6 @@ const AIHashtagGenerator = () => {
       hashtag: "",
       description: "",
       language: "English",
-      platform: "Instagram",
     });
   }, []);
 
@@ -204,7 +201,7 @@ const AIHashtagGenerator = () => {
             <div className="flex w-full flex-col gap-6 p-4 sm:w-2/5 ">
               <div className="flex flex-col gap-3 ">
                 <div className="text-xl w-full font-bold text-black ">
-                  AI Hashtag Generator</div>
+                  AI Twitter Hashtag Generator</div>
                 <hr />
               </div>
               {/* <div className="text-xl w-full font-bold text-black ">
@@ -232,7 +229,7 @@ const AIHashtagGenerator = () => {
               <div className="flex flex-col gap-1 ">
                 <div className="flex flex-col gap-1 ">
                   <div className="text-xs">
-                    Main hashtag <span className="text-[8px]">{`(topic)`}</span>{" "}
+                    Tweet Topic
                   </div>
                   <input
                     type="text"
@@ -252,43 +249,18 @@ const AIHashtagGenerator = () => {
 
               <div className="flex flex-col gap-1 ">
                 <div className="text-xs">
-                  Photo/video description{" "}
+                  Tweet description{" "}
                   <span className="text-[8px]">{`(optional)`}</span>
                 </div>
                 <textarea
                   type="text"
-                  placeholder="Please enter photo/video description if you want"
+                  placeholder="Please enter tweet here. (max 250 char)"
                   className="w-full rounded-md border p-1 text-xs placeholder:text-[9px] placeholder:text-gray-600"
                   rows="5"
-                  maxLength={69}
+                  maxLength={250}
                   value={prompt.description}
                   onChange={handleDescription}
                 />
-              </div>
-
-              {/* <div className="flex w-full items-center  gap-4"> */}
-              <div className="flex flex-col gap-1 ">
-                <div className="text-xs">Social media platfrom</div>
-                <select
-                  onChange={handlePlatform}
-                  className="w-full rounded-md border p-1 px-2 text-xs outline-none"
-                >
-                  <option value="Instagram" defaultValue>
-                    Instagram
-                  </option>
-                  <option value="TikTok" defaultValue>
-                    TikTok
-                  </option>
-                  <option value="Facebook">Facebook</option>
-                  <option value="Twitter">Twitter</option>
-                  <option value="Linkedin">Linkedin</option>
-                  <option value="Youtube">Youtube</option>
-                  <option value="Youtube Short">Mastodon</option>
-                  <option value="Vk">Vk</option>
-                  <option value="Tumblr">Tumblr</option>
-                  <option value="Instagram Reel">IG Reel</option>
-                  <option value="Youtube Short">YT Shorts</option>
-                </select>
               </div>
 
               <div className="flex flex-col gap-1 ">
@@ -322,9 +294,8 @@ const AIHashtagGenerator = () => {
                 <button
                   onClick={() => {
                     setPromptData({
-                      title: "",
-                      description: "",
                       hashtag: "",
+                      description: "",
                     });
                   }}
                   className="mx-auto w-full rounded-full border p-2 outline-none"

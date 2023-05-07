@@ -210,20 +210,24 @@ const Home = () => {
           </div>
           <div className="flex items-center gap-2 pt-10">
             <a href="https://www.linkedin.com/in/sagarjaid/" target="_blank">
-              Made with ❤️ by Sagar Jaid
+              by Sagar Jaid
             </a>
             <span>|</span>
 
             <a href="https://scripai.com/privacy" target="_blank">
-              Privacy Policy
+              Privacy
             </a>
             <span>|</span>
             <a href="https://scripai.com/tc" target="_blank">
-              Terms and Conditions
+              T&C
             </a>
             <span>|</span>
             <a href="https://scripai.com/gdrp" target="_blank">
-              GDRP Policy
+              GDRP
+            </a>
+            <span>|</span>
+            <a href="https://scripai.com/new" target="_blank">
+              What's New
             </a>
           </div>
         </div>
