@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
-import Script from "next/script";
 
 const Home = () => {
   const [isMobile, setMobile] = useState(false);
@@ -74,10 +73,11 @@ const Home = () => {
             <img src="/scrip.svg" className="w-[80px]" />
           </a>
           <div>
-            <ul className="flex items-center gap-4 text-sm">
+            <ul className="flex items-center gap-1 sm:gap-4 text-sm">
               {/* <li className="cursor-pointer">Pricing</li> */}
-              <ll className="rounded-md animate-pulse font-bold border border-rose-500 p-1 px-2">
-                <a href="/ai-tools">FREE AI TOOLS</a>
+              <ll className="relative rounded-md font-bold border border-rose-500 p-1 px-3">
+                <span className=" absolute -top-1.5 animate-pulse right-1.5 text-[9px] w-3 h-3 rounded-full bg-rose-600"></span>
+                <a href="/ai-tools">MORE AI TOOLS</a>
               </ll>
               {/* <li className="hidden sd:inline">
                 <a

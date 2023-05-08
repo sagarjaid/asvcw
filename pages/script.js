@@ -204,8 +204,9 @@ const Script = () => {
                     />
                   </a>
                 </li> */}
-                <ll className="rounded-md animate-pulse font-bold border border-rose-500 p-1 px-2">
-                  <a href="/ai-tools">FREE AI TOOLS</a>
+                <ll className="relative rounded-md font-bold border border-rose-500 p-1 px-3">
+                  <span className=" absolute -top-1.5 animate-pulse right-1.5 text-[9px] w-3 h-3 rounded-full bg-rose-600"></span>
+                  <a href="/ai-tools">MORE AI TOOLS</a>
                 </ll>
                 <li className="flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-500 p-1 px-3 text-white shadow-sm ">
                   <a href="/">Home</a>

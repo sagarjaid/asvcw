@@ -77,19 +77,20 @@ const AITools = () => {
  <a href="/new">What's new</a>
                 </ll> */}
                 {/* <li>
- <a
- className="hidden sm:inline"
-   href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
-   target="_blank"
- >
-   <img
-   className="w-36"
-     src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
-   />
- </a>
+                  <a
+                  className="hidden sm:inline"
+                    href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
+                    target="_blank"
+                  >
+                    <img
+                    className="w-36"
+                      src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
+                    />
+                  </a>
                 </li> */}
-                <ll className="rounded-md animate-pulse font-bold border border-rose-500 p-1 px-2">
-                  <a href="/ai-tools">FREE AI TOOLS</a>
+                <ll className="relative rounded-md font-bold border border-rose-500 p-1 px-3">
+                  <span className=" absolute -top-1.5 animate-pulse right-1.5 text-[9px] w-3 h-3 rounded-full bg-rose-600"></span>
+                  <a href="/ai-tools">MORE AI TOOLS</a>
                 </ll>
                 <li className="flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-500 p-1 px-3 text-white shadow-sm ">
                   <a href="/">Home</a>
@@ -117,7 +118,7 @@ const AITools = () => {
           <div className="w-full">
             <h1 className="text-xl p-4 font-bold">Free AI-powered Tools | No credit card required | No login is required</h1>
             <div className="flex w-full gap-4 flex-wrap p-4">
-              <a href="/hashtag" className="w-full sm:w-[32%] flex flex-col gap-1 p-4 outline hover:bg-black hover:text-white rounded-md">
+              <a href="/hashtag" className="w-full sm:w-[32%] flex flex-col gap-1 p-4 border border-black hover:bg-black hover:text-white rounded-md">
                 <span className="bg-rose-500 w-fit text-white py-0.5 px-2 rounded-md text-[9px]">
                   New
                 </span>
@@ -130,7 +131,7 @@ const AITools = () => {
                   </span>
                 </div>
               </a>
-              <a href="/twitter-hashtag" className="w-full sm:w-[32%] flex flex-col gap-1 p-4 outline hover:bg-blue-500 hover:text-white rounded-md">
+              <a href="/twitter-hashtag" className="w-full sm:w-[32%] flex flex-col gap-1 p-4 border border-black hover:bg-blue-500 hover:text-white rounded-md">
                 <span className="bg-rose-500 w-fit text-white py-0.5 px-2 rounded-md text-[9px]">
                   New
                 </span>
@@ -143,7 +144,7 @@ const AITools = () => {
                   </span>
                 </div>
               </a>
-              <a href="/app" className="w-full sm:w-[32%] flex flex-col gap-1 p-4 outline hover:bg-rose-500 hover:text-white rounded-md">
+              <a href="/app" className="w-full sm:w-[32%] flex flex-col gap-1 p-4 border border-black hover:bg-rose-500 hover:text-white rounded-md">
                 <span className="bg-black w-fit text-white py-0.5 px-2 rounded-md text-[9px]">
                   Popular
                 </span>
@@ -159,7 +160,7 @@ const AITools = () => {
 
 
             </div>
-            <h1 className="text-xl p-4 font-bold">More AI Tools Comming Soon..!</h1>
+            <h1 className="text-xl p-4 font-bold">MORE AI TOOLS Are Comming Soon..!</h1>
             <div className="flex flex-wrap flex-col  sm:flex-row">
               <div className="p-4">
                 <div className="flex flex-col mb-4">Copywriting AI<span className="text-[9px]">(Comming Soon)</span></div>

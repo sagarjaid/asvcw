@@ -64,7 +64,7 @@ const WhatsNew = () => {
             <ul className="flex items-center gap-4 text-sm">
               {/* <li className="cursor-pointer">Pricing</li> */}
               <ll className="rounded-md animate-pulse font-bold border border-rose-500 p-1 px-2">
-                <a href="/ai-tools">FREE AI TOOLS</a>
+                <a href="/ai-tools">MORE AI TOOLS</a>
               </ll>
               <li className="flex w-fit items-center gap-1 rounded-full bg-rose-500 p-1 px-3	 text-white shadow-sm ">
                 <a href="/">Home</a>
