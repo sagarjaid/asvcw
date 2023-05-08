@@ -414,8 +414,8 @@ const TC = () => {
               Terms and Conditions
             </a>
             <span>|</span>
-            <a href="https://scripai.com/gdrp" target="_blank">
-              GDRP Policy
+            <a href="https://scripai.com/GDPR" target="_blank">
+              GDPR Policy
             </a>
           </div>
         </div>

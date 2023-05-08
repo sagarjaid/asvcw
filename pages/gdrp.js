@@ -3,20 +3,20 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 
-const GDRP = () => {
+const GDPR = () => {
   return (
     <>
       <Head>
-        <title>GDRP Policy — Scrip AI</title>
-        <meta name="title" content="GDRP Policy — Scrip AI" />
+        <title>GDPR Policy — Scrip AI</title>
+        <meta name="title" content="GDPR Policy — Scrip AI" />
         <meta
           name="description"
           content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://scripai.com/gdrp" />
-        <meta property="og:title" content="GDRP Policy — Scrip AI" />
+        <meta property="og:url" content="https://scripai.com/GDPR" />
+        <meta property="og:title" content="GDPR Policy — Scrip AI" />
         <meta
           property="og:description"
           content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
@@ -27,8 +27,8 @@ const GDRP = () => {
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://scripai.com/gdrp" />
-        <meta property="twitter:title" content="GDRP Policy — Scrip AI" />
+        <meta property="twitter:url" content="https://scripai.com/GDPR" />
+        <meta property="twitter:title" content="GDPR Policy — Scrip AI" />
         <meta
           property="twitter:description"
           content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
@@ -93,7 +93,7 @@ const GDRP = () => {
         </nav>
         <div className="flex flex-col items-start justify-center gap-6 p-2 py-10 ">
           <div className="flex flex-col gap-2 text-2xl font-medium">
-            GDRP Policy
+            GDPR Policy
             <div className="text-sm">Updated on 1 April, 2023</div>
           </div>
 
@@ -286,8 +286,8 @@ const GDRP = () => {
               Terms and Conditions
             </a>
             <span>|</span>
-            <a href="https://scripai.com/gdrp" target="_blank">
-              GDRP Policy
+            <a href="https://scripai.com/GDPR" target="_blank">
+              GDPR Policy
             </a>
           </div>
         </div>
@@ -296,4 +296,4 @@ const GDRP = () => {
   );
 };
 
-export default GDRP;
+export default GDPR;

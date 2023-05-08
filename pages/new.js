@@ -148,8 +148,8 @@ const WhatsNew = () => {
               T&C
             </a>
             <span>|</span>
-            <a href="https://scripai.com/gdrp" target="_blank">
-              GDRP
+            <a href="https://scripai.com/GDPR" target="_blank">
+              GDPR
             </a>
             <span>|</span>
             <a href="https://scripai.com/new" target="_blank">

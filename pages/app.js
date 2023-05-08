@@ -510,10 +510,12 @@ const App = () => {
               <div className="relative w-auto p-4 my-6 mx-auto max-w-3xl">
                 <div className="border-0 rounded-xl shadow-lg relative flex flex-col w-full px-8 py-10 text-center items-center gap-4 bg-white outline-none focus:outline-none">
                   <img className="w-16" src='/favicon.png'></img>
-                  <div className="text-lg font-bold">Our AI is FREE only because of ads.</div>
-                  <div>Without Advertment We Won't be able to offer ScripAI for FREE!</div>
-                  <div className="bg-rose-500 p-2 px-4 rounded-full text-white text-sm cursor-pointer" onClick={() => window.location.reload()}>I have Disable AdBlockers</div>
-                  <div className="text-[10px] text-blue-500 -mt-2 cursor-pointer" onClick={handleToggle}>How to disable AdBlocker ▽</div>
+                  <div>
+                    <div className="text-lg font-bold">Please disable all Adblockers!</div>
+                    <div className="mt-1">Without Advertment We Won't be able to offer ScripAI for FREE!</div>
+                  </div>
+                  <div className="bg-rose-500 p-2 px-4 rounded-full text-white text-sm cursor-pointer" onClick={() => window.location.reload()}>I have disabled AdBlockers manually</div>
+                  <div className="text-[10px] text-blue-500 -mt-2 cursor-pointer" onClick={handleToggle}>Learn How to disable AdBlocker ▽</div>
                   {
                     toggle && <iframe
                       className="aspect-video w-11/12 rounded-xl border-4 border-rose-600 bg-rose-600"
