@@ -4,6 +4,19 @@ import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 
 const GDPR = () => {
+
+  useEffect(() => {
+    const ad1 = document.getElementById("aswift_1")
+    const ad2 = document.getElementById("aswift_2")
+    const ad3 = document.getElementById("aswift_3")
+
+    setInterval(() => {
+      ad1?.src = ad1?.src
+      ad2?.src = ad2?.src
+      ad3?.src = ad3?.src
+    }, 30000);
+
+  }, [])
   return (
     <>
       <Head>
