@@ -1,3 +1,4 @@
+import Tools from "@/components/Tools";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { WindupChildren } from "windups";
@@ -36,7 +37,7 @@ const App = () => {
 
   const handleClearText = (e) => {
     setData();
-    window.location.href = "/app";
+    window.location.reload()
   };
 
   const handleTitle = (e) => {
@@ -190,7 +191,7 @@ const App = () => {
         We are LIVE again 🙏
       </div> */}
         <main>
-          <div className="flex h-screen max-w-5xl m-auto flex-col items-center text-sm">
+          <div className="flex max-w-5xl m-auto flex-col items-center text-sm">
             {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
             Due to overwhelming response we are running out of capacity 🔥. Please check us after 24
             hours. 🙏
@@ -202,7 +203,9 @@ const App = () => {
               </a>
               <div>
                 <ul className="flex items-center gap-4 text-sm">
-                  {/* <li className="cursor-pointer">Pricing</li> */}
+                  <li className="hidden sm:inline cursor-pointer">
+                    <a href="/hashtag">AI Hashtag Generator</a>
+                  </li>
                   {/* <ll className="rounded-md bg-rose-50 p-1 px-2">
                   <a href="/new">What's new</a>
                 </ll> */}
@@ -390,8 +393,7 @@ const App = () => {
                   </button>
                 )}
               </div>
-              <div className="flex h-screen w-full flex-col gap-2 p-4">
-                {/* <div className="ml-1">Title: {prompt.title} </div> */}
+              <div className="flex relative w-full flex-col gap-2 p-4 sm:pl-0">
                 <div
                   id="copy"
                   contenteditable="true"
@@ -441,37 +443,9 @@ const App = () => {
                     )}
                   </WindupChildren>
                 </div>
-                <div className="hidden sm:flex sm:justify-end sm:relative bottom-20 right-4 gap-2 pt-2">
+                <div className="flex justify-center text-xs sm:justify-end sm:absolute bottom-8 right-8 gap-2 pt-2">
                   <button
-                    className="mb-1 cursor-pointer rounded-full border bg-gray-700  px-4 py-2 text-white"
-                    onClick={handleCopyText}
-                  >
-                    {textCopy ? "Text copied" : "Copy to Clipboard"}
-                  </button>
-                  <button
-                    className="mb-1 cursor-pointer rounded-full border bg-rose-500 p-2 text-white"
-                    onClick={handleClearText}
-                  >
-                    <svg
-                      className="w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={1.5}
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div className="flex justify-center gap-2 pt-2 sm:hidden">
-                  <button
-                    className="mb-1 cursor-pointer rounded-full border bg-gray-700  px-4 py-2 text-white"
+                    className="mb-1 cursor-pointer rounded-full border bg-gray-700 px-4 py-2 text-white"
                     onClick={handleCopyText}
                   >
                     {textCopy ? "Text copied" : "Copy to Clipboard"}
@@ -499,6 +473,7 @@ const App = () => {
                 </div>
               </div>
             </div>
+            <Tools />
           </div>
         </main>
         <div className="ad-box" style={{ position: "fixed", top: 0, left: 0 }} aria-hidden="true"></div>

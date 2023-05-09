@@ -74,7 +74,9 @@ const Home = () => {
           </a>
           <div>
             <ul className="flex items-center gap-1 sm:gap-4 text-sm">
-              {/* <li className="cursor-pointer">Pricing</li> */}
+              <li className="hidden sm:inline cursor-pointer">
+                <a href="/hashtag">AI Hashtag Generator</a>
+              </li>
               <ll className="relative rounded-md font-bold border border-rose-500 p-1 px-3">
                 <span className=" absolute -top-1.5 animate-pulse right-1.5 text-[9px] w-3 h-3 rounded-full bg-rose-600"></span>
                 <a href="/ai-tools">MORE AI TOOLS</a>

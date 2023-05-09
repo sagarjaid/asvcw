@@ -62,7 +62,9 @@ const WhatsNew = () => {
           </a>
           <div>
             <ul className="flex items-center gap-4 text-sm">
-              {/* <li className="cursor-pointer">Pricing</li> */}
+              <li className="hidden sm:inline cursor-pointer">
+                <a href="/hashtag">AI Hashtag Generator</a>
+              </li>
               <ll className="rounded-md animate-pulse font-bold border border-rose-500 p-1 px-2">
                 <a href="/ai-tools">MORE AI TOOLS</a>
               </ll>

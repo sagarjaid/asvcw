@@ -1,3 +1,4 @@
+import Tools from "@/components/Tools";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { WindupChildren } from "windups";
@@ -161,7 +162,7 @@ const AIHashtagGenerator = () => {
         We are LIVE again 🙏
       </div> */}
         <main>
-          <div className="flex h-screen max-w-5xl m-auto flex-col items-center text-sm">
+          <div className="flex  max-w-5xl m-auto flex-col items-center text-sm">
             {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
             Due to overwhelming response we are running out of capacity 🔥. Please check us after 24
             hours. 🙏
@@ -173,7 +174,9 @@ const AIHashtagGenerator = () => {
               </a>
               <div>
                 <ul className="flex items-center gap-4 text-sm">
-                  {/* <li className="cursor-pointer">Pricing</li> */}
+                  <li className="hidden sm:inline cursor-pointer">
+                    <a href="/hashtag">AI Hashtag Generator</a>
+                  </li>
                   {/* <ll className="rounded-md bg-rose-50 p-1 px-2">
                   <a href="/new">What's new</a>
                 </ll> */}
@@ -223,28 +226,6 @@ const AIHashtagGenerator = () => {
                     AI Twitter Hashtag Generator</div>
                   <hr />
                 </div>
-                {/* <div className="text-xl w-full font-bold text-black ">
-                AI Hashtag Generator
-              </div> */}
-                {/* <div className="flex gap-2 text-black">
-                <svg
-                  className="mr-1 inline w-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    clipRule="evenodd"
-                    fillRule="evenodd"
-                    d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
-                  />
-                </svg>
-                <div className="text-xl font-bold text-black ">
-                  AI Hashtag Generator
-                </div>
-              </div> */}
-
                 <div className="flex flex-col gap-1 ">
                   <div className="flex flex-col gap-1 ">
                     <div className="text-xs">
@@ -323,8 +304,7 @@ const AIHashtagGenerator = () => {
                   </button>
                 )}
               </div>
-              <div className="flex h-screen w-full flex-col gap-2 p-4">
-                {/* <div className="ml-1">Title: {prompt.hashtag} </div> */}
+              <div className="flex relative w-full flex-col gap-2 p-4 sm:pl-0">
                 <div
                   id="copy"
                   contenteditable="true"
@@ -375,37 +355,9 @@ const AIHashtagGenerator = () => {
                     )}
                   </WindupChildren>
                 </div>
-                <div className="hidden sm:flex sm:justify-end sm:relative bottom-20 right-4 gap-2 pt-2">
+                <div className="flex justify-center text-xs sm:justify-end sm:absolute bottom-8 right-8 gap-2 pt-2">
                   <button
-                    className="mb-1 cursor-pointer rounded-full border bg-gray-700  px-4 py-2 text-white"
-                    onClick={handleCopyText}
-                  >
-                    {textCopy ? "Text copied" : "Copy to Clipboard"}
-                  </button>
-                  <button
-                    className="mb-1 cursor-pointer rounded-full border bg-rose-500 p-2 text-white"
-                    onClick={handleClearText}
-                  >
-                    <svg
-                      className="w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={1.5}
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div className="flex justify-center gap-2 pt-2 sm:hidden">
-                  <button
-                    className="mb-1 cursor-pointer rounded-full border bg-gray-700  px-4 py-2 text-white"
+                    className="mb-1 cursor-pointer rounded-full border bg-gray-700 px-4 py-2 text-white"
                     onClick={handleCopyText}
                   >
                     {textCopy ? "Text copied" : "Copy to Clipboard"}
@@ -433,6 +385,7 @@ const AIHashtagGenerator = () => {
                 </div>
               </div>
             </div>
+            <Tools />
           </div>
         </main>
         <div className="ad-box" style={{ position: "fixed", top: 0, left: 0 }} aria-hidden="true"></div>
