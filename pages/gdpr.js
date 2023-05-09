@@ -4,27 +4,6 @@ import { useEffect, useState } from "react";
 
 const GDPR = () => {
 
-  useEffect(() => {
-
-    setTimeout(() => {
-
-      const ad1 = document.getElementById("aswift_1") | undefined;
-      const ad2 = document.getElementById("aswift_2") | undefined;
-      const ad3 = document.getElementById("aswift_3") | undefined;
-
-      setInterval(() => {
-
-        console.log(ad1, "ad1");
-        console.log(ad2, "ad2");
-        console.log(ad3, "ad3");
-
-        ad1 && (ad1.src = ad1?.src)
-        ad2 && (ad2.src = ad2?.src)
-        ad3 && (ad3.src = ad3?.src)
-      }, 30000);
-
-    }, 30000);
-  }, [])
   return (
     <>
       <Head>
