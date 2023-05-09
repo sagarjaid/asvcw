@@ -49,12 +49,20 @@ export default function App({ Component, pageProps }) {
 
 
       <Script
-        strategy="afterInteractive"
+        strategy="lazyOnload"
+        onLoad={() => {
+          console.log('Ads Script has loaded');
+        }}
       >{`
         (function() {
           function relaodAds() {
+             console.log("reloadAds got called");
             setInterval(() => {
-              if (window.frames['googlefcPresent']) {
+               console.log("setInterval got called");
+
+              if (document) {
+
+                 console.log("if got called");
 
                 var ad1 = document.getElementById("aswift_1")
                 var ad2 = document.getElementById("aswift_2")
