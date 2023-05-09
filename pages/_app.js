@@ -11,13 +11,13 @@ export default function App({ Component, pageProps }) {
 
       var ad1
       var ad2
-      var ad2
+      var ad3
 
       setInterval(() => {
 
-        ad1 = document.getElementById("aswift_1")
-        ad2 = document.getElementById("aswift_2")
-        ad3 = document.getElementById("aswift_3")
+        ad1 = document.getElementById("aswift_1") | null
+        ad2 = document.getElementById("aswift_2") | null
+        ad3 = document.getElementById("aswift_3") | null
 
         console.log(ad1, "ad1");
         console.log(ad2, "ad2");
@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }) {
 
       }, 30000);
 
-    }, 30000);
+    }, 10000);
   }, [])
 
   return (
