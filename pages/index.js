@@ -224,7 +224,7 @@ const Home = () => {
               T&C
             </a>
             <span>|</span>
-            <a href="https://scripai.com/GDPR" target="_blank">
+            <a href="https://scripai.com/gdpr" target="_blank">
               GDPR
             </a>
             <span>|</span>

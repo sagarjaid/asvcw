@@ -1,21 +1,29 @@
 import React from "react";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import Typewriter from "typewriter-effect";
 
 const GDPR = () => {
 
   useEffect(() => {
-    const ad1 = document.getElementById("aswift_1")
-    const ad2 = document.getElementById("aswift_2")
-    const ad3 = document.getElementById("aswift_3")
 
-    setInterval(() => {
-      ad1?.src = ad1?.src
-      ad2?.src = ad2?.src
-      ad3?.src = ad3?.src
+    setTimeout(() => {
+
+      const ad1 = document.getElementById("aswift_1") | undefined;
+      const ad2 = document.getElementById("aswift_2") | undefined;
+      const ad3 = document.getElementById("aswift_3") | undefined;
+
+      setInterval(() => {
+
+        console.log(ad1, "ad1");
+        console.log(ad2, "ad2");
+        console.log(ad3, "ad3");
+
+        ad1 && (ad1.src = ad1?.src)
+        ad2 && (ad2.src = ad2?.src)
+        ad3 && (ad3.src = ad3?.src)
+      }, 30000);
+
     }, 30000);
-
   }, [])
   return (
     <>
@@ -28,7 +36,7 @@ const GDPR = () => {
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://scripai.com/GDPR" />
+        <meta property="og:url" content="https://scripai.com/gdpr" />
         <meta property="og:title" content="GDPR Policy — Scrip AI" />
         <meta
           property="og:description"
@@ -40,7 +48,7 @@ const GDPR = () => {
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://scripai.com/GDPR" />
+        <meta property="twitter:url" content="https://scripai.com/gdpr" />
         <meta property="twitter:title" content="GDPR Policy — Scrip AI" />
         <meta
           property="twitter:description"
@@ -301,7 +309,7 @@ const GDPR = () => {
               Terms and Conditions
             </a>
             <span>|</span>
-            <a href="https://scripai.com/GDPR" target="_blank">
+            <a href="https://scripai.com/gdpr" target="_blank">
               GDPR Policy
             </a>
           </div>
