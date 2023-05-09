@@ -45,6 +45,45 @@ export default function App({ Component, pageProps }) {
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
         }}
       />
+
+
+
+      <Script
+        strategy="afterInteractive"
+      >{`
+        (function() {
+          function relaodAds() {
+            setInterval(() => {
+              if (window.frames['googlefcPresent']) {
+
+                var ad1 = document.getElementById("aswift_1")
+                var ad2 = document.getElementById("aswift_2")
+                var ad3 = document.getElementById("aswift_3")
+
+                console.log(ad1, "ad1");
+                console.log(ad2, "ad2");
+                console.log(ad3, "ad3");
+
+                if(ad1){
+                ad1.src = ad1.src
+                console.log(ad1.src, "ad1 src");
+                }
+
+                if(ad2){
+                ad2.src = ad2.src
+                console.log(ad1.src, "ad1 src");
+                }
+
+                if(ad3){
+                ad3.src = ad3.src
+                console.log(ad3.src, "ad3 src");
+                }
+              }
+            }, 30000);
+          }
+          relaodAds();
+        })();
+      `}</Script>
     </>
   );
 }
