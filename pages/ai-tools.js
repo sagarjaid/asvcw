@@ -5,6 +5,37 @@ import { WindupChildren } from "windups";
 
 const AITools = () => {
 
+  useEffect(() => {
+
+    setTimeout(() => {
+
+      var ad1
+      var ad2
+      var ad3
+
+      setInterval(() => {
+        if (typeof window !== "undefined" && window.document) {
+          // Client-side-only code
+          ad1 = document.getElementById("aswift_1") | null
+          ad2 = document.getElementById("aswift_2") | null
+          ad3 = document.getElementById("aswift_3") | null
+
+          console.log(ad1, "ad1");
+          console.log(ad2, "ad2");
+          console.log(ad3, "ad3");
+
+          ad1 && (ad1.src = ad1?.src)
+          console.log(ad1?.src, "ad1 src");
+          ad2 && (ad2.src = ad2?.src)
+          console.log(ad2?.src, "ad2 src");
+          ad3 && (ad3.src = ad3?.src)
+          console.log(ad3?.src, "ad3 src");
+        }
+
+      }, 30000);
+
+    }, 30000);
+  }, [])
 
   return (
     <>
