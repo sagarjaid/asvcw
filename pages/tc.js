@@ -1,54 +1,14 @@
-import React from "react";
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import Typewriter from "typewriter-effect";
+import SEOMeta from '@/components/SEOMeta';
+import React from 'react';
 
 const TC = () => {
   return (
     <>
-      <Head>
-        <title>Terms and Conditions — Scrip AI</title>
-        <meta name="title" content="Terms and Conditions — Scrip AI" />
-        <meta
-          name="description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://scripai.com/tc" />
-        <meta property="og:title" content="Terms and Conditions — Scrip AI" />
-        <meta
-          property="og:description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-        <meta
-          property="og:image"
-          content="https://scripai.com/scrip-ai-cover.png"
-        />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://scripai.com/tc" />
-        <meta
-          property="twitter:title"
-          content="Terms and Conditions — Scrip AI"
-        />
-        <meta
-          property="twitter:description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-        <meta
-          property="twitter:image"
-          content="https://scripai.com/scrip-ai-cover.png"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <link rel="icon" href="https://scripai.com/favicon.png" />
-
-        <meta
-          name="google-site-verification"
-          content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
-        />
-      </Head>
+      <SEOMeta
+        title="Terms and Conditions — Scrip AI"
+        description="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
+        slug="tc"
+      />
       <main className="m-auto flex max-w-5xl flex-col px-4">
         <nav className="flex items-center justify-between py-4">
           <a href="/">
@@ -56,7 +16,7 @@ const TC = () => {
           </a>
           <div>
             <ul className="flex items-center gap-4 text-sm">
-              <li className="hidden sm:inline cursor-pointer">
+              <li className="hidden cursor-pointer sm:inline">
                 <a href="/hashtag">AI Hashtag Generator</a>
               </li>
               <ll className="rounded-md bg-rose-50 p-1 px-2">

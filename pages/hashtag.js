@@ -1,21 +1,21 @@
-import Tools from "@/components/Tools";
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import { WindupChildren } from "windups";
+import SEOMeta from '@/components/SEOMeta';
+import Tools from '@/components/Tools';
+import { useEffect, useState } from 'react';
+import { WindupChildren } from 'windups';
 
 const AIHashtagGenerator = () => {
-  const [showBanner, setShowBanner] = useState(false)
-  const [toggle, setToggle] = useState(false)
+  const [showBanner, setShowBanner] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
-    setToggle(!toggle)
-  }
+    setToggle(!toggle);
+  };
 
   const [prompt, setPromptData] = useState({
-    hashtag: "",
-    description: "",
-    language: "",
-    platform: "",
+    hashtag: '',
+    description: '',
+    language: '',
+    platform: '',
   });
 
   const [data, setData] = useState();
@@ -24,7 +24,7 @@ const AIHashtagGenerator = () => {
   const [textCopy, setTextCopy] = useState(false);
 
   const handleCopyText = () => {
-    let copyText = document.getElementById("copy");
+    let copyText = document.getElementById('copy');
     let htmlcopydata = copyText.innerText;
     navigator.clipboard.writeText(htmlcopydata);
     setTextCopy(true);
@@ -35,7 +35,7 @@ const AIHashtagGenerator = () => {
 
   const handleClearText = (e) => {
     setData();
-    window.location.href = "/hashtag";
+    window.location.reload();
   };
 
   const handleDescription = (e) => {
@@ -55,24 +55,29 @@ const AIHashtagGenerator = () => {
   };
 
   const getData = async () => {
+    let hashtagDescription = prompt.description
+      ? `context of photo/video: ${prompt.description}`
+      : '';
 
-    let hashtagDescription = prompt.description ? `context of photo/video: ${prompt.description}` : ""
+    let userPrompt = `write 30 ${
+      prompt.platform || 'Instagram'
+    } hashtags for keyword "${prompt.hashtag || '[choose any hashtag]'}" in ${
+      prompt.language || 'English'
+    }. ${hashtagDescription}. only hashtag are allowed in your answer`;
 
-    let userPrompt = `write 30 ${prompt.platform || "Instagram"} hashtags for keyword "${prompt.hashtag || "[choose any hashtag]"}" in ${prompt.language || "English"}. ${hashtagDescription}. only hashtag are allowed in your answer`
-
-    const response = await fetch("/api/getGPTdata", {
-      method: "POST",
+    const response = await fetch('/api/getGPTdata', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({ text: userPrompt }),
     });
 
     const resData = await response.json();
 
-    console.log(resData, "resData");
+    console.log(resData, 'resData');
 
-    const DataArr = resData.result.toLowerCase().split("\n")
+    const DataArr = resData.result.toLowerCase().split('\n');
     console.log(DataArr);
     setData(DataArr);
     setLoading(false);
@@ -91,81 +96,36 @@ const AIHashtagGenerator = () => {
 
   useEffect(() => {
     setPromptData({
-      hashtag: "",
-      description: "",
-      language: "English",
-      platform: "Instagram",
+      hashtag: '',
+      description: '',
+      language: 'English',
+      platform: 'Instagram',
     });
   }, []);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      const adBoxEl = document.querySelector(".ad-box");
-      const hasAdBlock = window.getComputedStyle(adBoxEl)?.display === "none";
-      console.log(hasAdBlock, "hasAdBlock");
-      setShowBanner(hasAdBlock)
+      const adBoxEl = document.querySelector('.ad-box');
+      const hasAdBlock = window.getComputedStyle(adBoxEl)?.display === 'none';
+      console.log(hasAdBlock, 'hasAdBlock');
+      setShowBanner(hasAdBlock);
     }, 1200);
     return () => clearTimeout(timeoutId);
   }, []);
 
-
   return (
     <>
-      <div className='relative'>
-        <Head>
-          <title>FREE AI Hashtag generator for TikTok, Reel & YT Shorts — Scrip AI</title>
-          <meta
-            name="title"
-            content="FREE AI Hashtag generator for TikTok, Reel & YT Shorts — Scrip AI"
-          />
-          <meta
-            name="description"
-            content="10X faster wasy to write Hashtag for Instagram Reel, TikTok and Youtube shorts"
-          />
-
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://scripai.com/hashtag" />
-          <meta
-            property="og:title"
-            content="FREE AI Hashtag generator for TikTok, Reel & YT Shorts — Scrip AI"
-          />
-          <meta
-            property="og:description"
-            content="10X faster wasy to write Hashtag for Instagram Reel, TikTok and Youtube shorts"
-          />
-          <meta
-            property="og:image"
-            content="https://scripai.com/scrip-ai-cover.png"
-          />
-
-          <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://scripai.com/hashtag" />
-          <meta
-            property="twitter:title"
-            content="FREE AI Hashtag generator for TikTok, Reel & YT Shorts — Scrip AI"
-          />
-          <meta
-            property="twitter:description"
-            content="10X faster wasy to write Hashtag for Instagram Reel, TikTok and Youtube shorts"
-          />
-          <meta
-            property="twitter:image"
-            content="https://scripai.com/scrip-ai-cover.png"
-          />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-          <link rel="icon" href="https://scripai.com/favicon.png" />
-
-          <meta
-            name="google-site-verification"
-            content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
-          />
-        </Head>
+      <div className="relative">
+        <SEOMeta
+          title="AI Hashtag Generator [100% FREE - No Login required] — Scrip AI"
+          description="Try the FREE Social media Hashtag Generator powerd by AI today and watch your posts go viral! FREE Hashtag Generator by Scrip AI. "
+          slug="hashtag"
+        />
         {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
         We are LIVE again 🙏
       </div> */}
         <main>
-          <div className="flex max-w-5xl m-auto flex-col items-center text-sm">
+          <div className="m-auto flex max-w-5xl flex-col items-center text-sm">
             {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
             Due to overwhelming response we are running out of capacity 🔥. Please check us after 24
             hours. 🙏
@@ -177,7 +137,7 @@ const AIHashtagGenerator = () => {
               </a>
               <div>
                 <ul className="flex items-center gap-4 text-sm">
-                  <li className="hidden sm:inline cursor-pointer">
+                  <li className="hidden cursor-pointer sm:inline">
                     <a href="/hashtag">AI Hashtag Generator</a>
                   </li>
                   {/* <ll className="rounded-md bg-rose-50 p-1 px-2">
@@ -195,8 +155,8 @@ const AIHashtagGenerator = () => {
                     />
                   </a>
                 </li> */}
-                  <ll className="relative rounded-md font-bold border border-rose-500 p-1 px-3">
-                    <span className=" absolute -top-1.5 animate-pulse right-1.5 text-[9px] w-3 h-3 rounded-full bg-rose-600"></span>
+                  <ll className="relative rounded-md border border-rose-500 p-1 px-3 font-bold">
+                    <span className=" absolute -top-1.5 right-1.5 h-3 w-3 animate-pulse rounded-full bg-rose-600 text-[9px]"></span>
                     <a href="/ai-tools">MORE AI TOOLS</a>
                   </ll>
                   <li className="flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-500 p-1 px-3 text-white shadow-sm ">
@@ -225,14 +185,16 @@ const AIHashtagGenerator = () => {
             <div className="flex w-full flex-col justify-between sm:flex-row">
               <div className="flex w-full flex-col gap-6 p-4 sm:w-2/5 ">
                 <div className="flex flex-col gap-3 ">
-                  <div className="text-xl w-full font-bold text-black ">
-                    AI Hashtag Generator</div>
+                  <div className="w-full text-xl font-bold text-black ">
+                    AI Hashtag Generator
+                  </div>
                   <hr />
                 </div>
                 <div className="flex flex-col gap-1 ">
                   <div className="flex flex-col gap-1 ">
                     <div className="text-xs">
-                      Main hashtag <span className="text-[8px]">{`(topic)`}</span>{" "}
+                      Main hashtag{' '}
+                      <span className="text-[8px]">{`(topic)`}</span>{' '}
                     </div>
                     <input
                       type="text"
@@ -252,7 +214,7 @@ const AIHashtagGenerator = () => {
 
                 <div className="flex flex-col gap-1 ">
                   <div className="text-xs">
-                    Photo/video description{" "}
+                    Photo/video description{' '}
                     <span className="text-[8px]">{`(optional)`}</span>
                   </div>
                   <textarea
@@ -304,10 +266,16 @@ const AIHashtagGenerator = () => {
                     <option value="French">French</option>
                     <option value="Chinese">Chinese</option>
                     <option value="Hindi">Hindi</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="Russian">Russian</option>
+                    <option value="German">German</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Indonesian">Indonesian</option>
+                    <option value="Vietnamese">Vietnamese</option>
+                    <option value="Thai">Thai</option>
+                    <option value="Korean">Korean</option>
                   </select>
                 </div>
-
-                {/* </div> */}
 
                 {
                   <button
@@ -315,16 +283,16 @@ const AIHashtagGenerator = () => {
                     onClick={handleApi}
                     className="mx-auto w-full rounded-full border bg-rose-500 p-2 text-white outline-none"
                   >
-                    {isLoading ? "Loading..." : "Generate Hashtag"}
+                    {isLoading ? 'Loading...' : 'Generate Hashtag'}
                   </button>
                 }
                 {data?.length && data && (
                   <button
                     onClick={() => {
                       setPromptData({
-                        title: "",
-                        description: "",
-                        hashtag: "",
+                        title: '',
+                        description: '',
+                        hashtag: '',
                       });
                     }}
                     className="mx-auto w-full rounded-full border p-2 outline-none"
@@ -333,7 +301,7 @@ const AIHashtagGenerator = () => {
                   </button>
                 )}
               </div>
-              <div className="flex relative w-full flex-col gap-2 p-4 sm:pl-0">
+              <div className="relative flex w-full flex-col gap-2 p-4 sm:pl-0">
                 <div
                   id="copy"
                   contenteditable="true"
@@ -384,12 +352,12 @@ const AIHashtagGenerator = () => {
                     )}
                   </WindupChildren>
                 </div>
-                <div className="flex justify-center text-xs sm:justify-end sm:absolute bottom-8 right-8 gap-2 pt-2">
+                <div className="bottom-8 right-8 flex justify-center gap-2 pt-2 text-xs sm:absolute sm:justify-end">
                   <button
                     className="mb-1 cursor-pointer rounded-full border bg-gray-700 px-4 py-2 text-white"
                     onClick={handleCopyText}
                   >
-                    {textCopy ? "Text copied" : "Copy to Clipboard"}
+                    {textCopy ? 'Text copied' : 'Copy to Clipboard'}
                   </button>
                   <button
                     className="mb-1 cursor-pointer rounded-full border bg-rose-500 p-2 text-white"
@@ -417,33 +385,50 @@ const AIHashtagGenerator = () => {
             <Tools />
           </div>
         </main>
-        <div className="ad-box" style={{ position: "fixed", top: 0, left: 0 }} aria-hidden="true"></div>
+        <div
+          className="ad-box"
+          style={{ position: 'fixed', top: 0, left: 0 }}
+          aria-hidden="true"
+        ></div>
         {showBanner && (
           <>
-            <div
-              className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-            >
-              <div className="relative w-auto p-4 my-6 mx-auto max-w-3xl">
-                <div className="border-0 rounded-xl shadow-lg relative flex flex-col w-full px-8 py-10 text-center items-center gap-4 bg-white outline-none focus:outline-none">
-                  <img className="w-16" src='/favicon.png'></img>
+            <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
+              <div className="relative mx-auto my-6 w-auto max-w-3xl p-4">
+                <div className="relative flex w-full flex-col items-center gap-4 rounded-xl border-0 bg-white px-8 py-10 text-center shadow-lg outline-none focus:outline-none">
+                  <img className="w-16" src="/favicon.png"></img>
                   <div>
-                    <div className="text-lg font-bold">Please disable all Adblockers!</div>
-                    <div className="mt-1">Without Advertment We Won't be able to offer ScripAI for FREE!</div>
+                    <div className="text-lg font-bold">
+                      Please disable all Adblockers!
+                    </div>
+                    <div className="mt-1">
+                      Without Advertment We Won't be able to offer ScripAI for
+                      FREE!
+                    </div>
                   </div>
-                  <div className="bg-rose-500 p-2 px-4 rounded-full text-white text-sm cursor-pointer" onClick={() => window.location.reload()}>I have disabled AdBlockers manually</div>
-                  <div className="text-[10px] text-blue-500 -mt-2 cursor-pointer" onClick={handleToggle}>Learn How to disable AdBlocker ▽</div>
-                  {
-                    toggle && <iframe
+                  <div
+                    className="cursor-pointer rounded-full bg-rose-500 p-2 px-4 text-sm text-white"
+                    onClick={() => window.location.reload()}
+                  >
+                    I have disabled AdBlockers manually
+                  </div>
+                  <div
+                    className="-mt-2 cursor-pointer text-[10px] text-blue-500"
+                    onClick={handleToggle}
+                  >
+                    Learn How to disable AdBlocker ▽
+                  </div>
+                  {toggle && (
+                    <iframe
                       className="aspect-video w-11/12 rounded-xl border-4 border-rose-600 bg-rose-600"
                       title="How to Disable AdBlock on Google Chrome"
                       src="https://www.youtube.com/embed/OdIGBz5koX4"
                       allowfullscreen="true"
                     ></iframe>
-                  }
+                  )}
                 </div>
               </div>
             </div>
-            <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+            <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
           </>
         )}
       </div>

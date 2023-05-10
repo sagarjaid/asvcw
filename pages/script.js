@@ -1,18 +1,18 @@
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import { WindupChildren } from "windups";
+import SEOMeta from '@/components/SEOMeta';
+import { useEffect, useState } from 'react';
+import { WindupChildren } from 'windups';
 
 const Script = () => {
   const [show, setShow] = useState(false);
   const [isDesktop, setDesktop] = useState(false);
 
   const [prompt, setPromptData] = useState({
-    title: "",
-    description: "",
-    keywords: "",
-    language: "",
-    tone: "",
-    time: "",
+    title: '',
+    description: '',
+    keywords: '',
+    language: '',
+    tone: '',
+    time: '',
   });
 
   const [data, setData] = useState();
@@ -21,7 +21,7 @@ const Script = () => {
   const [textCopy, setTextCopy] = useState(false);
 
   const handleCopyText = () => {
-    let copyText = document.getElementById("copy");
+    let copyText = document.getElementById('copy');
     let htmlcopydata = copyText.innerText;
     navigator.clipboard.writeText(htmlcopydata);
     setTextCopy(true);
@@ -32,7 +32,7 @@ const Script = () => {
 
   const handleClearText = (e) => {
     setData();
-    window.location.href = "/script";
+    window.location.reload();
   };
 
   const handleTitle = (e) => {
@@ -60,32 +60,36 @@ const Script = () => {
   };
 
   const getData = async () => {
-    let userPrompt = `Assume you are a content creator. Write content in ${prompt.language || "English"
-      } for a Tiktok on following. Topic: ${prompt.title}, description: ${prompt.description
-      }, keyword: ${prompt.keywords}, Tone of voice: ${prompt.tone || "Professional"
-      }, Time to read the content: ${prompt.time || "30 Sec"
-      }, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, make sure to write the content in bit-size sentences and put each sentence in the next line.`;
+    let userPrompt = `Assume you are a content creator. Write content in ${
+      prompt.language || 'English'
+    } for a Tiktok on following. Topic: ${prompt.title}, description: ${
+      prompt.description
+    }, keyword: ${prompt.keywords}, Tone of voice: ${
+      prompt.tone || 'Professional'
+    }, Time to read the content: ${
+      prompt.time || '30 Sec'
+    }, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, make sure to write the content in bit-size sentences and put each sentence in the next line.`;
 
-    const response = await fetch("/api/getGPTdata", {
-      method: "POST",
+    const response = await fetch('/api/getGPTdata', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({ text: userPrompt }),
     });
 
     const resData = await response.json();
 
-    console.log(resData, "resData");
+    console.log(resData, 'resData');
 
-    const DataArr = resData.result.split("\n");
+    const DataArr = resData.result.split('\n');
     console.log(DataArr);
     setData(DataArr);
     setShow(true);
     setLoading(false);
     setPromptData({
-      description: "",
-      keywords: "",
+      description: '',
+      keywords: '',
     });
   };
 
@@ -102,12 +106,12 @@ const Script = () => {
 
   useEffect(() => {
     setPromptData({
-      title: "",
-      description: "",
-      keywords: "",
-      language: "English",
-      tone: "Professional",
-      time: "30-to-60 seconds",
+      title: '',
+      description: '',
+      keywords: '',
+      language: 'English',
+      tone: 'Professional',
+      time: '30-to-60 seconds',
     });
 
     if (window.innerWidth >= 640) {
@@ -118,65 +122,21 @@ const Script = () => {
   }, [isDesktop]);
 
   if (isDesktop) {
-    window.location.href = "/app"
+    window.location.href = '/app';
   }
 
   return (
     <>
-      <Head>
-        <title>FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI</title>
-        <meta
-          name="title"
-          content="FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
-        />
-        <meta
-          name="description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://scripai.com/app" />
-        <meta
-          property="og:title"
-          content="FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
-        />
-        <meta
-          property="og:description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-        <meta
-          property="og:image"
-          content="https://scripai.com/scrip-ai-cover.png"
-        />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://scripai.com/" />
-        <meta
-          property="twitter:title"
-          content="FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
-        />
-        <meta
-          property="twitter:description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-        <meta
-          property="twitter:image"
-          content="https://scripai.com/scrip-ai-cover.png"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <link rel="icon" href="https://scripai.com/favicon.png" />
-
-        <meta
-          name="google-site-verification"
-          content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
-        />
-      </Head>
+      <SEOMeta
+        title="FREE AI TikTok, Reel & YT Shorts Script Writer [100% FREE - No Login required] — Scrip AI"
+        description="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
+        slug="script"
+      />
       {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
         We are LIVE again 🙏
       </div> */}
       <main>
-        <div className="flex h-screen max-w-5xl m-auto flex-col items-center text-sm">
+        <div className="m-auto flex h-screen max-w-5xl flex-col items-center text-sm">
           {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
             Due to overwhelming response we are running out of capacity 🔥. Please check us after 24
             hours. 🙏
@@ -188,7 +148,7 @@ const Script = () => {
             </a>
             <div>
               <ul className="flex items-center gap-4 text-sm">
-                <li className="hidden sm:inline cursor-pointer">
+                <li className="hidden cursor-pointer sm:inline">
                   <a href="/hashtag">AI Hashtag Generator</a>
                 </li>
                 {/* <ll className="rounded-md bg-rose-50 p-1 px-2">
@@ -206,8 +166,8 @@ const Script = () => {
                     />
                   </a>
                 </li> */}
-                <ll className="relative rounded-md font-bold border border-rose-500 p-1 px-3">
-                  <span className=" absolute -top-1.5 animate-pulse right-1.5 text-[9px] w-3 h-3 rounded-full bg-rose-600"></span>
+                <ll className="relative rounded-md border border-rose-500 p-1 px-3 font-bold">
+                  <span className=" absolute -top-1.5 right-1.5 h-3 w-3 animate-pulse rounded-full bg-rose-600 text-[9px]"></span>
                   <a href="/ai-tools">MORE AI TOOLS</a>
                 </ll>
                 <li className="flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-500 p-1 px-3 text-white shadow-sm ">
@@ -234,11 +194,12 @@ const Script = () => {
             </div>
           </nav>
           <div className="flex w-full flex-col items-center">
-            {!show &&
+            {!show && (
               <div className="flex w-full flex-col gap-6 p-4 pb-20 ">
                 <div className="flex flex-col gap-3 ">
                   <div className="text-xl font-bold text-black ">
-                    AI Short Script</div>
+                    AI Short Script
+                  </div>
                   <hr />
                 </div>
                 <div className="flex flex-col gap-1">
@@ -266,7 +227,9 @@ const Script = () => {
                         d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
                       />
                     </svg>
-                    <span className="text-[9px]">Start the title with: How to, 3 steps, etc</span>
+                    <span className="text-[9px]">
+                      Start the title with: How to, 3 steps, etc
+                    </span>
                   </div>
                   {err && (
                     <div className="text-xs text-rose-600">
@@ -277,7 +240,7 @@ const Script = () => {
 
                 <div className="flex flex-col gap-1 ">
                   <div className="text-xs">
-                    Short video description{" "}
+                    Short video description{' '}
                     <span className="text-[8px]">{`(optional)`}</span>
                   </div>
                   <textarea
@@ -292,7 +255,7 @@ const Script = () => {
                 </div>
                 <div className="flex flex-col gap-1 ">
                   <div className="text-xs">
-                    Keywords <span className="text-[8px]">{`(optional)`}</span>{" "}
+                    Keywords <span className="text-[8px]">{`(optional)`}</span>{' '}
                   </div>
                   <input
                     type="text"
@@ -316,6 +279,14 @@ const Script = () => {
                       <option value="French">French</option>
                       <option value="Chinese">Chinese</option>
                       <option value="Hindi">Hindi</option>
+                      <option value="Arabic">Arabic</option>
+                      <option value="Russian">Russian</option>
+                      <option value="German">German</option>
+                      <option value="Japanese">Japanese</option>
+                      <option value="Indonesian">Indonesian</option>
+                      <option value="Vietnamese">Vietnamese</option>
+                      <option value="Thai">Thai</option>
+                      <option value="Korean">Korean</option>
                     </select>
                   </div>
                   <div className="flex flex-col gap-1 ">
@@ -361,16 +332,16 @@ const Script = () => {
                     onClick={handleApi}
                     className="mx-auto w-full rounded-full border bg-rose-500 p-2 text-white outline-none"
                   >
-                    {isLoading ? "Loading..." : "Generate Script"}
+                    {isLoading ? 'Loading...' : 'Generate Script'}
                   </button>
                 }
                 {data?.length && data && (
                   <button
                     onClick={() => {
                       setPromptData({
-                        title: "",
-                        description: "",
-                        keywords: "",
+                        title: '',
+                        description: '',
+                        keywords: '',
                       });
                     }}
                     className="mx-auto w-full rounded-full border p-2 outline-none"
@@ -378,9 +349,10 @@ const Script = () => {
                     Clear All Fields
                   </button>
                 )}
-              </div>}
+              </div>
+            )}
 
-            {show &&
+            {show && (
               <div className="flex h-screen w-full flex-col gap-2 bg-stone-50 p-4">
                 {/* <div className="ml-1">Title: {prompt.title} </div> */}
                 <div
@@ -432,12 +404,12 @@ const Script = () => {
                     )}
                   </WindupChildren>
                 </div>
-                <div className="hidden sm:flex sm:justify-end sm:relative bottom-20 right-4 gap-2 pt-2">
+                <div className="bottom-20 right-4 hidden gap-2 pt-2 sm:relative sm:flex sm:justify-end">
                   <button
                     className="mb-1 cursor-pointer rounded-full border bg-gray-700  px-4 py-2 text-white"
                     onClick={handleCopyText}
                   >
-                    {textCopy ? "Text copied" : "Copy to Clipboard"}
+                    {textCopy ? 'Text copied' : 'Copy to Clipboard'}
                   </button>
                   <button
                     className="mb-1 cursor-pointer rounded-full border bg-rose-500 p-2 text-white"
@@ -465,7 +437,7 @@ const Script = () => {
                     className="mb-1 cursor-pointer rounded-full border bg-gray-700  px-4 py-2 text-white"
                     onClick={handleCopyText}
                   >
-                    {textCopy ? "Text copied" : "Copy to Clipboard"}
+                    {textCopy ? 'Text copied' : 'Copy to Clipboard'}
                   </button>
                   <button
                     className="mb-1 cursor-pointer rounded-full border bg-rose-500 p-2 text-white"
@@ -489,7 +461,7 @@ const Script = () => {
                   </button>
                 </div>
               </div>
-            }
+            )}
           </div>
         </div>
       </main>

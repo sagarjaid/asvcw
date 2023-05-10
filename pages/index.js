@@ -1,6 +1,6 @@
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import Typewriter from "typewriter-effect";
+import SEOMeta from '@/components/SEOMeta';
+import { useEffect, useState } from 'react';
+import Typewriter from 'typewriter-effect';
 
 const Home = () => {
   const [isMobile, setMobile] = useState(false);
@@ -11,59 +11,14 @@ const Home = () => {
       console.log(w);
       setMobile(true);
     }
-  }, [])
+  }, []);
 
   return (
     <>
-      <Head>
-        <title>Scrip AI — AI TikTok, Reel & YT Shorts Script Writer</title>
-        <meta
-          name="title"
-          content="Scrip AI — AI TikTok, Reel & YT Shorts Script Writer"
-        />
-        <meta
-          name="description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://scripai.com/" />
-        <meta
-          property="og:title"
-          content="Scrip AI — AI TikTok, Reel & YT Shorts Script Writer"
-        />
-        <meta
-          property="og:description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-        <meta
-          property="og:image"
-          content="https://scripai.com/scrip-ai-cover.png"
-        />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://scripai.com/" />
-        <meta
-          property="twitter:title"
-          content="Scrip AI — AI TikTok, Reel & YT Shorts Script Writer"
-        />
-        <meta
-          property="twitter:description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-        <meta
-          property="twitter:image"
-          content="https://scripai.com/scrip-ai-cover.png"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <link rel="icon" href="https://scripai.com/favicon.png" />
-
-        <meta
-          name="google-site-verification"
-          content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
-        />
-      </Head>
+      <SEOMeta
+        title="Scrip AI — AI TikTok, Reel & YT Shorts Script Writer [100% FREE - No Login required]"
+        description="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts powerd by AI"
+      />
       {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
         We are LIVE again 🙏
       </div> */}
@@ -73,28 +28,17 @@ const Home = () => {
             <img src="/scrip.svg" className="w-[80px]" />
           </a>
           <div>
-            <ul className="flex items-center gap-1 sm:gap-4 text-sm">
-              <li className="hidden sm:inline cursor-pointer">
+            <ul className="flex items-center gap-1 text-sm sm:gap-4">
+              <li className="hidden cursor-pointer sm:inline">
                 <a href="/hashtag">AI Hashtag Generator</a>
               </li>
-              <ll className="relative rounded-md font-bold border border-rose-500 p-1 px-3">
-                <span className=" absolute -top-1.5 animate-pulse right-1.5 text-[9px] w-3 h-3 rounded-full bg-rose-600"></span>
+              <ll className="relative rounded-md border border-rose-500 p-1 px-3 font-bold">
+                <span className=" absolute -top-1.5 right-1.5 h-3 w-3 animate-pulse rounded-full bg-rose-600 text-[9px]"></span>
                 <a href="/ai-tools">MORE AI TOOLS</a>
               </ll>
-              {/* <li className="hidden sd:inline">
-                <a
-                  href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
-                  target="_blank"
-                >
-                  <img
-                    className="w-36"
-                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
-                  />
-                </a>
-              </li> */}
               <li className="flex w-fit items-center gap-1 rounded-full bg-rose-500 p-1 px-3	 text-white shadow-sm ">
-                <a href={isMobile ? "/script" : "/app"}>Try for free!</a>
-                <a href={isMobile ? "/script" : "/app"}>
+                <a href={isMobile ? '/script' : '/app'}>Try for free!</a>
+                <a href={isMobile ? '/script' : '/app'}>
                   <svg
                     className="w-6"
                     fill="none"
@@ -124,7 +68,7 @@ const Home = () => {
             <spn className="text-rose-500">
               <Typewriter
                 options={{
-                  strings: ["Instagram Reels", "TikTok", "Youtube Shorts"],
+                  strings: ['Instagram Reels', 'TikTok', 'Youtube Shorts'],
                   autoStart: true,
                   loop: true,
                 }}
@@ -135,7 +79,7 @@ const Home = () => {
             Create short videos 30-sec to 60-sec scripts in 1 minutes!
           </p>
           <div className="flex w-fit items-center justify-around rounded-full bg-rose-600 p-2 px-4	text-white shadow-xl hover:bg-rose-700 ">
-            <a href={isMobile ? "/script" : "/app"}>Start for Free!</a>
+            <a href={isMobile ? '/script' : '/app'}>Start for Free!</a>
             <svg
               className="w-6"
               fill="none"
@@ -182,11 +126,11 @@ const Home = () => {
             <img src="/love.png" className="hidden w-full py-10 md:block " />
             <img src="/love-mobile.png" className="w-full py-10 md:hidden " />
           </div>
-          <div className=" flex w-[100%] flex-col items-center gap-6 rounded-xl bg-rose-600 py-10 px-2 text-center text-white xs:text-lg sdm:text-3xl">
+          <div className=" flex w-[100%] flex-col items-center gap-6 rounded-xl bg-rose-600 px-2 py-10 text-center text-white xs:text-lg sdm:text-3xl">
             Stop wasting time & start creating
             <br /> short video scripts for FREE!
             <div className="flex w-fit items-center justify-around rounded-full bg-white p-2 px-4 text-lg	text-black ">
-              <a href={isMobile ? "/script" : "/app"} className="text-md">
+              <a href={isMobile ? '/script' : '/app'} className="text-md">
                 Try Scrip!
               </a>
               <svg

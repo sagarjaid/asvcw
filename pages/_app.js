@@ -1,10 +1,9 @@
-import "@/styles/globals.css";
-import { Analytics } from "@vercel/analytics/react";
-import Script from "next/script";
-import { useEffect } from "react";
+import '@/styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
+import Script from 'next/script';
+import { useEffect } from 'react';
 
 export default function App({ Component, pageProps }) {
-
   return (
     <>
       <Script
@@ -32,7 +31,7 @@ export default function App({ Component, pageProps }) {
       <Script
         strategy="afterInteractive"
         onLoad={() => {
-          console.log("hjar");
+          console.log('hjar');
         }}
         dangerouslySetInnerHTML={{
           __html: `(function(h,o,t,j,a,r){
@@ -45,8 +44,6 @@ export default function App({ Component, pageProps }) {
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
         }}
       />
-
-
 
       <Script
         strategy="lazyOnload"
@@ -68,23 +65,17 @@ export default function App({ Component, pageProps }) {
                 var ad2 = document.getElementById("aswift_2")
                 var ad3 = document.getElementById("aswift_3")
 
-                console.log(ad1, "ad1");
-                console.log(ad2, "ad2");
-                console.log(ad3, "ad3");
 
                 if(ad1){
                 ad1.src = ad1.src
-                console.log(ad1.src, "ad1 src");
                 }
 
                 if(ad2){
                 ad2.src = ad2.src
-                console.log(ad1.src, "ad1 src");
                 }
 
                 if(ad3){
                 ad3.src = ad3.src
-                console.log(ad3.src, "ad3 src");
                 }
               }
             }, 30000);

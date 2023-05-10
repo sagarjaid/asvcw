@@ -1,60 +1,14 @@
-import React from "react";
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import Typewriter from "typewriter-effect";
+import React from 'react';
+import SEOMeta from '@/components/SEOMeta';
 
 const WhatsNew = () => {
   return (
     <>
-      <Head>
-        <title>What's New | FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI</title>
-        <meta
-          name="title"
-          content="What's New | FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
-        />
-        <meta
-          name="description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://scripai.com/" />
-        <meta
-          property="og:title"
-          content="What's New | FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
-        />
-        <meta
-          property="og:description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-        <meta
-          property="og:image"
-          content="https://scripai.com/scrip-ai-cover.png"
-        />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://scripai.com/" />
-        <meta
-          property="twitter:title"
-          content="What's New | FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
-        />
-        <meta
-          property="twitter:description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-        <meta
-          property="twitter:image"
-          content="https://scripai.com/scrip-ai-cover.png"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <link rel="icon" href="https://scripai.com/favicon.png" />
-
-        <meta
-          name="google-site-verification"
-          content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
-        />
-      </Head>
+      <SEOMeta
+        title="What's New | FREE AI TikTok, Reel & YT Shorts Script Writer — Scrip AI"
+        description="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
+        slug="new"
+      />
       <main className="m-auto flex max-w-5xl flex-col px-4">
         <nav className="flex items-center justify-between py-4">
           <a href="/">
@@ -62,10 +16,10 @@ const WhatsNew = () => {
           </a>
           <div>
             <ul className="flex items-center gap-4 text-sm">
-              <li className="hidden sm:inline cursor-pointer">
+              <li className="hidden cursor-pointer sm:inline">
                 <a href="/hashtag">AI Hashtag Generator</a>
               </li>
-              <ll className="rounded-md animate-pulse font-bold border border-rose-500 p-1 px-2">
+              <ll className="animate-pulse rounded-md border border-rose-500 p-1 px-2 font-bold">
                 <a href="/ai-tools">MORE AI TOOLS</a>
               </ll>
               <li className="flex w-fit items-center gap-1 rounded-full bg-rose-500 p-1 px-3	 text-white shadow-sm ">

@@ -1,51 +1,14 @@
-import React from "react";
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import Typewriter from "typewriter-effect";
+import React from 'react';
+import SEOMeta from '@/components/SEOMeta';
 
 const Privacy = () => {
   return (
     <>
-      <Head>
-        <title>Privacy Policy — Scrip AI</title>
-        <meta name="title" content="Privacy Policy — Scrip AI" />
-        <meta
-          name="description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://scripai.com/privacy" />
-        <meta property="og:title" content="Privacy Policy — Scrip AI" />
-        <meta
-          property="og:description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-        <meta
-          property="og:image"
-          content="https://scripai.com/scrip-ai-cover.png"
-        />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://scripai.com/privacy" />
-        <meta property="twitter:title" content="Privacy Policy — Scrip AI" />
-        <meta
-          property="twitter:description"
-          content="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
-        />
-        <meta
-          property="twitter:image"
-          content="https://scripai.com/scrip-ai-cover.png"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <link rel="icon" href="https://scripai.com/favicon.png" />
-
-        <meta
-          name="google-site-verification"
-          content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
-        />
-      </Head>
+      <SEOMeta
+        title="Privacy Policy — Scrip AI"
+        description="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
+        slug="privacy"
+      />
       <main className="m-auto flex max-w-5xl flex-col px-4">
         <nav className="flex items-center justify-between py-4">
           <a href="/">
@@ -53,7 +16,7 @@ const Privacy = () => {
           </a>
           <div>
             <ul className="flex items-center gap-4 text-sm">
-              <li className="hidden sm:inline cursor-pointer">
+              <li className="hidden cursor-pointer sm:inline">
                 <a href="/hashtag">AI Hashtag Generator</a>
               </li>
               <ll className="rounded-md bg-rose-50 p-1 px-2">
@@ -139,7 +102,7 @@ const Privacy = () => {
             based upon their visit to www.website.com and other sites on the
             internet. However, visitors may choose to decline the use of DART
             cookies by visiting the Google ad and content network Privacy Policy
-            at the following URL –{" "}
+            at the following URL –{' '}
             <a href="https://policies.google.com/technologies/ads">
               https://policies.google.com/technologies/ads
             </a>
@@ -196,7 +159,7 @@ const Privacy = () => {
             websites. Thus, we are advising you to consult the respective
             Privacy Policies of these third-party ad servers for more detailed
             information. It may include their practices and instructions about
-            how to opt-out of certain options.{" "}
+            how to opt-out of certain options.{' '}
           </p>
 
           <p>

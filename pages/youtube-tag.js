@@ -3,7 +3,7 @@ import Tools from '@/components/Tools';
 import { useEffect, useState } from 'react';
 import { WindupChildren } from 'windups';
 
-const TwitterHashtagGenerator = () => {
+const YoutubeTagGenerator = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [toggle, setToggle] = useState(false);
 
@@ -12,10 +12,10 @@ const TwitterHashtagGenerator = () => {
   };
 
   const [prompt, setPromptData] = useState({
-    hashtag: '',
+    tag: '',
     description: '',
     language: '',
-    platform: 'Twitter',
+    platform: 'Youtube',
   });
 
   const [data, setData] = useState();
@@ -42,8 +42,8 @@ const TwitterHashtagGenerator = () => {
     setPromptData({ ...prompt, description: e.target.value });
   };
 
-  const handleHashtag = (e) => {
-    setPromptData({ ...prompt, hashtag: e.target.value });
+  const handleTag = (e) => {
+    setPromptData({ ...prompt, tag: e.target.value });
   };
 
   const handleLanguage = (e) => {
@@ -51,13 +51,13 @@ const TwitterHashtagGenerator = () => {
   };
 
   const getData = async () => {
-    let hashtagDescription =
-      prompt.description && `and context of tweet: ${prompt.description}`;
-    let hasHashtag = prompt.hashtag && `tweet topic/keyword ${prompt.hashtag}`;
+    let TagDescription =
+      prompt.description && `and context of video: ${prompt.description}`;
+    let hasTag = prompt.tag && `topic/keyword ${prompt.tag}`;
 
-    let userPrompt = `write 5 twitter hashtags based on "${hasHashtag}" ${hashtagDescription} in ${
+    let userPrompt = `Write 15 Youtube video tags based on "${hasTag}" ${TagDescription} in ${
       prompt.language || 'English'
-    }. only hashtag are allowed in your answer`;
+    }. only tag are allowed in your answer`;
 
     const response = await fetch('/api/getGPTdata', {
       method: 'POST',
@@ -78,10 +78,10 @@ const TwitterHashtagGenerator = () => {
   };
 
   const handleApi = (e) => {
-    if (!prompt.hashtag) {
+    if (!prompt.tag) {
       setErr(true);
     }
-    if (prompt.hashtag) {
+    if (prompt.tag) {
       e.preventDefault();
       setLoading(true);
       getData();
@@ -90,7 +90,7 @@ const TwitterHashtagGenerator = () => {
 
   useEffect(() => {
     setPromptData({
-      hashtag: '',
+      tag: '',
       description: '',
       language: 'English',
     });
@@ -110,10 +110,11 @@ const TwitterHashtagGenerator = () => {
     <>
       <div className="relative">
         <SEOMeta
-          title="AI Twitter Hashtag Generator [100% FREE - No Login required] — Scrip AI"
-          description="Try the AI Twitter Hashtag Generator today and watch your posts go viral! Twitter Hashtag Generator by Scrip AI."
-          slug="twitter-hashtag"
+          title="AI Youtube Tag Generator [100% FREE - No Login required] — Scrip AI"
+          description="Try the AI Youtube Video Tag Generator today and watch your posts go viral! YT Tag Generator by Scrip AI."
+          slug="youtube-tag"
         />
+
         {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
         We are LIVE again 🙏
       </div> */}
@@ -131,7 +132,7 @@ const TwitterHashtagGenerator = () => {
               <div>
                 <ul className="flex items-center gap-4 text-sm">
                   <li className="hidden cursor-pointer sm:inline">
-                    <a href="/hashtag">AI Hashtag Generator</a>
+                    <a href="/tag">AI Tag Generator</a>
                   </li>
                   {/* <ll className="rounded-md bg-rose-50 p-1 px-2">
                   <a href="/new">What's new</a>
@@ -167,32 +168,32 @@ const TwitterHashtagGenerator = () => {
               <div className="flex w-full flex-col gap-6 p-4 sm:w-2/5 ">
                 <div className="flex flex-col gap-3 ">
                   <div className="w-full text-xl font-bold text-black ">
-                    AI Twitter Hashtag Generator
+                    AI Youtube Tag Generator
                   </div>
                   <hr />
                 </div>
                 <div className="flex flex-col gap-1 ">
                   <div className="flex flex-col gap-1 ">
-                    <div className="text-xs">Tweet Topic</div>
+                    <div className="text-xs">Video Title</div>
                     <input
                       type="text"
                       className="w-full rounded-md border p-2 placeholder:text-[9px] placeholder:text-gray-600"
-                      placeholder="Please enter main hashtag/keyword/topic"
-                      value={prompt.hashtag}
-                      onChange={handleHashtag}
-                      maxLength={40}
+                      placeholder="Please enter main tag/keyword/topic"
+                      value={prompt.tag}
+                      onChange={handleTag}
+                      maxLength={56}
                     />
                   </div>
                   {err && (
                     <div className="text-xs text-rose-600">
-                      main hashtag/topic is required*
+                      main tag/topic is required*
                     </div>
                   )}
                 </div>
 
                 <div className="flex flex-col gap-1 ">
                   <div className="text-xs">
-                    Tweet description{' '}
+                    Video description{' '}
                     <span className="text-[8px]">{`(optional)`}</span>
                   </div>
                   <textarea
@@ -229,20 +230,21 @@ const TwitterHashtagGenerator = () => {
                     <option value="Korean">Korean</option>
                   </select>
                 </div>
+
                 {
                   <button
                     disabled={isLoading}
                     onClick={handleApi}
                     className="mx-auto w-full rounded-full border bg-rose-500 p-2 text-white outline-none"
                   >
-                    {isLoading ? 'Loading...' : 'Generate Hashtag'}
+                    {isLoading ? 'Loading...' : 'Generate Tag'}
                   </button>
                 }
                 {data?.length && data && (
                   <button
                     onClick={() => {
                       setPromptData({
-                        hashtag: '',
+                        tag: '',
                         description: '',
                       });
                     }}
@@ -298,7 +300,7 @@ const TwitterHashtagGenerator = () => {
                             d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
                           />
                         </svg>
-                        AI will write hashtags here!
+                        AI will write video tags here!
                       </p>
                     )}
                   </WindupChildren>
@@ -387,4 +389,4 @@ const TwitterHashtagGenerator = () => {
   );
 };
 
-export default TwitterHashtagGenerator;
+export default YoutubeTagGenerator;

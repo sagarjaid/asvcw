@@ -3,7 +3,7 @@ import Tools from '@/components/Tools';
 import { useEffect, useState } from 'react';
 import { WindupChildren } from 'windups';
 
-const TwitterHashtagGenerator = () => {
+const LinkedinHashtagGenerator = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [toggle, setToggle] = useState(false);
 
@@ -15,7 +15,7 @@ const TwitterHashtagGenerator = () => {
     hashtag: '',
     description: '',
     language: '',
-    platform: 'Twitter',
+    platform: 'Linkedin',
   });
 
   const [data, setData] = useState();
@@ -52,10 +52,10 @@ const TwitterHashtagGenerator = () => {
 
   const getData = async () => {
     let hashtagDescription =
-      prompt.description && `and context of tweet: ${prompt.description}`;
-    let hasHashtag = prompt.hashtag && `tweet topic/keyword ${prompt.hashtag}`;
+      prompt.description && `and context of post: ${prompt.description}`;
+    let hasHashtag = prompt.hashtag && `topic/keyword ${prompt.hashtag}`;
 
-    let userPrompt = `write 5 twitter hashtags based on "${hasHashtag}" ${hashtagDescription} in ${
+    let userPrompt = `Write 5 Linkedin hashtags based on "${hasHashtag}" ${hashtagDescription} in ${
       prompt.language || 'English'
     }. only hashtag are allowed in your answer`;
 
@@ -110,9 +110,9 @@ const TwitterHashtagGenerator = () => {
     <>
       <div className="relative">
         <SEOMeta
-          title="AI Twitter Hashtag Generator [100% FREE - No Login required] — Scrip AI"
-          description="Try the AI Twitter Hashtag Generator today and watch your posts go viral! Twitter Hashtag Generator by Scrip AI."
-          slug="twitter-hashtag"
+          title="AI LinkedIn Hashtag Generator [100% FREE - No Login required] — Scrip AI"
+          description="Try the AI Linkedin Hashtag Generator today and watch your posts go viral! Linkedin Hashtag Generator by Scrip AI."
+          slug="linkedin-hashtag"
         />
         {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
         We are LIVE again 🙏
@@ -167,20 +167,20 @@ const TwitterHashtagGenerator = () => {
               <div className="flex w-full flex-col gap-6 p-4 sm:w-2/5 ">
                 <div className="flex flex-col gap-3 ">
                   <div className="w-full text-xl font-bold text-black ">
-                    AI Twitter Hashtag Generator
+                    AI Linkedin Hashtag Generator
                   </div>
                   <hr />
                 </div>
                 <div className="flex flex-col gap-1 ">
                   <div className="flex flex-col gap-1 ">
-                    <div className="text-xs">Tweet Topic</div>
+                    <div className="text-xs">Post Topic</div>
                     <input
                       type="text"
                       className="w-full rounded-md border p-2 placeholder:text-[9px] placeholder:text-gray-600"
                       placeholder="Please enter main hashtag/keyword/topic"
                       value={prompt.hashtag}
                       onChange={handleHashtag}
-                      maxLength={40}
+                      maxLength={56}
                     />
                   </div>
                   {err && (
@@ -192,7 +192,7 @@ const TwitterHashtagGenerator = () => {
 
                 <div className="flex flex-col gap-1 ">
                   <div className="text-xs">
-                    Tweet description{' '}
+                    Post description{' '}
                     <span className="text-[8px]">{`(optional)`}</span>
                   </div>
                   <textarea
@@ -229,6 +229,7 @@ const TwitterHashtagGenerator = () => {
                     <option value="Korean">Korean</option>
                   </select>
                 </div>
+
                 {
                   <button
                     disabled={isLoading}
@@ -387,4 +388,4 @@ const TwitterHashtagGenerator = () => {
   );
 };
 
-export default TwitterHashtagGenerator;
+export default LinkedinHashtagGenerator;
