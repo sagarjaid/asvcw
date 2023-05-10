@@ -54,7 +54,7 @@ export default function App({ Component, pageProps }) {
         (function() {
           function relaodAds() {
              console.log("reloadAds got called");
-            setInterval(() => {
+            setTimeout(() => {
                console.log("setInterval got called");
 
               if (document) {
@@ -82,7 +82,7 @@ export default function App({ Component, pageProps }) {
           }
           relaodAds();
         })();
-      `}</Script>
+      `}</Script >
     </>
   );
 }
