@@ -55,30 +55,15 @@ export default function App({ Component, pageProps }) {
           function relaodAds() {
              console.log("reloadAds got called");
             setTimeout(() => {
-               console.log("setInterval got called");
-
+               console.log("setTimeout got called");
               if (document) {
-
                  console.log("if got called");
-
                 var ad1 = document.getElementById("aswift_1")
-                var ad2 = document.getElementById("aswift_2")
-                var ad3 = document.getElementById("aswift_3")
-
-
                 if(ad1){
                 ad1.src = ad1.src
                 }
-
-                if(ad2){
-                ad2.src = ad2.src
-                }
-
-                if(ad3){
-                ad3.src = ad3.src
-                }
               }
-            }, 30000);
+            }, 60000);
           }
           relaodAds();
         })();
