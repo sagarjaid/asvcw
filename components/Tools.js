@@ -158,8 +158,18 @@ const Tools = () => {
             </ul>
             <div className="mt-2 flex flex-col ">Linkedin</div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4 text-blue-500">
-              <li>Linkedin Post Hook</li>
-              <li>Linkedin Post</li>
+              <li>
+                <a className="underline" href="/linkedin-post-hook">
+                  Linkedin Post Hook
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/linkedin-post">
+                  Linkedin Post
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
               <li>Linkedin Long Text Thread</li>
               <li>Linkedin Story Post</li>
               <li>
@@ -202,7 +212,12 @@ const Tools = () => {
               <li>Youtube Description</li>
               <li>Youtube Video Outline</li>
               <li>Youtube Intro</li>
-              <li>Youtube Hook</li>
+              <li>
+                <a className="underline" href="/youtube-hook">
+                  Youtube Hook
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
               <li>
                 <a className="underline" href="/youtube-hashtag">
                   Youtube Hashtag
@@ -224,7 +239,12 @@ const Tools = () => {
             </ul>
             <div className="mt-2 flex flex-col">Tiktok</div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4 text-blue-500">
-              <li>Tiktok Hook</li>
+              <li>
+                <a className="underline" href="/tiktok-hook">
+                  Tiktok Hook
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
               <li>
                 <a className="underline" href="/tiktok-hashtag">
                   Tiktok Hashtag
@@ -325,7 +345,12 @@ const Tools = () => {
               Other AI Tools<span className="text-[9px]">(Coming Soon)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4 text-blue-500">
-              <li>Definition</li>
+              <li>
+                <a className="underline" href="/definition">
+                  Definition
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
               <li>Song Writer</li>
               <li>Poem Writer</li>
               <li>Bullet Point Summary</li>

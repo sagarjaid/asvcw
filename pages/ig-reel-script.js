@@ -65,15 +65,11 @@ const IGReelScript = () => {
   };
 
   const getData = async () => {
-    let userPrompt = `Assume you are a content creator. Write content in ${
-      prompt.language || 'English'
-    } for a Instagrm Reel on following. Topic: ${prompt.title}, description: ${
-      prompt.description
-    }, keyword: ${prompt.keywords}, Tone of voice: ${
-      prompt.tone || 'Professional'
-    }, Time to read the content: ${
-      prompt.time || '30 Sec'
-    }, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, make sure to write the content in bit-size sentences and put each sentence in the next line.`;
+    let userPrompt = `Assume you are a content creator. Write content in ${prompt.language || 'English'
+      } for a Instagrm Reel on following. Topic: ${prompt.title}, description: ${prompt.description
+      }, keyword: ${prompt.keywords}, Tone of voice: ${prompt.tone || 'Professional'
+      }, Time to read the content: ${prompt.time || '30 Sec'
+      }, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, make sure to write the content in bit-size sentences and put each sentence in the next line.`;
 
     const response = await fetch('/api/getGPTdata', {
       method: 'POST',
@@ -208,7 +204,7 @@ const IGReelScript = () => {
               <div className="flex w-full flex-col gap-4 p-4 sm:w-2/5 ">
                 <div className="flex flex-col gap-3 ">
                   <div className="w-full text-xl font-bold text-black ">
-                    AI Short Script
+                    AI IG Script Writer
                   </div>
                   <hr />
                 </div>

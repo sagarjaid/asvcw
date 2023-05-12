@@ -3,7 +3,7 @@ import Tools from '@/components/Tools';
 import { useEffect, useState } from 'react';
 import { WindupChildren } from 'windups';
 
-const YTshortsScript = () => {
+const Definition = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [toggle, setToggle] = useState(false);
 
@@ -13,11 +13,9 @@ const YTshortsScript = () => {
   const [isMobile, setMobile] = useState(false);
   const [prompt, setPromptData] = useState({
     title: '',
-    description: '',
     keywords: '',
     language: '',
     tone: '',
-    time: '',
   });
 
   const [data, setData] = useState();
@@ -44,10 +42,6 @@ const YTshortsScript = () => {
     setPromptData({ ...prompt, title: e.target.value });
   };
 
-  const handleDescription = (e) => {
-    setPromptData({ ...prompt, description: e.target.value });
-  };
-
   const handleKeywords = (e) => {
     setPromptData({ ...prompt, keywords: e.target.value });
   };
@@ -60,17 +54,11 @@ const YTshortsScript = () => {
     setPromptData({ ...prompt, tone: e.target.value });
   };
 
-  const handleTime = (e) => {
-    setPromptData({ ...prompt, time: e.target.value });
-  };
-
   const getData = async () => {
-    let userPrompt = `Assume you are a content creator. Write content in ${prompt.language || 'English'
-      } for a Youtube shorts/Tiktok on following. Topic: ${prompt.title
-      }, description: ${prompt.description}, keyword: ${prompt.keywords
-      }, Tone of voice: ${prompt.tone || 'Professional'
-      }, Time to read the content: ${prompt.time || '30 Sec'
-      }, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, make sure to write the content in bit-size sentences and put each sentence in the next line.`;
+    let userPrompt = `Assume you are a Linkedin content creator. Write content in ${prompt.language || 'English'
+      } for a Linkedin post on following. Topic: ${prompt.title}, description: ${prompt.description
+      }, keyword: ${prompt.keywords}, Tone of voice: ${prompt.tone || 'Professional'
+      }, Start the script with 1 sentence hook so that people will want to stop and watch the content creator, you can also use 1 emoji at end of hook sentence, make sure to write the content in bit-size sentences and put each sentence in the next line.`;
 
     const response = await fetch('/api/getGPTdata', {
       method: 'POST',
@@ -88,10 +76,6 @@ const YTshortsScript = () => {
     console.log(DataArr);
     setData(DataArr);
     setLoading(false);
-    setPromptData({
-      description: '',
-      keywords: '',
-    });
   };
 
   const handleApi = (e) => {
@@ -108,11 +92,9 @@ const YTshortsScript = () => {
   useEffect(() => {
     setPromptData({
       title: '',
-      description: '',
       keywords: '',
       language: 'English',
       tone: 'Professional',
-      time: '30-to-60 seconds',
     });
 
     if (window.innerWidth <= 640) {
@@ -136,9 +118,9 @@ const YTshortsScript = () => {
     <>
       <div className="relative">
         <SEOMeta
-          title="AI Youtube Shorts Script Writer [100% FREE - No Login required] — Scrip AI"
-          description="Write 30 sec Youtube Shorts script powerd by AI and watch your YT Shorts go viral! Try short video scripr by Scrip AI."
-          slug="yt-shorts-script"
+          title="AI Linkedin Post Writer [100% FREE - No Login required] — Scrip AI"
+          description="Write Linkedin post that make your Linkeidn conncetions stop scrolling. Try AI Linkedin Post generator by Scrip AI and watch your Linkedin post go viral!."
+          slug="linkedin-post"
         />
         {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
         We are LIVE again 🙏
@@ -162,18 +144,6 @@ const YTshortsScript = () => {
                   {/* <ll className="rounded-md bg-rose-50 p-1 px-2">
                   <a href="/new">What's new</a>
                 </ll> */}
-                  {/* <li>
-                  <a
-                    className="hidden sm:inline"
-                    href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
-                    target="_blank"
-                  >
-                    <img
-                      className="w-36"
-                      src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
-                    />
-                  </a>
-                </li> */}
                   <ll className="relative rounded-md border border-rose-500 p-1 px-3 font-bold">
                     <span className=" absolute -top-1.5 right-1.5 h-3 w-3 animate-pulse rounded-full bg-rose-600 text-[9px]"></span>
                     <a href="/ai-tools">MORE AI TOOLS</a>
@@ -205,22 +175,22 @@ const YTshortsScript = () => {
               <div className="flex w-full flex-col gap-4 p-4 sm:w-2/5 ">
                 <div className="flex flex-col gap-3 ">
                   <div className="w-full text-xl font-bold text-black ">
-                    AI YT short Script Writer
+                    AI Definition Writer
                   </div>
                   <hr />
                 </div>
                 <div className="flex flex-col gap-1 ">
-                  <div className="text-xs">Video title</div>
+                  <div className="text-xs">Define</div>
                   <textarea
-                    placeholder="How to..."
+                    placeholder="What is/define..."
                     type="text"
                     className="w-full rounded-md border p-1 text-xs placeholder:text-[9px] placeholder:text-gray-600"
                     rows="2"
-                    maxLength={250}
+                    maxLength={100}
                     value={prompt.title}
                     onChange={handleTitle}
                   />
-                  <div className="w-fit rounded-md p-1 text-xs text-gray-800">
+                  {/* <div className="w-fit rounded-md p-1 text-xs text-gray-800">
                     <svg
                       className="mr-2 inline w-3"
                       fill="currentColor"
@@ -235,31 +205,16 @@ const YTshortsScript = () => {
                       />
                     </svg>
                     <span className="text-[9px]">
-                      Start the title with: How to, 3 steps, etc
+                      Start the post topic with: How to, 3 steps, etc
                     </span>
-                  </div>
+                  </div> */}
                   {err && (
                     <div className="text-xs text-rose-600">
-                      title is required*
+                      Topic for definition is required*
                     </div>
                   )}
                 </div>
 
-                <div className="flex flex-col gap-1 ">
-                  <div className="text-xs">
-                    Short video description{' '}
-                    <span className="text-[8px]">{`(optional)`}</span>
-                  </div>
-                  <textarea
-                    type="text"
-                    placeholder="Please enter video description if you want"
-                    className="w-full rounded-md border p-1 text-xs placeholder:text-[9px] placeholder:text-gray-600"
-                    rows="5"
-                    maxLength={250}
-                    value={prompt.description}
-                    onChange={handleDescription}
-                  />
-                </div>
                 <div className="flex flex-col gap-1 ">
                   <div className="text-xs">
                     Keywords <span className="text-[8px]">{`(optional)`}</span>{' '}
@@ -317,20 +272,6 @@ const YTshortsScript = () => {
                       <option value="Worried">Worried</option>
                     </select>
                   </div>
-                </div>
-
-                <div className="flex items-center  gap-1">
-                  <div className="text-xs">Time :</div>
-                  <select
-                    onChange={handleTime}
-                    className="rounded-md border-none p-1 px-2 text-xs outline-none"
-                  >
-                    <option value="30-to-60 seconds" defaultValue>
-                      30-to-60 seconds
-                    </option>
-                    <option value="30 seconds">30 seconds</option>
-                    <option value="60 seconds">60 seconds</option>
-                  </select>
                 </div>
 
                 {
@@ -491,4 +432,4 @@ const YTshortsScript = () => {
   );
 };
 
-export default YTshortsScript;
+export default Definition;
