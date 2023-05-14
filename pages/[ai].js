@@ -60,7 +60,7 @@ const ToolPage = ({ text }) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ prompt: prompt, slug: isRoute.url }),
+      body: JSON.stringify({ prompt: prompt, slug: text.url }),
     });
 
     const resData = await response.json();
