@@ -3,11 +3,12 @@ import React from 'react';
 const Tools = () => {
   return (
     <>
-      <div className="w-full">
+      <div className="mt-10 w-full">
         <h1 className="p-4 text-xl font-bold">
           Free AI-powered Tools | No credit card required | No login is required
         </h1>
-        <div className="flex w-full flex-wrap gap-4 p-4">
+        <hr />
+        {/* <div className="flex w-full flex-wrap gap-4 p-4">
           <a
             href="/hashtag"
             className="flex w-full flex-col gap-1 rounded-md border border-black p-4 hover:bg-black hover:text-white sm:w-[32%]"
@@ -56,23 +57,52 @@ const Tools = () => {
               </span>
             </div>
           </a>
-        </div>
-        <h1 className="p-4 text-xl font-bold">
+        </div> */}
+        {/* <h1 className="p-4 text-xl font-bold">
           MORE AI TOOLS Are Coming Soon..!
-        </h1>
+        </h1> */}
         <div className="flex flex-col flex-wrap  sm:flex-row">
           <div className="p-4">
             <div className="mb-4 flex flex-col">
-              Copywriting AI<span className="text-[9px]">(Coming Soon)</span>
+              Copywriting AI<span className="text-[9px]">(Live)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col  gap-2 pl-4 text-blue-500">
-              <li>Paragraph Writer</li>
-              <li>Text Expander</li>
-              <li>Content Rewriter</li>
-              <li>Content Shortener</li>
-              <li>Sales Copy Generator</li>
-              <li>Sentence Rewriter</li>
-              <li>Content Ideas</li>
+              <li>
+                <a className="underline" href="/paragraph-writer">
+                  Paragraph Writer
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/sentence-expander">
+                  Sentence Expander
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/content-rewriter">
+                  Content Rewriter
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/sentence-rewriter">
+                  Sentence Rewriter
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/sales-copy">
+                  Sales Copy Generator
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/content-idea">
+                  Content Ideas
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
             </ul>
           </div>
 
@@ -126,11 +156,21 @@ const Tools = () => {
 
           <div className="flex flex-col gap-1 p-4">
             <div className="mb-4 flex flex-col">
-              Social Media AI<span className="text-[9px]">(Coming Soon)</span>
+              Social Media AI<span className="text-[9px]">(Live)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4 text-blue-500">
-              <li>Social Media Post</li>
-              <li>Social Media Theme</li>
+              <li>
+                <a className="underline" href="/social-media-post">
+                  Social Media Post
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/social-post-idea">
+                  Social Media Post Ideas
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
               <li>
                 <a className="underline" href="/hashtag">
                   Hashtag Generator
@@ -146,9 +186,24 @@ const Tools = () => {
             </ul>
             <div className="mt-2 flex flex-col">Twitter</div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4 text-blue-500">
-              <li>Twitter Bio</li>
-              <li>Twitter Tweet</li>
-              <li>Twitter Thread</li>
+              <li>
+                <a className="underline" href="/twitter-bio">
+                  Twitter Bio
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/twitter-tweet">
+                  Twitter Tweet
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/twitter-thread">
+                  Twitter Thread
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
               <li>
                 <a className="underline" href="/twitter-hashtag">
                   Twitter Hashtag
@@ -170,8 +225,12 @@ const Tools = () => {
                 </a>{' '}
                 <span className="text-[9px] text-rose-500">(live)</span>{' '}
               </li>
-              <li>Linkedin Long Text Thread</li>
-              <li>Linkedin Story Post</li>
+              <li>
+                <a className="underline" href="/linkedin-story-post">
+                  Linkedin Story Post
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
               <li>
                 <a className="underline" href="/linkedin-hashtag">
                   Linkedin Hashtag
@@ -181,7 +240,12 @@ const Tools = () => {
             </ul>
             <div className="mt-2 flex flex-col">Facebook</div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4 text-blue-500">
-              <li>Facebook Post</li>
+              <li>
+                <a className="underline" href="/facebook-post">
+                  Facebook Post
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
               <li>
                 <a className="underline" href="/facebook-hashtag">
                   Facebook Hashtag
@@ -191,7 +255,12 @@ const Tools = () => {
             </ul>
             <div className="mt-2 flex flex-col">Instagram</div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4 text-blue-500">
-              <li>Instagram Caption</li>
+              <li>
+                <a className="underline" href="/instagram-caption">
+                  Instagram Caption
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
               <li>
                 <a className="underline" href="/instagram-hashtag">
                   Instagram Hashtag

@@ -132,9 +132,9 @@ const Script = () => {
         description="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
         slug="script"
       />
-      {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
-        We are LIVE again 🙏
-      </div> */}
+      <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
+        If you refer this tool to only one friend, You'll make my day :)
+      </div>
       <main>
         <div className="m-auto flex h-screen max-w-5xl flex-col items-center text-sm">
           {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
@@ -149,7 +149,7 @@ const Script = () => {
             <div>
               <ul className="flex items-center gap-4 text-sm">
                 <li className="hidden cursor-pointer sm:inline">
-                  <a href="/hashtag">AI Hashtag Generator</a>
+                  <a href="/new">What's New</a>
                 </li>
                 {/* <ll className="rounded-md bg-rose-50 p-1 px-2">
                   <a href="/new">What's new</a>

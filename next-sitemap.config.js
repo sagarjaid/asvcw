@@ -1,4 +1,4 @@
 module.exports = {
-    siteUrl: 'https://scripai.com',
-    generateRobotsTxt: true,
-}
+  siteUrl: 'https://scripai.com',
+  generateRobotsTxt: true,
+};

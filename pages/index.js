@@ -19,9 +19,9 @@ const Home = () => {
         title="Scrip AI — AI TikTok, Reel & YT Shorts Script Writer [100% FREE - No Login required]"
         description="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts powerd by AI"
       />
-      {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
-        We are LIVE again 🙏
-      </div> */}
+      <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
+        If you refer this tool to only one friend, You'll make my day :)
+      </div>
       <main className="m-auto flex max-w-5xl flex-col px-4">
         <nav className="flex items-center justify-between py-4">
           <a href="/">
@@ -30,7 +30,7 @@ const Home = () => {
           <div>
             <ul className="flex items-center gap-1 text-sm sm:gap-4">
               <li className="hidden cursor-pointer sm:inline">
-                <a href="/hashtag">AI Hashtag Generator</a>
+                <a href="/new">What's New</a>
               </li>
               <ll className="relative rounded-md border border-rose-500 p-1 px-3 font-bold">
                 <span className=" absolute -top-1.5 right-1.5 h-3 w-3 animate-pulse rounded-full bg-rose-600 text-[9px]"></span>
