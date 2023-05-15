@@ -276,11 +276,36 @@ const Tools = () => {
             </ul>
             <div className="mt-2 flex flex-col">Youtube</div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4 text-blue-500">
-              <li>Youtube Video Ideas</li>
-              <li>Youtube SEO Title</li>
-              <li>Youtube Description</li>
-              <li>Youtube Video Outline</li>
-              <li>Youtube Intro</li>
+              <li>
+                <a className="underline" href="/youtube-video-idea">
+                  Youtube Video Ideas
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/youtube-video-outline">
+                  Youtube Video Outline
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/youtube-intro">
+                  Youtube Intro
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/youtube-seo-title">
+                  Youtube SEO Title
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
+              <li>
+                <a className="underline" href="/youtube-seo-description">
+                  Youtube Description
+                </a>{' '}
+                <span className="text-[9px] text-rose-500">(live)</span>{' '}
+              </li>
               <li>
                 <a className="underline" href="/youtube-hook">
                   Youtube Hook

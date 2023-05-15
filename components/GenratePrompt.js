@@ -31,6 +31,9 @@ const GenratePrompt = (prompt, slug) => {
     case 'social-post-idea':
       userPrompt = `Write 3 Social Media Post ideas for ${platform} in ${language} based on following. Topic: ${title}, keywords: ${keywords} Tone: ${tone}`;
       break;
+    case 'youtube-video-idea':
+      userPrompt = `Write 3 Youtube Video Ideas for Youtube in ${language} based on following. Topic: ${title}, keywords: ${keywords} Tone: ${tone}`;
+      break;
     case 'content-idea':
       userPrompt = `Write 3 content ideas in ${language} for following. Topic: ${title}, Tone: ${tone}`;
       break;
@@ -93,6 +96,18 @@ const GenratePrompt = (prompt, slug) => {
       break;
     case 'instagram-hashtag':
       userPrompt = `Write 30 hashtag in ${language} for instagram post on following. Topic: ${title}`;
+      break;
+    case 'youtube-intro':
+      userPrompt = `Assume you are youtube content creator. Write 2 sentence hook intro so that people will want to stop scrolling. Write in ${language} for a Youtube video on following. Topic: ${title}, description: ${description}, keyword: ${keywords}, Tone: ${tone}`;
+      break;
+    case 'youtube-video-outline':
+      userPrompt = `Assume you are youtube content creator. Write Youtube Video Outline in ${language} for a Youtube video on following. Topic: ${title}, description: ${description}, keyword: ${keywords}, Tone: ${tone}`;
+      break;
+    case 'youtube-seo-title':
+      userPrompt = `Assume you are SEO expert. Write 3 Youtube SEO Title in ${language} for a Youtube video on following. Video title: ${title}, keyword: ${keywords}, Tone: ${tone}`;
+      break;
+    case 'youtube-seo-description':
+      userPrompt = `Assume you are SEO expert. Write 3 Youtube SEO description in ${language} for a Youtube video on following. Video title: ${title}, keyword: ${keywords}, Tone: ${tone}`;
       break;
     default:
       break;

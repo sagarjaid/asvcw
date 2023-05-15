@@ -70,6 +70,7 @@ const ToolPage = ({ text }) => {
     const DataArr = resData.result.split('\n');
     console.log(DataArr);
     setData(DataArr);
+    setPromptData(text?.initalState);
     setLoading(false);
   };
 
@@ -85,7 +86,7 @@ const ToolPage = ({ text }) => {
   };
 
   const handleClearFields = () => {
-    setPromptData(text.initalState);
+    setPromptData(text?.initalState);
   };
 
   return (

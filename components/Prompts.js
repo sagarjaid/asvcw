@@ -462,7 +462,7 @@ const prompts = [
         'AI Social Media Post Ideas [100% FREE - No Login required] — Scrip AI',
       description:
         'Get Social Media post ideas 10X faster. Try AI Social Media Post Idea Generator by Scrip AI and watch your post go viral!.',
-      slug: 'social-post-ideas',
+      slug: 'social-post-idea',
     },
   },
   {
@@ -1068,6 +1068,186 @@ const prompts = [
       description:
         'Generate Youtube Tag that make Youtube Algorithm Happy. Try AI Youtube Tag generator by Scrip AI and watch your Youtube video go viral!.',
       slug: 'youtube-tag',
+    },
+  },
+  {
+    url: 'youtube-video-idea',
+    toolName: 'AI Youtube Video Ideas',
+    initalState: {
+      title: '',
+      keywords: '',
+      platform: 'Youtube',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Video topic',
+      maxLength: 300,
+      placeholder: 'Please enter video topic...',
+      err: 'video topic is required*',
+      rows: 8,
+      showOptional: false,
+    },
+    keywords: {
+      name: 'keywords',
+      maxLength: 50,
+      showOptional: true,
+    },
+    language: 'Language',
+    tone: 'Tone',
+    btnText: 'Generate 3 YT Video Ideas',
+    seoData: {
+      title:
+        'AI Youtube Video Ideas [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Get Youtube Video Ideas 10X faster. Try AI Youtube Video Ideas Generator by Scrip AI and watch your YT video go viral!.',
+      slug: 'youtube-video-idea',
+    },
+  },
+  {
+    url: 'youtube-intro',
+    toolName: 'AI Youtube Intro',
+    initalState: {
+      title: '',
+      description: '',
+      keywords: '',
+      platform: 'Youtube',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Youtube video title',
+      maxLength: 100,
+      placeholder: 'Please enter Video title...',
+      err: 'video title is required*',
+      showOptional: false,
+    },
+    description: {
+      name: 'video description',
+      maxLength: 250,
+      placeholder: 'Please enter video description...',
+      showOptional: true,
+    },
+    keywords: {
+      name: 'keywords',
+      maxLength: 50,
+      showOptional: true,
+    },
+    language: 'Language',
+    tone: 'Tone',
+    btnText: 'Generate Youtube Video Intro',
+    seoData: {
+      title:
+        'AI YouTube Intro Generator [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Write YouTube Intro that make YouTube viewer stick to video. Try AI YouTube Intro generator by Scrip AI and watch your YouTube video go viral!.',
+      slug: 'youtube-hook',
+    },
+  },
+  {
+    url: 'youtube-video-outline',
+    toolName: 'AI Youtube Video Outine',
+    initalState: {
+      title: '',
+      description: '',
+      keywords: '',
+      platform: 'Youtube',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Youtube video title',
+      maxLength: 100,
+      placeholder: 'Please enter Video title...',
+      err: 'video title is required*',
+      showOptional: false,
+    },
+    description: {
+      name: 'video description',
+      maxLength: 250,
+      placeholder: 'Please enter video description...',
+      showOptional: true,
+    },
+    keywords: {
+      name: 'keywords',
+      maxLength: 50,
+      showOptional: true,
+    },
+    language: 'Language',
+    tone: 'Tone',
+    btnText: 'Generate Youtube Video Outline',
+    seoData: {
+      title:
+        'AI YouTube Video outline Generator [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Write YouTube Video outline that make YouTube viewer stick to video. Try AI YouTube Video outline generator by Scrip AI and watch your YouTube video go viral!.',
+      slug: 'youtube-video-outline',
+    },
+  },
+  {
+    url: 'youtube-seo-title',
+    toolName: 'AI Youtube SEO Title',
+    initalState: {
+      title: '',
+      keywords: '',
+      platform: 'Youtube',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Video title/topic',
+      maxLength: 300,
+      placeholder: 'Please enter video title/topic...',
+      err: 'video title/topic is required*',
+      rows: 8,
+      showOptional: false,
+    },
+    keywords: {
+      name: 'keywords',
+      maxLength: 50,
+      showOptional: true,
+    },
+    language: 'Language',
+    btnText: 'Generate Youtube SEO Title',
+    seoData: {
+      title:
+        'AI Youtube SEO Title Generator [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Get Youtube SEO Title 10X faster. Try AI Youtube SEO Title Generator by Scrip AI and watch your YT video go viral!.',
+      slug: 'youtube-seo-title',
+    },
+  },
+  {
+    url: 'youtube-seo-description',
+    toolName: 'AI Youtube SEO Description',
+    initalState: {
+      title: '',
+      keywords: '',
+      platform: 'Youtube',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Video title/topic',
+      maxLength: 300,
+      placeholder: 'Please enter video title/topic...',
+      err: 'video title/topic is required*',
+      rows: 8,
+      showOptional: false,
+    },
+    keywords: {
+      name: 'keywords',
+      maxLength: 50,
+      showOptional: true,
+    },
+    language: 'Language',
+    btnText: 'Generate Youtube SEO Description',
+    seoData: {
+      title:
+        'AI Youtube SEO Description Generator [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Get Youtube SEO Description 10X faster. Try AI Youtube SEO Description Generator by Scrip AI and watch your YT video go viral!.',
+      slug: 'youtube-seo-description',
     },
   },
 ];
