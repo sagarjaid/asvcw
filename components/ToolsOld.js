@@ -1,10 +1,8 @@
 import React from 'react';
-import Footer from './Footer';
 
-const domainURL = 'https://scripai.com';
-// const domainURL = "http://localhost:3000"
+const domainURL = 'http://localhost:3000' || 'https://scripai.com';
 
-const Tools = () => {
+const ToolsOld = () => {
   return (
     <>
       <div className="w-full">
@@ -590,12 +588,31 @@ const Tools = () => {
             </ul>
           </div>
         </div>
-        <div className="p-4">
-          <Footer />
+        <div className="flex justify-center gap-2 py-20">
+          <a href="https://www.linkedin.com/in/sagarjaid/" target="_blank">
+            by Sagar Jaid
+          </a>
+          <span>|</span>
+
+          <a href="https://scripai.com/privacy" target="_blank">
+            Privacy
+          </a>
+          <span>|</span>
+          <a href="https://scripai.com/tc" target="_blank">
+            T&C
+          </a>
+          <span>|</span>
+          <a href="https://scripai.com/gdpr" target="_blank">
+            GDPR
+          </a>
+          <span>|</span>
+          <a href="https://scripai.com/new" target="_blank">
+            What's New
+          </a>
         </div>
       </div>
     </>
   );
 };
 
-export default Tools;
+export default ToolsOld;

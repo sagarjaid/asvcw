@@ -1,4 +1,4 @@
-const prompts = [
+const pageObj = [
   {
     url: 'ig-reel-script',
     toolName: 'AI IG Script Writer',
@@ -1250,6 +1250,283 @@ const prompts = [
       slug: 'youtube-seo-description',
     },
   },
+  {
+    url: 'email-subject',
+    toolName: 'AI Email Subject Generator',
+    initalState: {
+      title: '',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Email description',
+      maxLength: 300,
+      placeholder: 'Please enter description...',
+      err: 'descriptionis required*',
+      rows: 5,
+      showOptional: false,
+    },
+    language: 'Language',
+    tone: 'Tone',
+    btnText: 'Generate Email Subject',
+    seoData: {
+      title:
+        'AI Email Subject Generator [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Generate Email Subject line that has highy open rate. Try AI Email Subject generator by Scrip AI.',
+      slug: 'email-subject',
+    },
+  },
+  {
+    url: 'blog-post-idea',
+    toolName: 'AI Blog Post Ideas',
+    initalState: {
+      title: '',
+      keywords: '',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Blog topic',
+      maxLength: 100,
+      placeholder: 'Please enter blog topic/name/title...',
+      err: 'video topic is required*',
+      rows: 8,
+      showOptional: false,
+    },
+    keywords: {
+      name: 'keywords',
+      maxLength: 50,
+      showOptional: true,
+    },
+    tone: 'Tone',
+    language: 'Language',
+    btnText: 'Generate 3 Blog Post Ideas',
+    seoData: {
+      title: 'AI Blog Post Ideas [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Get Blog Post Ideas 10X faster. Try AI Blog Post Ideas Generator by Scrip AI and watch your Blog post go viral!.',
+      slug: 'blog-post-idea',
+    },
+  },
+  {
+    url: 'blog-post-title',
+    toolName: 'AI Blog Post Title',
+    initalState: {
+      title: '',
+      keywords: '',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Blog topic',
+      maxLength: 100,
+      placeholder: 'Please enter blog topic/name/title...',
+      err: 'video topic is required*',
+      rows: 8,
+      showOptional: false,
+    },
+    keywords: {
+      name: 'keywords',
+      maxLength: 50,
+      showOptional: true,
+    },
+    tone: 'Tone',
+    language: 'Language',
+    btnText: 'Generate 3 Blog Post Title',
+    seoData: {
+      title: 'AI Blog Post Title [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Get Blog Post Title 10X faster. Try AI Blog Post Title Generator by Scrip AI and watch your Blog post go viral!.',
+      slug: 'blog-post-title',
+    },
+  },
+  {
+    url: 'blog-post-outline',
+    toolName: 'AI Blog Post Outline',
+    initalState: {
+      title: '',
+      description: '',
+      keywords: '',
+      platform: 'Online Blog',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Blog post title',
+      maxLength: 100,
+      placeholder: 'Please enter blog post title...',
+      err: 'video title is required*',
+      showOptional: false,
+    },
+    description: {
+      name: 'Blog description',
+      maxLength: 250,
+      placeholder: 'Please enter blog description...',
+      showOptional: true,
+    },
+    keywords: {
+      name: 'keywords',
+      maxLength: 50,
+      showOptional: true,
+    },
+    language: 'Language',
+    tone: 'Tone',
+    btnText: 'Generate Blog Post Outline',
+    seoData: {
+      title:
+        'AI Blog Post Outline Generator [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Write Blog Post Outline that makes your viewer stick on blog. Try AI Blog Post Outline generator by Scrip AI and watch your blog post go viral!.',
+      slug: 'blog-post-outline',
+    },
+  },
+  {
+    url: 'blog-post-hook',
+    toolName: 'AI Blog Post Hook',
+    initalState: {
+      title: '',
+      description: '',
+      keywords: '',
+      platform: 'Online Blog',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Blog post topic',
+      maxLength: 100,
+      placeholder: 'Please enter post topic...',
+      err: 'post topic is required*',
+      showOptional: false,
+    },
+    description: {
+      name: 'Post description',
+      maxLength: 250,
+      placeholder: 'Please enter post description...',
+      showOptional: true,
+    },
+    keywords: {
+      name: 'keywords',
+      maxLength: 50,
+      showOptional: true,
+    },
+    language: 'Language',
+    tone: 'Tone',
+    btnText: 'Generate Blog Post Hook',
+    seoData: {
+      title:
+        'AI Blog Post Hook Generator [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Write Blog post Hook 10X faster. Try AI Blog Post Hook generator by Scrip AI and watch your blog post go viral!.',
+      slug: 'blog-post-hook',
+    },
+  },
+  {
+    url: 'article-rewriter',
+    toolName: 'AI Article Rewriter ',
+    initalState: {
+      title: '',
+      description: '',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Content',
+      maxLength: 500,
+      placeholder: 'Please enter content here (max 500 char)...',
+      err: 'Content is required*',
+      rows: 8,
+      showOptional: false,
+    },
+    description: {
+      name: 'Article title',
+      maxLength: 100,
+      placeholder: 'Please enter article title...',
+      showOptional: true,
+    },
+    language: 'Language',
+    tone: 'Tone',
+    btnText: 'Rewriter Article',
+    seoData: {
+      title: 'AI Article Rewriter [100% FREE - No Login required] — Scrip AI',
+      description:
+        'AI powered Article rewriter and content rephraser. Try Article rewriter by Scrip AI.',
+      slug: 'article-rewriter',
+    },
+  },
+  {
+    url: 'blog-rewriter',
+    toolName: 'AI Blog Paragraph Rewriter',
+    initalState: {
+      title: '',
+      description: '',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Content',
+      maxLength: 500,
+      placeholder: 'Please enter content here (max 500 char)...',
+      err: 'Content is required*',
+      rows: 8,
+      showOptional: false,
+    },
+    description: {
+      name: 'Blog Post title',
+      maxLength: 100,
+      placeholder: 'Please enter post title...',
+      showOptional: true,
+    },
+    language: 'Language',
+    tone: 'Tone',
+    btnText: 'Rewriter Blog',
+    seoData: {
+      title:
+        'AI  Blog Paragraph Rewriter [100% FREE - No Login required] — Scrip AI',
+      description:
+        'AI powered Blog paragraph rewriter and content rephraser. Try blog rewriter by Scrip AI.',
+      slug: 'blog-rewriter',
+    },
+  },
+  {
+    url: 'blog-paragraph-writer',
+    toolName: 'AI Blog Paragraph Writer',
+    initalState: {
+      title: '',
+      description: '',
+      keywords: '',
+      language: 'English',
+      tone: 'Professional',
+    },
+    title: {
+      name: 'Blog post title/topic',
+      maxLength: 70,
+      placeholder: 'Please enter title/topic for paragraph...',
+      err: ' topic is required*',
+      showOptional: false,
+    },
+    description: {
+      name: 'Post description',
+      maxLength: 200,
+      placeholder: 'Please enter post description...',
+      showOptional: true,
+    },
+    keywords: {
+      name: 'keywords',
+      maxLength: 50,
+      showOptional: true,
+    },
+    language: 'Language',
+    tone: 'Tone',
+    btnText: 'Write Blog Paragraph',
+    seoData: {
+      title:
+        'AI Blog Paragraph Script Writer [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Write Blog paragraph content powered by AI. Try Blog content writer by Scrip AI.',
+      slug: 'blog-paragraph-writer',
+    },
+  },
 ];
 
-export default prompts;
+export default pageObj;

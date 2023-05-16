@@ -2,10 +2,12 @@ import React from 'react';
 import PouUp from './PouUp';
 import SEOMeta from '@/components/SEOMeta';
 import Tools from '@/components/Tools';
+import { useEffect, useState } from 'react';
 import { WindupChildren } from 'windups';
 import Nav from './Nav';
+import Menu from './Menu';
 
-const UI2 = ({
+const UI = ({
   prompt,
   handleTitle,
   handleDescription,
@@ -35,9 +37,9 @@ const UI2 = ({
         If you refer this tool to only one friend, You'll make my day :)
       </div> */}
       <main>
-        <div className="m-auto flex flex-col items-center text-sm mdx:px-4">
+        <div className="m-auto flex h-screen flex-col items-center text-sm">
           <Nav />
-          <div className="flex w-full flex-col justify-between sm:flex-row">
+          <div className="flex w-full flex-col justify-around border-t sm:flex-row">
             <div className="flex w-full flex-col gap-4 p-4 sm:w-2/5 ">
               {text.toolName && (
                 <div className="flex flex-col gap-3">
@@ -253,7 +255,7 @@ const UI2 = ({
               <div
                 id="copy"
                 contenteditable="true"
-                className="h-[80vh] w-full overflow-y-scroll rounded-md border bg-white p-4 placeholder:text-[8px] placeholder:text-gray-600 focus:outline-none"
+                className="h-[75vh] w-full overflow-y-scroll rounded-md border bg-white p-4 placeholder:text-[8px] placeholder:text-gray-600 focus:outline-none"
               >
                 <WindupChildren>
                   {data?.length ? (
@@ -328,8 +330,10 @@ const UI2 = ({
                 </button>
               </div>
             </div>
+            <div className="hidden h-[90vh] border-l mdx:block mdx:w-2/6 mdx:overflow-y-scroll">
+              <Menu />
+            </div>
           </div>
-          <Tools />
         </div>
       </main>
       <PouUp />
@@ -337,4 +341,4 @@ const UI2 = ({
   );
 };
 
-export default UI2;
+export default UI;

@@ -1,7 +1,8 @@
 import React from 'react';
-import UI from '@/components/UI';
+import UI from '@/components/newUI';
 import { useState } from 'react';
-import prompts from '@/components/Prompts';
+import pageObj from '@/components/PageObj';
+import UI2 from '@/components/UI';
 
 const ToolPage = ({ text }) => {
   const [prompt, setPromptData] = useState(text?.initalState);
@@ -81,6 +82,7 @@ const ToolPage = ({ text }) => {
     if (prompt.title) {
       e.preventDefault();
       setLoading(true);
+      setData();
       getData();
     }
   };
@@ -90,7 +92,7 @@ const ToolPage = ({ text }) => {
   };
 
   return (
-    <UI
+    <UI2
       prompt={prompt}
       handleTitle={handleTitle}
       handleDescription={handleDescription}
@@ -113,7 +115,7 @@ const ToolPage = ({ text }) => {
 };
 
 export async function getStaticPaths() {
-  let pathsArr = prompts.map((el) => {
+  let pathsArr = pageObj.map((el) => {
     return { params: { ai: el.url } };
   });
   return {
@@ -123,7 +125,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  let text = prompts.find((el) => context.params.ai === el.url);
+  let text = pageObj.find((el) => context.params.ai === el.url);
   return {
     props: { text },
   };

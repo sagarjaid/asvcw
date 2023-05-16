@@ -109,6 +109,30 @@ const GenratePrompt = (prompt, slug) => {
     case 'youtube-seo-description':
       userPrompt = `Assume you are SEO expert. Write 3 Youtube SEO description in ${language} for a Youtube video on following. Video title: ${title}, keyword: ${keywords}, Tone: ${tone}`;
       break;
+    case 'email-subject':
+      userPrompt = `Write 3 Email Subject lines in ${language} for following. Email Topic/description: ${title}, Tone: ${tone},`;
+      break;
+    case 'blog-post-idea':
+      userPrompt = `Write 3 Blog Post Ideas for online blog in ${language} based on following.Blog Topic: ${title}, keywords: ${keywords}, Tone: ${tone}. make the ideas clickbaity.`;
+      break;
+    case 'blog-post-title':
+      userPrompt = `Write 3 Blog Post Titles for online blog in ${language} based on following.Blog Topic: ${title}, keywords: ${keywords}, Tone: ${tone}. make the Title clickbaity.`;
+      break;
+    case 'blog-post-outline':
+      userPrompt = `Assume you are SEO expert.Write Blog Post Outline in ${language} for an online blog on following.Topic: ${title}, description: ${description}, keyword: ${keywords}, Tone: ${tone};`;
+      break;
+    case 'blog-post-hook':
+      userPrompt = `Assume you are blog content creator. Write 1 sentence hook so that people will want to read the full blog. Write in ${language} for a online blog on following. Blog Topic: ${title}, description: ${description}, keyword: ${keywords}, Tone: ${tone}`;
+      break;
+    case 'article-rewriter':
+      userPrompt = `Rewrite following article in ${language}. article Title: ${description} Content: ${title}, Tone: ${tone};`;
+      break;
+    case 'blog-rewriter':
+      userPrompt = `Rewrite following Blog post Paragraph in ${language}. Blog Post Title: ${description} Content: ${title}, Tone: ${tone};`;
+      break;
+    case 'blog-paragraph-writer':
+      userPrompt = `Write 5-6 line blog paragraph in ${language} for Online blog on following. blog title/topic: ${title}, description: ${description} keyword: ${keywords}, Tone: ${tone}`;
+      break;
     default:
       break;
   }

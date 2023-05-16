@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '@/components/Footer';
 import SEOMeta from '@/components/SEOMeta';
 
 const GDPR = () => {
@@ -15,7 +16,7 @@ const GDPR = () => {
             <img src="/scrip.svg" className="w-[80px]" />
           </a>
           <div>
-            <ul className="flex items-center gap-4 text-sm">
+            <ul className="flex items-center gap-2 text-sm mdx:gap-4">
               <li className="hidden cursor-pointer sm:inline">
                 <a href="/new">What's New</a>
               </li>
@@ -237,24 +238,7 @@ const GDPR = () => {
             agree to its terms.
           </p>
 
-          <div className="flex items-center gap-2 pt-10">
-            <a href="https://www.linkedin.com/in/sagarjaid/" target="_blank">
-              Made with ❤️ by Sagar Jaid
-            </a>
-            <span>|</span>
-
-            <a href="https://scripai.com/privacy" target="_blank">
-              Privacy Policy
-            </a>
-            <span>|</span>
-            <a href="https://scripai.com/tc" target="_blank">
-              Terms and Conditions
-            </a>
-            <span>|</span>
-            <a href="https://scripai.com/gdpr" target="_blank">
-              GDPR Policy
-            </a>
-          </div>
+          <Footer />
         </div>
       </main>
     </>

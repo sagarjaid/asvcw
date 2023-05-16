@@ -1,27 +1,18 @@
+import Footer from '@/components/Footer';
 import SEOMeta from '@/components/SEOMeta';
 import { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 
 const Home = () => {
-  const [isMobile, setMobile] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth <= 640) {
-      let w = window.innerWidth;
-      console.log(w);
-      setMobile(true);
-    }
-  }, []);
-
   return (
     <>
       <SEOMeta
         title="Scrip AI — AI TikTok, Reel & YT Shorts Script Writer [100% FREE - No Login required]"
         description="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts powerd by AI"
       />
-      <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
+      {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
         If you refer this tool to only one friend, You'll make my day :)
-      </div>
+      </div> */}
       <main className="m-auto flex max-w-5xl flex-col px-4">
         <nav className="flex items-center justify-between py-4">
           <a href="/">
@@ -37,8 +28,8 @@ const Home = () => {
                 <a href="/ai-tools">MORE AI TOOLS</a>
               </ll>
               <li className="flex w-fit items-center gap-1 rounded-full bg-rose-500 p-1 px-3	 text-white shadow-sm ">
-                <a href={isMobile ? '/script' : '/app'}>Try for free!</a>
-                <a href={isMobile ? '/script' : '/app'}>
+                <a href="/app">Try for free!</a>
+                <a href="/app">
                   <svg
                     className="w-6"
                     fill="none"
@@ -79,7 +70,7 @@ const Home = () => {
             Create short videos 30-sec to 60-sec scripts in 1 minutes!
           </p>
           <div className="flex w-fit items-center justify-around rounded-full bg-rose-600 p-2 px-4	text-white shadow-xl hover:bg-rose-700 ">
-            <a href={isMobile ? '/script' : '/app'}>Start for Free!</a>
+            <a href="/app">Start for Free!</a>
             <svg
               className="w-6"
               fill="none"
@@ -130,7 +121,7 @@ const Home = () => {
             Stop wasting time & start creating
             <br /> short video scripts for FREE!
             <div className="flex w-fit items-center justify-around rounded-full bg-white p-2 px-4 text-lg	text-black ">
-              <a href={isMobile ? '/script' : '/app'} className="text-md">
+              <a href="/app" className="text-md">
                 Try Scrip!
               </a>
               <svg
@@ -154,28 +145,7 @@ const Home = () => {
               <span>✓ No login is required</span>
             </div>
           </div>
-          <div className="flex items-center gap-2 pt-10">
-            <a href="https://www.linkedin.com/in/sagarjaid/" target="_blank">
-              by Sagar Jaid
-            </a>
-            <span>|</span>
-
-            <a href="https://scripai.com/privacy" target="_blank">
-              Privacy
-            </a>
-            <span>|</span>
-            <a href="https://scripai.com/tc" target="_blank">
-              T&C
-            </a>
-            <span>|</span>
-            <a href="https://scripai.com/gdpr" target="_blank">
-              GDPR
-            </a>
-            <span>|</span>
-            <a href="https://scripai.com/new" target="_blank">
-              What's New
-            </a>
-          </div>
+          <Footer />
         </div>
       </main>
     </>

@@ -1,5 +1,6 @@
 import React from 'react';
 import SEOMeta from '@/components/SEOMeta';
+import Footer from '@/components/Footer';
 
 const WhatsNew = () => {
   return (
@@ -15,7 +16,7 @@ const WhatsNew = () => {
             <img src="/scrip.svg" className="w-[80px]" />
           </a>
           <div>
-            <ul className="flex items-center gap-4 text-sm">
+            <ul className="flex items-center gap-2 text-sm mdx:gap-4">
               <li className="hidden cursor-pointer sm:inline">
                 <a href="/new">What's New</a>
               </li>
@@ -139,28 +140,7 @@ const WhatsNew = () => {
               </span>
             </div>
           </div>
-          <div className="flex items-center gap-2 py-20">
-            <a href="https://www.linkedin.com/in/sagarjaid/" target="_blank">
-              by Sagar Jaid
-            </a>
-            <span>|</span>
-
-            <a href="https://scripai.com/privacy" target="_blank">
-              Privacy
-            </a>
-            <span>|</span>
-            <a href="https://scripai.com/tc" target="_blank">
-              T&C
-            </a>
-            <span>|</span>
-            <a href="https://scripai.com/gdpr" target="_blank">
-              GDPR
-            </a>
-            <span>|</span>
-            <a href="https://scripai.com/new" target="_blank">
-              What's New
-            </a>
-          </div>
+          <Footer />
         </div>
       </main>
     </>

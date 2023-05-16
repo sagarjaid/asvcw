@@ -9,9 +9,9 @@ const AITools = () => {
         description="Boost your productivity with over 100+ FREE AI tools - No login required. No credit card required. Discover the power of Scrip AI and revolutionize your workflow. Enhance efficiency"
         slug="ai-tools"
       />
-      <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
+      {/* <div className=" w-full bg-yellow-400 px-4 py-2 text-center">
         If you refer this tool to only one friend, You'll make my day :)
-      </div>
+      </div> */}
       <main>
         <div className="m-auto flex h-screen max-w-5xl flex-col items-center text-sm">
           <nav className="flex w-full items-center justify-between p-4">
@@ -19,7 +19,7 @@ const AITools = () => {
               <img src="/scrip.svg" className="w-[80px]" />
             </a>
             <div>
-              <ul className="flex items-center gap-4 text-sm">
+              <ul className="flex items-center gap-2 text-sm mdx:gap-4">
                 <li className="hidden cursor-pointer sm:inline">
                   <a href="/new">What's New</a>
                 </li>

@@ -1,18 +1,18 @@
 import React from 'react';
-import Footer from './Footer';
 
-const domainURL = 'https://scripai.com';
-// const domainURL = "http://localhost:3000"
+const domainURL = 'http://localhost:3000' || 'https://scripai.com';
 
-const Tools = () => {
+const Menu = () => {
   return (
     <>
-      <div className="w-full">
-        <h1 className="p-4 text-xl font-bold">
-          Free AI-powered Tools | No credit card required | No login is required
-        </h1>
-        <hr />
-        <div className="flex flex-col flex-wrap  sm:flex-row">
+      <div className="flex w-full flex-col text-xs">
+        <div className="flex flex-col border-b px-4 py-2">
+          <span className="text-md font-bold ">LIST OF FREE AI TOOLS !</span>
+          <span className="text-[9px] text-rose-500">
+            (scroll to see more tools ↓)
+          </span>
+        </div>
+        <div className="w-full px-2">
           <div className="p-4">
             <div className="mb-4 flex flex-col">
               Social Media AI
@@ -590,12 +590,9 @@ const Tools = () => {
             </ul>
           </div>
         </div>
-        <div className="p-4">
-          <Footer />
-        </div>
       </div>
     </>
   );
 };
 
-export default Tools;
+export default Menu;
