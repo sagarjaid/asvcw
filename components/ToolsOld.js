@@ -1,6 +1,7 @@
 import React from 'react';
 
-const domainURL = 'http://localhost:3000' || 'https://scripai.com';
+const domainURL = 'https://scripai.com';
+// const domainURL = "http://localhost:3000"
 
 const ToolsOld = () => {
   return (
