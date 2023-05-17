@@ -6,7 +6,7 @@ const domainURL = 'https://scripai.com';
 const Menu = () => {
   return (
     <>
-      <div className="flex w-full flex-col text-xs">
+      <div className="flex w-full flex-col bg-white text-xs">
         <div className="flex flex-col border-b px-4 py-2">
           <span className="text-md font-bold ">LIST OF FREE AI TOOLS !</span>
           <span className="text-[9px] text-rose-500">

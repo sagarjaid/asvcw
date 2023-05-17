@@ -32,7 +32,7 @@ const Nav = () => {
             </li>
             <ll className="relative rounded-md border border-rose-500 p-1 px-3 font-bold">
               <span className=" absolute -top-1.5 right-1.5 h-3 w-3 animate-pulse rounded-full bg-rose-600 text-[9px]"></span>
-              <a href="/ai-tools">MORE AI TOOLS</a>
+              <a href="/ai-tools">FREE AI TOOLS LIST</a>
             </ll>
             {/* <li className="hidden mdx:flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-500 p-1 px-3 text-white shadow-sm ">
               <a href="/">Home</a>
@@ -78,10 +78,10 @@ const Nav = () => {
         </div>
       </nav>
       {toggle && (
-        <div className="absolute z-10 w-full bg-white">
+        <div className="absolute z-20 h-full w-full">
           <div
             onClick={handleToogle}
-            className="fixed right-0 top-0 w-min bg-rose-500 p-3.5 text-white"
+            className="fixed right-0 top-0 w-min bg-rose-500 p-3.5 text-white "
           >
             X
           </div>

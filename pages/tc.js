@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '@/components/Footer';
 import SEOMeta from '@/components/SEOMeta';
+import Nav from '@/components/Nav';
 
 const TC = () => {
   return (
@@ -11,53 +12,8 @@ const TC = () => {
         slug="tc"
       />
       <main className="m-auto flex max-w-5xl flex-col px-4">
-        <nav className="flex items-center justify-between py-4">
-          <a href="/">
-            <img src="/scrip.svg" className="w-[80px]" />
-          </a>
-          <div>
-            <ul className="flex items-center gap-2 text-sm mdx:gap-4">
-              <li className="hidden cursor-pointer sm:inline">
-                <a href="/new">What's New</a>
-              </li>
-              <ll className="rounded-md bg-rose-50 p-1 px-2">
-                <a href="/new">What's new</a>
-              </ll>
-              <li className="hidden sd:inline">
-                <a
-                  href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
-                  target="_blank"
-                >
-                  <img
-                    className="w-36"
-                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
-                  />
-                </a>
-              </li>
-              <li className="flex w-fit items-center gap-1 rounded-full bg-rose-500 p-1 px-3	 text-white shadow-sm ">
-                <a href="/app">Try for free!</a>
-                <a href="/app">
-                  <svg
-                    className="w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                    />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div className="flex flex-col items-start justify-center gap-6 p-2 py-10 ">
+        <Nav />
+        <div className="flex flex-col items-start justify-center gap-6 px-4 py-10 ">
           <div className="flex flex-col gap-2 text-2xl font-medium">
             Terms and Conditions
             <div className="text-sm">Updated on 1 April, 2023</div>

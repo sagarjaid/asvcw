@@ -1,6 +1,7 @@
 import React from 'react';
 import SEOMeta from '@/components/SEOMeta';
 import Footer from '@/components/Footer';
+import Nav from '@/components/Nav';
 
 const WhatsNew = () => {
   return (
@@ -10,43 +11,9 @@ const WhatsNew = () => {
         description="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
         slug="new"
       />
-      <main className="m-auto flex max-w-5xl flex-col px-4">
-        <nav className="flex items-center justify-between py-4">
-          <a href="/">
-            <img src="/scrip.svg" className="w-[80px]" />
-          </a>
-          <div>
-            <ul className="flex items-center gap-2 text-sm mdx:gap-4">
-              <li className="hidden cursor-pointer sm:inline">
-                <a href="/new">What's New</a>
-              </li>
-              <ll className="animate-pulse rounded-md border border-rose-500 p-1 px-2 font-bold">
-                <a href="/ai-tools">MORE AI TOOLS</a>
-              </ll>
-              <li className="flex w-fit items-center gap-1 rounded-full bg-rose-500 p-1 px-3	 text-white shadow-sm ">
-                <a href="/">Home</a>
-                <a href="/">
-                  <svg
-                    className="w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                    />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div className="flex flex-col items-start justify-center gap-6 p-2 py-10 ">
+      <main className="m-auto flex max-w-5xl flex-col">
+        <Nav />
+        <div className="flex flex-col items-start justify-center gap-6 px-4 py-10 ">
           <div className="flex flex-col gap-2 text-4xl font-medium">
             What's new!
             <div className="text-sm">Updated on 15 may, 2023</div>

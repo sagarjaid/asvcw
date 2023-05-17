@@ -1,14 +1,16 @@
-import React from 'react';
-import UI from '@/components/newUI';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import pageObj from '@/components/PageObj';
-import UI2 from '@/components/UI';
+import UI3 from '@/components/UI3';
 
 const ToolPage = ({ text }) => {
   const [prompt, setPromptData] = useState(text?.initalState);
 
   const [data, setData] = useState();
   const [err, setErr] = useState(false);
+  const [mobile, setMobile] = useState(false);
+  const [show, setShow] = useState(false);
+  const [hide, setHide] = useState(true);
   const [textCopy, setTextCopy] = useState(false);
   const [isLoading, setLoading] = useState(false);
 
@@ -84,6 +86,10 @@ const ToolPage = ({ text }) => {
       setLoading(true);
       setData();
       getData();
+      if (mobile) {
+        setShow(true);
+        setHide(false);
+      }
     }
   };
 
@@ -91,8 +97,16 @@ const ToolPage = ({ text }) => {
     setPromptData(text?.initalState);
   };
 
+  useEffect(() => {
+    if (window.innerWidth <= 640) {
+      let w = window.innerWidth;
+      console.log(w);
+      setMobile(true);
+    }
+  }, [mobile]);
+
   return (
-    <UI2
+    <UI3
       prompt={prompt}
       handleTitle={handleTitle}
       handleDescription={handleDescription}
@@ -110,6 +124,9 @@ const ToolPage = ({ text }) => {
       err={err}
       textCopy={textCopy}
       text={text}
+      mobile={mobile}
+      show={show}
+      hide={hide}
     />
   );
 };

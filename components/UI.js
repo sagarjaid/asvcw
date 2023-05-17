@@ -329,7 +329,9 @@ const UI2 = ({
               </div>
             </div>
           </div>
-          <Tools />
+          <div className="hidden mdx:block">
+            <Tools />
+          </div>
         </div>
       </main>
       <PouUp />
