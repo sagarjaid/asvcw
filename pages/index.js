@@ -1,8 +1,10 @@
 import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
+import pageObj from '@/components/PageObj';
 import SEOMeta from '@/components/SEOMeta';
 import { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
+import { domainUrl } from '@/components/domainUrl';
 
 const Home = () => {
   return (
@@ -18,8 +20,6 @@ const Home = () => {
         <Nav />
         <div className="flex flex-col items-center justify-center gap-6 p-4 py-20 ">
           <div className="line flex flex-col text-center text-base font-extrabold xs:text-lg sdm:text-3xl sm:gap-3 md:text-4xl mdx:text-5xl ">
-            {/* <span> 10X faster & better way to write viral </span>
-            <span> 30 sec short video script for </span> */}
             <span>10X faster way to write </span>
             <span>short video script for </span>
             <spn className="text-rose-500">
@@ -35,7 +35,7 @@ const Home = () => {
           <p className="text-center text-xs sm:text-base">
             Create short videos 30-sec to 60-sec scripts in 1 minutes!
           </p>
-          <div className="flex w-fit items-center justify-around rounded-full bg-rose-600 p-2 px-4	text-white shadow-xl hover:bg-rose-700 ">
+          <div className="flex w-fit items-center justify-around rounded-full bg-green-600 p-2 px-4	text-white shadow-xl hover:bg-green-700 ">
             <a href="/app">Start for Free!</a>
             <svg
               className="w-6"
@@ -76,13 +76,25 @@ const Home = () => {
             frameBorder="0"
           ></iframe>
 
-          <div className="pt-10">
-            <div className="text-center font-bold xs:text-lg sdm:text-3xl md:text-4xl">
-              Loved by Creators & Product Hunters
-            </div>
-            <img src="/love.png" className="hidden w-full py-10 md:block " />
-            <img src="/love-mobile.png" className="w-full py-10 md:hidden " />
+          <div className="w-full pt-10 text-center font-bold xs:text-lg sdm:text-3xl md:text-4xl">
+            100% Free AI Use Cases!
+            {pageObj?.length && (
+              <div className="flex w-full flex-col flex-wrap justify-center py-10 text-center sm:w-full sm:flex-row">
+                {pageObj?.map((el) => {
+                  return (
+                    <a
+                      key={el.toolName}
+                      href={`${domainUrl}/${el.url}`}
+                      className="m-1 rounded-full bg-green-600 px-2 py-1 text-sm text-white"
+                    >
+                      {el.toolName}
+                    </a>
+                  );
+                })}
+              </div>
+            )}
           </div>
+
           <div className=" flex w-[100%] flex-col items-center gap-6 rounded-xl bg-rose-600 px-2 py-10 text-center text-white xs:text-lg sdm:text-3xl">
             Stop wasting time & start creating
             <br /> short video scripts for FREE!

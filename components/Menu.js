@@ -1,7 +1,5 @@
 import React from 'react';
-
-const domainURL = 'https://scripai.com';
-// const domainURL = "http://localhost:3000"
+import { domainUrl } from './domainUrl';
 
 const Menu = () => {
   return (
@@ -23,7 +21,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/social-media-post`}
+                  href={`${domainUrl}/social-media-post`}
                 >
                   Social Media Post
                 </a>
@@ -31,7 +29,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/social-post-idea`}
+                  href={`${domainUrl}/social-post-idea`}
                 >
                   Social Media Post Ideas
                 </a>
@@ -39,7 +37,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/hashtag`}
+                  href={`${domainUrl}/hashtag`}
                 >
                   Hashtag Generator
                 </a>
@@ -47,7 +45,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/app`}
+                  href={`${domainUrl}/app`}
                 >
                   Short Video Script
                 </a>
@@ -62,7 +60,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/twitter-bio`}
+                  href={`${domainUrl}/twitter-bio`}
                 >
                   Twitter Bio
                 </a>
@@ -70,7 +68,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/twitter-tweet`}
+                  href={`${domainUrl}/twitter-tweet`}
                 >
                   Twitter Tweet
                 </a>
@@ -78,7 +76,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/twitter-thread`}
+                  href={`${domainUrl}/twitter-thread`}
                 >
                   Twitter Thread
                 </a>
@@ -86,7 +84,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/twitter-hashtag`}
+                  href={`${domainUrl}/twitter-hashtag`}
                 >
                   Twitter Hashtag
                 </a>
@@ -102,7 +100,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/linkedin-post-hook`}
+                  href={`${domainUrl}/linkedin-post-hook`}
                 >
                   Linkedin Post Hook
                 </a>
@@ -110,7 +108,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/linkedin-post`}
+                  href={`${domainUrl}/linkedin-post`}
                 >
                   Linkedin Post
                 </a>
@@ -118,7 +116,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/linkedin-story-post`}
+                  href={`${domainUrl}/linkedin-story-post`}
                 >
                   Linkedin Story Post
                 </a>
@@ -126,7 +124,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/linkedin-hashtag`}
+                  href={`${domainUrl}/linkedin-hashtag`}
                 >
                   Linkedin Hashtag
                 </a>
@@ -142,7 +140,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/facebook-post`}
+                  href={`${domainUrl}/facebook-post`}
                 >
                   Facebook Post
                 </a>
@@ -150,7 +148,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/facebook-hashtag`}
+                  href={`${domainUrl}/facebook-hashtag`}
                 >
                   Facebook Hashtag
                 </a>
@@ -166,7 +164,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/instagram-caption`}
+                  href={`${domainUrl}/instagram-caption`}
                 >
                   Instagram Caption
                 </a>
@@ -174,7 +172,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/instagram-hashtag`}
+                  href={`${domainUrl}/instagram-hashtag`}
                 >
                   Instagram Hashtag
                 </a>
@@ -182,7 +180,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/ig-reel-script`}
+                  href={`${domainUrl}/ig-reel-script`}
                 >
                   Instagram Reel Script
                 </a>
@@ -197,7 +195,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/tiktok-hook`}
+                  href={`${domainUrl}/tiktok-hook`}
                 >
                   Tiktok Hook
                 </a>
@@ -205,7 +203,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/tiktok-hashtag`}
+                  href={`${domainUrl}/tiktok-hashtag`}
                 >
                   Tiktok Hashtag
                 </a>
@@ -213,7 +211,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/tiktok-script`}
+                  href={`${domainUrl}/tiktok-script`}
                 >
                   Tiktok Script
                 </a>
@@ -228,7 +226,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/youtube-video-idea`}
+                  href={`${domainUrl}/youtube-video-idea`}
                 >
                   Youtube Video Ideas
                 </a>
@@ -236,7 +234,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/youtube-video-outline`}
+                  href={`${domainUrl}/youtube-video-outline`}
                 >
                   Youtube Video Outline
                 </a>
@@ -244,7 +242,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/youtube-intro`}
+                  href={`${domainUrl}/youtube-intro`}
                 >
                   Youtube Intro
                 </a>
@@ -252,7 +250,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/youtube-seo-title`}
+                  href={`${domainUrl}/youtube-seo-title`}
                 >
                   Youtube SEO Title
                 </a>
@@ -260,7 +258,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/youtube-seo-description`}
+                  href={`${domainUrl}/youtube-seo-description`}
                 >
                   Youtube Description
                 </a>
@@ -268,7 +266,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/youtube-hook`}
+                  href={`${domainUrl}/youtube-hook`}
                 >
                   Youtube Hook
                 </a>
@@ -276,7 +274,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/youtube-hashtag`}
+                  href={`${domainUrl}/youtube-hashtag`}
                 >
                   Youtube Hashtag
                 </a>
@@ -284,7 +282,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/youtube-tag`}
+                  href={`${domainUrl}/youtube-tag`}
                 >
                   Youtube Tag
                 </a>
@@ -292,7 +290,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/yt-shorts-script`}
+                  href={`${domainUrl}/yt-shorts-script`}
                 >
                   Youtube Shorts Script
                 </a>
@@ -311,7 +309,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/paragraph-writer`}
+                  href={`${domainUrl}/paragraph-writer`}
                 >
                   Paragraph Writer
                 </a>
@@ -319,7 +317,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/sentence-expander`}
+                  href={`${domainUrl}/sentence-expander`}
                 >
                   Sentence Expander
                 </a>
@@ -327,7 +325,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/content-rewriter`}
+                  href={`${domainUrl}/content-rewriter`}
                 >
                   Content Rewriter
                 </a>
@@ -335,7 +333,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/sentence-rewriter`}
+                  href={`${domainUrl}/sentence-rewriter`}
                 >
                   Sentence Rewriter
                 </a>
@@ -343,7 +341,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/sales-copy`}
+                  href={`${domainUrl}/sales-copy`}
                 >
                   Sales Copy Generator
                 </a>
@@ -351,7 +349,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/content-idea`}
+                  href={`${domainUrl}/content-idea`}
                 >
                   Content Ideas
                 </a>
@@ -368,7 +366,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/blog-post-idea`}
+                  href={`${domainUrl}/blog-post-idea`}
                 >
                   Blog Post Ideas
                 </a>
@@ -376,7 +374,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/blog-post-title`}
+                  href={`${domainUrl}/blog-post-title`}
                 >
                   Blog Post Title
                 </a>
@@ -384,7 +382,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/blog-post-outline`}
+                  href={`${domainUrl}/blog-post-outline`}
                 >
                   Blog Post Outline
                 </a>
@@ -392,7 +390,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/blog-post-hook`}
+                  href={`${domainUrl}/blog-post-hook`}
                 >
                   Blog Post Hook
                 </a>
@@ -400,7 +398,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/blog-paragraph-writer`}
+                  href={`${domainUrl}/blog-paragraph-writer`}
                 >
                   Blog Paragraph Writer
                 </a>
@@ -408,7 +406,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/blog-rewriter`}
+                  href={`${domainUrl}/blog-rewriter`}
                 >
                   Blog reWriter
                 </a>
@@ -416,7 +414,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/blog-paragraph-writer`}
+                  href={`${domainUrl}/blog-paragraph-writer`}
                 >
                   Article reWriter
                 </a>
@@ -433,7 +431,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/email-subject`}
+                  href={`${domainUrl}/email-subject`}
                 >
                   Email Subject
                 </a>
@@ -529,7 +527,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/ig-reel-script`}
+                  href={`${domainUrl}/ig-reel-script`}
                 >
                   Instagram Reel Ad Script
                 </a>
@@ -540,7 +538,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/tiktok-script`}
+                  href={`${domainUrl}/tiktok-script`}
                 >
                   Tiktok Ads Script
                 </a>
@@ -566,7 +564,7 @@ const Menu = () => {
               <li>
                 <a
                   className="text-blue-500 underline"
-                  href={`${domainURL}/definition`}
+                  href={`${domainUrl}/definition`}
                 >
                   Definition
                 </a>

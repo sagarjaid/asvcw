@@ -255,32 +255,6 @@ const pageObj = [
     },
   },
   {
-    url: 'content-rewriter',
-    toolName: 'AI Content Rewriter',
-    initalState: {
-      title: '',
-      language: 'English',
-      tone: 'Professional',
-    },
-    title: {
-      name: 'Content',
-      maxLength: 500,
-      placeholder: 'Please enter content here (max 500 char)...',
-      err: 'Content is required*',
-      rows: 8,
-      showOptional: false,
-    },
-    language: 'Language',
-    tone: 'Tone',
-    btnText: 'Rewriter Content',
-    seoData: {
-      title: 'AI Content Rewriter [100% FREE - No Login required] — Scrip AI',
-      description:
-        'AI powerd Content rewriter and content rephraser. Try content rewriter by Scrip AI.',
-      slug: 'content-rewriter',
-    },
-  },
-  {
     url: 'content-idea',
     toolName: 'AI Content Idea Generator',
     initalState: {
@@ -303,7 +277,7 @@ const pageObj = [
         'AI Content Idea Generator [100% FREE - No Login required] — Scrip AI',
       description:
         'Generate Content Ideas and 10X your Content creation today. Try Content Idea Generator by Scrip AI.',
-      slug: 'content-rewriter',
+      slug: 'content-idea',
     },
   },
   {
