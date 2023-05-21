@@ -44,6 +44,30 @@ export default function App({ Component, pageProps }) {
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
         }}
       />
+      <Script
+        strategy="lazyOnload"
+        onLoad={() => {
+          console.log('Ads Script has loaded');
+        }}
+      >{`
+        (function() {
+          function relaodAds() {
+             console.log("reloadAds got called");
+            setTimeout(() => {
+               console.log("setTimeout got called");
+              if (document) {
+                 console.log("if got called");
+                var ad1 = document.getElementById("aswift_1")
+                if(ad1){
+                ad1.src = ad1.src
+                }
+              }
+            }, 40000);
+          }
+          relaodAds();
+        })();
+      `}
+      </Script >
     </>
   );
 }
