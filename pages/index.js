@@ -20,7 +20,7 @@ const Home = () => {
         <div className="flex flex-col items-center justify-center gap-6 p-4 py-20">
           <div className="flex items-center gap-2 rounded-full bg-black px-3.5 py-2 text-xs text-white">
             <svg
-              className="w-4"
+              className="w-3.5"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ const Home = () => {
                     'Blog Post',
                     'Email Marketing',
                     'Instagram Reels',
-                    'Fecbook Ads',
+                    'Facebook Ads',
                   ],
                   autoStart: true,
                   loop: true,

@@ -13,7 +13,9 @@ const Menu = ({ handleToogle }) => {
             </span>
           </div>
           <div onClick={handleToogle} className="text-xl mdx:hidden">
-            X
+            <svg className='w-8' fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </div>
         </div>
         <div className="w-full px-2">
@@ -583,8 +585,8 @@ const Menu = ({ handleToogle }) => {
               <li>Fact Generator</li>
               <li>Quiz Generator</li>
               <li>Topic Example Generator</li>
-              <li>AI Boy Chat Response</li>
-              <li>AI Girl Chat Response</li>
+              <li>AI Male Chat Response</li>
+              <li>AI Female Chat Response</li>
               <li>Customer Service Response</li>
               <li>Pros And Cons</li>
               <li>Slogan Generator</li>

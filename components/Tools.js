@@ -577,7 +577,7 @@ const Tools = () => {
               <li>Fact Generator</li>
               <li>Quiz Generator</li>
               <li>Topic Example Generator</li>
-              <li>AI Boy Chat Response</li>
+              <li>AI Male Chat Response</li>
               <li>AI Girl Chat Response</li>
               <li>Customer Service Response</li>
               <li>Pros And Cons</li>
