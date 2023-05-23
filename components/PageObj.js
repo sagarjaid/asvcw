@@ -230,7 +230,8 @@ const pageObj = [
     btnText: 'Expand the Sentence',
     seoData: {
       title: 'AI Sentence Expander [100% FREE - No Login required] — Scrip AI',
-      description: 'Try AI sentence expander by Scrip AI.',
+      description:
+        'Expand the sentence or Ideas with AI. Try AI sentence expander by Scrip AI.',
       slug: 'sentence-expander',
     },
   },

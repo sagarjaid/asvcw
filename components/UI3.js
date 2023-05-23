@@ -39,7 +39,7 @@ const UI3 = ({
       />
       <HelloBar />
       <main>
-        <div className="m-auto flex h-screen flex-col items-center text-sm">
+        <div className="m-auto flex flex-col items-center text-sm">
           <Nav />
           <div className="flex w-full flex-col justify-around border-t sm:flex-row">
             {hide && mobile && (

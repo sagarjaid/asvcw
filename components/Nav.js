@@ -79,12 +79,6 @@ const Nav = () => {
       </nav>
       {toggle && (
         <div className="absolute z-20 h-full w-full">
-          {/* <div
-            onClick={handleToogle}
-            className="fixed text-xl right-0 top-8 w-min p-3.5 "
-          >
-            X
-          </div> */}
           <Menu handleToogle={handleToogle} />
         </div>
       )}

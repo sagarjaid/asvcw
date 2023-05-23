@@ -37,7 +37,7 @@ const UI = ({
         If you refer this tool to only one friend, You'll make my day :)
       </div> */}
       <main>
-        <div className="m-auto flex h-screen flex-col items-center text-sm">
+        <div className="m-auto flex flex-col items-center text-sm">
           <Nav />
           <div className="flex w-full flex-col justify-around border-t sm:flex-row">
             <div className="flex w-full flex-col gap-4 p-4 sm:w-2/5 ">

@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { domainUrl } from '@/components/domainUrl';
 import HelloBar from '@/components/HelloBar';
+import Card from '@/components/Card';
 
 const Home = () => {
   return (
@@ -102,21 +103,7 @@ const Home = () => {
 
           <div className="w-full pt-10 text-center font-bold xs:text-lg sdm:text-3xl md:text-4xl">
             100% Free AI Use Cases!
-            {pageObj?.length && (
-              <div className="flex w-full flex-wrap py-10 text-center sm:justify-center">
-                {pageObj?.map((el) => {
-                  return (
-                    <a
-                      key={el.name}
-                      href={`${domainUrl}/${el.url}`}
-                      className="m-1 w-max rounded-full bg-stone-800 px-3 py-2 text-sm text-white"
-                    >
-                      {el.name}
-                    </a>
-                  );
-                })}
-              </div>
-            )}
+            {pageObj?.length && <Card pageObj={pageObj} />}
           </div>
 
           <div className=" flex w-[100%] flex-col items-center gap-6 rounded-xl bg-rose-600 px-2 py-10 text-center text-white xs:text-lg sdm:text-3xl">
