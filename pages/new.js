@@ -2,6 +2,7 @@ import React from 'react';
 import SEOMeta from '@/components/SEOMeta';
 import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
+import HelloBar from '@/components/HelloBar';
 
 const WhatsNew = () => {
   return (
@@ -11,6 +12,7 @@ const WhatsNew = () => {
         description="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
         slug="new"
       />
+      <HelloBar />
       <main className="m-auto flex max-w-5xl flex-col">
         <Nav />
         <div className="flex flex-col items-start justify-center gap-6 px-4 py-10 ">

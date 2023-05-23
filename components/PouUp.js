@@ -42,7 +42,7 @@ const PouUp = () => {
                   </div>
                 </div>
                 <div
-                  className="cursor-pointer rounded-full bg-rose-500 p-2 px-4 text-sm text-white"
+                  className="cursor-pointer rounded-full bg-rose-600 p-2 px-4 text-sm text-white"
                   onClick={() => window.location.reload()}
                 >
                   I have disabled AdBlockers manually

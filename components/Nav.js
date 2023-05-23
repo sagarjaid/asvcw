@@ -30,11 +30,11 @@ const Nav = () => {
                 />
               </a>
             </li>
-            <ll className="relative rounded-md border border-rose-500 p-1 px-3 font-bold">
+            <ll className="relative rounded-md border border-rose-600 p-1 px-3 font-bold">
               <span className=" absolute -top-1.5 right-1.5 h-3 w-3 animate-pulse rounded-full bg-rose-600 text-[9px]"></span>
               <a href="/ai-tools">FREE AI TOOLS LIST</a>
             </ll>
-            {/* <li className="hidden mdx:flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-500 p-1 px-3 text-white shadow-sm ">
+            {/* <li className="hidden mdx:flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-600 p-1 px-3 text-white shadow-sm ">
               <a href="/">Home</a>
               <a href="/">
                 <svg
@@ -56,11 +56,11 @@ const Nav = () => {
             </li> */}
             <li
               onClick={handleToogle}
-              className="flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-500 p-1 px-3 text-white shadow-sm mdx:hidden "
+              className="flex w-fit cursor-pointer items-center gap-1 mdx:hidden "
             >
               <svg
                 fill="none"
-                className="w-6"
+                className="w-8"
                 stroke="currentColor"
                 strokeWidth={1.5}
                 viewBox="0 0 24 24"
@@ -79,13 +79,13 @@ const Nav = () => {
       </nav>
       {toggle && (
         <div className="absolute z-20 h-full w-full">
-          <div
+          {/* <div
             onClick={handleToogle}
-            className="fixed right-0 top-0 w-min bg-rose-500 p-3.5 text-white "
+            className="fixed text-xl right-0 top-8 w-min p-3.5 "
           >
             X
-          </div>
-          <Menu />
+          </div> */}
+          <Menu handleToogle={handleToogle} />
         </div>
       )}
     </>

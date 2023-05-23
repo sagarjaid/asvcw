@@ -1,21 +1,26 @@
 import React from 'react';
 import { domainUrl } from './domainUrl';
 
-const Menu = () => {
+const Menu = ({ handleToogle }) => {
   return (
     <>
       <div className="flex w-full flex-col bg-white text-xs">
-        <div className="flex flex-col border-b px-4 py-2">
-          <span className="text-md font-bold ">LIST OF FREE AI TOOLS !</span>
-          <span className="text-[9px] text-rose-500">
-            (scroll to see more tools ↓)
-          </span>
+        <div className="flex items-center border-b p-4">
+          <div className="flex w-full flex-col ">
+            <span className="text-md font-bold ">LIST OF FREE AI TOOLS !</span>
+            <span className="text-[9px] text-rose-600">
+              (scroll to see more tools ↓)
+            </span>
+          </div>
+          <div onClick={handleToogle} className="text-xl mdx:hidden">
+            X
+          </div>
         </div>
         <div className="w-full px-2">
           <div className="p-4">
-            <div className="mb-4 flex flex-col">
+            <div className="flex flex-col">
               Social Media AI
-              <span className="text-[9px] text-rose-500">(Live)</span>
+              <span className="text-[9px] text-rose-600">(Live)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
               <li>
@@ -54,7 +59,7 @@ const Menu = () => {
           </div>
           <div className="p-4">
             <div className="mb-4 flex flex-col">
-              Twitter AI<span className="text-[9px] text-rose-500">(Live)</span>
+              Twitter AI<span className="text-[9px] text-rose-600">(Live)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
               <li>
@@ -94,7 +99,7 @@ const Menu = () => {
           <div className="p-4">
             <div className="mb-4 flex flex-col">
               Linkedin AI
-              <span className="text-[9px] text-rose-500">(Live)</span>
+              <span className="text-[9px] text-rose-600">(Live)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
               <li>
@@ -134,7 +139,7 @@ const Menu = () => {
           <div className="p-4">
             <div className="mb-4 flex flex-col">
               Facebook AI
-              <span className="text-[9px] text-rose-500">(Live)</span>
+              <span className="text-[9px] text-rose-600">(Live)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
               <li>
@@ -158,7 +163,7 @@ const Menu = () => {
           <div className="p-4">
             <div className="mb-4 flex flex-col">
               Instagram AI
-              <span className="text-[9px] text-rose-500">(Live)</span>
+              <span className="text-[9px] text-rose-600">(Live)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
               <li>
@@ -189,7 +194,7 @@ const Menu = () => {
           </div>
           <div className="p-4">
             <div className="mb-4 flex flex-col">
-              Tiktok AI<span className="text-[9px] text-rose-500">(Live)</span>
+              Tiktok AI<span className="text-[9px] text-rose-600">(Live)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
               <li>
@@ -220,7 +225,7 @@ const Menu = () => {
           </div>
           <div className="p-4">
             <div className="mb-4 flex flex-col">
-              Youtube AI<span className="text-[9px] text-rose-500">(Live)</span>
+              Youtube AI<span className="text-[9px] text-rose-600">(Live)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
               <li>
@@ -303,7 +308,7 @@ const Menu = () => {
           <div className="p-4">
             <div className="mb-4 flex flex-col">
               Copywriting AI
-              <span className="text-[9px] text-rose-500">(Live)</span>
+              <span className="text-[9px] text-rose-600">(Live)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col  gap-2 pl-4">
               <li>
@@ -360,7 +365,7 @@ const Menu = () => {
           <div className="p-4">
             <div className="mb-4 flex flex-col">
               Blog AI
-              <span className="text-[9px] text-rose-500">(Coming Soon)</span>
+              <span className="text-[9px] text-rose-600">(Live)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
               <li>
@@ -425,7 +430,7 @@ const Menu = () => {
           <div className="p-4">
             <div className="mb-4 flex flex-col">
               Email AI
-              <span className="text-[9px] text-rose-500">(Coming Soon)</span>
+              <span className="text-[9px] text-rose-600">(Coming Soon)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
               <li>
@@ -444,7 +449,7 @@ const Menu = () => {
           <div className="p-4">
             <div className="mb-4 flex flex-col">
               SEO AI
-              <span className="text-[9px] text-rose-500">(Coming Soon)</span>
+              <span className="text-[9px] text-rose-600">(Coming Soon)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
               <li>SEO Keyword Generator</li>
@@ -456,7 +461,7 @@ const Menu = () => {
           <div className="p-4">
             <div className="mb-4 flex flex-col">
               Website Copy AI
-              <span className="text-[9px] text-rose-500">(Coming Soon)</span>
+              <span className="text-[9px] text-rose-600">(Coming Soon)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col  gap-2 pl-4">
               <li>Homepage Headline</li>
@@ -471,7 +476,7 @@ const Menu = () => {
           <div className="p-4">
             <div className="mb-4 flex flex-col">
               AI Job/Resume
-              <span className="text-[9px] text-rose-500">(Coming Soon)</span>
+              <span className="text-[9px] text-rose-600">(Coming Soon)</span>
             </div>
 
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
@@ -486,7 +491,7 @@ const Menu = () => {
           <div className="p-4">
             <div className="mb-4 flex flex-col">
               AI Names
-              <span className="text-[9px] text-rose-500">(Coming Soon)</span>
+              <span className="text-[9px] text-rose-600">(Coming Soon)</span>
             </div>
 
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
@@ -510,7 +515,7 @@ const Menu = () => {
           <div className="flex flex-col gap-1 p-4">
             <div className="mb-4 flex flex-col">
               Advertment AI
-              <span className="text-[9px] text-rose-500">(Coming Soon)</span>
+              <span className="text-[9px] text-rose-600">(Coming Soon)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
               <li>Ad copy</li>
@@ -558,7 +563,7 @@ const Menu = () => {
           <div className="p-4">
             <div className="mb-4 flex flex-col">
               Other AI Tools
-              <span className="text-[9px] text-rose-500">(Coming Soon)</span>
+              <span className="text-[9px] text-rose-600">(Coming Soon)</span>
             </div>
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
               <li>

@@ -235,7 +235,7 @@ const UI2 = ({
                 <button
                   disabled={isLoading}
                   onClick={handleApi}
-                  className="mx-auto w-full rounded-full border bg-rose-500 p-2 text-white outline-none"
+                  className="mx-auto w-full rounded-full border bg-rose-600 p-2 text-white outline-none"
                 >
                   {isLoading ? 'Loading...' : text.btnText}
                 </button>
@@ -307,7 +307,7 @@ const UI2 = ({
                   {textCopy ? 'Text copied' : 'Copy to Clipboard'}
                 </button>
                 <button
-                  className="mb-1 cursor-pointer rounded-full border bg-rose-500 p-2 text-white"
+                  className="mb-1 cursor-pointer rounded-full border bg-rose-600 p-2 text-white"
                   onClick={handleClearText}
                 >
                   <svg

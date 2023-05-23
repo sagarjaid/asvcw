@@ -1,6 +1,7 @@
 const pageObj = [
   {
     url: 'ig-reel-script',
+    name: 'IG Script Writer',
     toolName: 'AI IG Script Writer',
     initalState: {
       title: '',
@@ -43,6 +44,7 @@ const pageObj = [
   },
   {
     url: 'tiktok-script',
+    name: 'Tiktok Script Writer',
     toolName: 'AI Tiktok Script Writer',
     initalState: {
       title: '',
@@ -85,6 +87,7 @@ const pageObj = [
   },
   {
     url: 'app',
+    name: 'Short Script Writer',
     toolName: 'AI Short Script',
     initalState: {
       title: '',
@@ -126,6 +129,7 @@ const pageObj = [
   },
   {
     url: 'yt-shorts-script',
+    name: 'YT Shorts Script',
     toolName: 'AI YT Shorts Script',
     initalState: {
       title: '',
@@ -168,6 +172,7 @@ const pageObj = [
   },
   {
     url: 'paragraph-writer',
+    name: 'Paragraph Writer',
     toolName: 'AI Paragraph Writer',
     initalState: {
       title: '',
@@ -200,6 +205,7 @@ const pageObj = [
   },
   {
     url: 'sentence-expander',
+    name: 'AI Sentence Expander',
     toolName: 'AI Sentence Expander',
     initalState: {
       title: '',
@@ -230,6 +236,7 @@ const pageObj = [
   },
   {
     url: 'sentence-rewriter',
+    name: 'Sentence Rewriter',
     toolName: 'AI Sentence Rewriter',
     initalState: {
       title: '',
@@ -256,6 +263,7 @@ const pageObj = [
   },
   {
     url: 'content-idea',
+    name: 'Content Ideas',
     toolName: 'AI Content Idea Generator',
     initalState: {
       title: '',
@@ -282,6 +290,7 @@ const pageObj = [
   },
   {
     url: 'twitter-bio',
+    name: 'Twitter Bio',
     toolName: 'AI Twitter Bio Generator',
     initalState: {
       title: '',
@@ -315,6 +324,7 @@ const pageObj = [
   },
   {
     url: 'definition',
+    name: 'Definition',
     toolName: 'AI Definition Generator',
     initalState: {
       title: '',
@@ -341,6 +351,7 @@ const pageObj = [
   },
   {
     url: 'content-rewriter',
+    name: 'Content Rewriter',
     toolName: 'AI Content Rewriter',
     initalState: {
       title: '',
@@ -367,6 +378,7 @@ const pageObj = [
   },
   {
     url: 'sales-copy',
+    name: 'Sales Copy',
     toolName: 'AI Sales Copy Generator',
     initalState: {
       title: '',
@@ -406,6 +418,7 @@ const pageObj = [
   },
   {
     url: 'social-post-idea',
+    name: 'Social Media Post Ideas',
     toolName: 'AI Social Post Ideas',
     initalState: {
       title: '',
@@ -441,6 +454,7 @@ const pageObj = [
   },
   {
     url: 'social-media-post',
+    name: 'Social Media Post',
     toolName: 'AI Social Media Post',
     initalState: {
       title: '',
@@ -482,6 +496,7 @@ const pageObj = [
   },
   {
     url: 'linkedin-post',
+    name: 'LinkedIn Post',
     toolName: 'AI LinkedIn Post',
     initalState: {
       title: '',
@@ -522,6 +537,7 @@ const pageObj = [
   },
   {
     url: 'linkedin-story-post',
+    name: 'LinkedIn Story Post',
     toolName: 'AI LinkedIn Story Post',
     initalState: {
       title: '',
@@ -562,6 +578,7 @@ const pageObj = [
   },
   {
     url: 'tiktok-hook',
+    name: 'Tiktok Hook',
     toolName: 'AI Tiktok Hook',
     initalState: {
       title: '',
@@ -602,6 +619,7 @@ const pageObj = [
   },
   {
     url: 'youtube-hook',
+    name: 'Youtube Hook',
     toolName: 'AI Youtube Hook',
     initalState: {
       title: '',
@@ -642,6 +660,7 @@ const pageObj = [
   },
   {
     url: 'linkedin-post-hook',
+    name: 'LinkedIn Post Hook',
     toolName: 'AI LinkedIn Post Hook',
     initalState: {
       title: '',
@@ -682,6 +701,7 @@ const pageObj = [
   },
   {
     url: 'facebook-post',
+    name: 'Facebook Post',
     toolName: 'AI Facebook Post',
     initalState: {
       title: '',
@@ -722,6 +742,7 @@ const pageObj = [
   },
   {
     url: 'twitter-tweet',
+    name: 'Twitter Tweet',
     toolName: 'AI Twitter Tweet',
     initalState: {
       title: '',
@@ -757,6 +778,7 @@ const pageObj = [
   },
   {
     url: 'twitter-thread',
+    name: 'Twitter Thread',
     toolName: 'AI Twitter Thread',
     initalState: {
       title: '',
@@ -792,6 +814,7 @@ const pageObj = [
   },
   {
     url: 'instagram-caption',
+    name: 'Instagram Caption',
     toolName: 'AI Instagram Caption',
     initalState: {
       title: '',
@@ -832,6 +855,7 @@ const pageObj = [
   },
   {
     url: 'hashtag',
+    name: 'Hashtag Generator',
     toolName: 'AI Hashtag Generator',
     initalState: {
       title: '',
@@ -864,6 +888,7 @@ const pageObj = [
   },
   {
     url: 'twitter-hashtag',
+    name: 'Twitter Hashtag',
     toolName: 'AI Twitter Hashtag Generator',
     initalState: {
       title: '',
@@ -890,6 +915,7 @@ const pageObj = [
   },
   {
     url: 'linkedin-hashtag',
+    name: 'Linkedin Hashtag',
     toolName: 'AI Linkedin Hashtag Generator',
     initalState: {
       title: '',
@@ -916,6 +942,7 @@ const pageObj = [
   },
   {
     url: 'tiktok-hashtag',
+    name: 'Tiktok Hashtag',
     toolName: 'AI Tiktok Hashtag Generator',
     initalState: {
       title: '',
@@ -942,6 +969,7 @@ const pageObj = [
   },
   {
     url: 'facebook-hashtag',
+    name: 'Facebook Hashtag',
     toolName: 'AI Facebook Hashtag Generator',
     initalState: {
       title: '',
@@ -968,6 +996,7 @@ const pageObj = [
   },
   {
     url: 'instagram-hashtag',
+    name: 'Instagram Hashtag',
     toolName: 'AI Instagram Hashtag Generator',
     initalState: {
       title: '',
@@ -994,6 +1023,7 @@ const pageObj = [
   },
   {
     url: 'youtube-hashtag',
+    name: 'Youtube Hashtag',
     toolName: 'AI Youtube Hashtag Generator',
     initalState: {
       title: '',
@@ -1020,6 +1050,7 @@ const pageObj = [
   },
   {
     url: 'youtube-tag',
+    name: 'Youtube Tag',
     toolName: 'AI Youtube Tag Generator',
     initalState: {
       title: '',
@@ -1046,6 +1077,7 @@ const pageObj = [
   },
   {
     url: 'youtube-video-idea',
+    name: 'Youtube Video Ideas',
     toolName: 'AI Youtube Video Ideas',
     initalState: {
       title: '',
@@ -1080,6 +1112,7 @@ const pageObj = [
   },
   {
     url: 'youtube-intro',
+    name: 'Youtube Intro',
     toolName: 'AI Youtube Intro',
     initalState: {
       title: '',
@@ -1120,6 +1153,7 @@ const pageObj = [
   },
   {
     url: 'youtube-video-outline',
+    name: 'AI Youtube Video Outine',
     toolName: 'AI Youtube Video Outine',
     initalState: {
       title: '',
@@ -1160,6 +1194,7 @@ const pageObj = [
   },
   {
     url: 'youtube-seo-title',
+    name: 'Youtube SEO Title',
     toolName: 'AI Youtube SEO Title',
     initalState: {
       title: '',
@@ -1193,6 +1228,7 @@ const pageObj = [
   },
   {
     url: 'youtube-seo-description',
+    name: 'Youtube SEO Description',
     toolName: 'AI Youtube SEO Description',
     initalState: {
       title: '',
@@ -1226,6 +1262,7 @@ const pageObj = [
   },
   {
     url: 'email-subject',
+    name: 'Email Subject Generator',
     toolName: 'AI Email Subject Generator',
     initalState: {
       title: '',
@@ -1253,6 +1290,7 @@ const pageObj = [
   },
   {
     url: 'blog-post-idea',
+    name: 'Blog Post Ideas',
     toolName: 'AI Blog Post Ideas',
     initalState: {
       title: '',
@@ -1285,6 +1323,7 @@ const pageObj = [
   },
   {
     url: 'blog-post-title',
+    name: 'Blog Post Title',
     toolName: 'AI Blog Post Title',
     initalState: {
       title: '',
@@ -1317,6 +1356,7 @@ const pageObj = [
   },
   {
     url: 'blog-post-outline',
+    name: 'Blog Post Outline',
     toolName: 'AI Blog Post Outline',
     initalState: {
       title: '',
@@ -1357,6 +1397,7 @@ const pageObj = [
   },
   {
     url: 'blog-post-hook',
+    name: 'Blog Post Hook',
     toolName: 'AI Blog Post Hook',
     initalState: {
       title: '',
@@ -1397,6 +1438,7 @@ const pageObj = [
   },
   {
     url: 'article-rewriter',
+    name: 'Article Rewriter',
     toolName: 'AI Article Rewriter ',
     initalState: {
       title: '',
@@ -1430,6 +1472,7 @@ const pageObj = [
   },
   {
     url: 'blog-rewriter',
+    name: 'Blog Paragraph Rewriter',
     toolName: 'AI Blog Paragraph Rewriter',
     initalState: {
       title: '',
@@ -1464,6 +1507,7 @@ const pageObj = [
   },
   {
     url: 'blog-paragraph-writer',
+    name: 'AI Blog Paragraph Writer',
     toolName: 'AI Blog Paragraph Writer',
     initalState: {
       title: '',

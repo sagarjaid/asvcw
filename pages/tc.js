@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '@/components/Footer';
 import SEOMeta from '@/components/SEOMeta';
 import Nav from '@/components/Nav';
+import HelloBar from '@/components/HelloBar';
 
 const TC = () => {
   return (
@@ -11,6 +12,7 @@ const TC = () => {
         description="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts"
         slug="tc"
       />
+      <HelloBar />
       <main className="m-auto flex max-w-5xl flex-col px-4">
         <Nav />
         <div className="flex flex-col items-start justify-center gap-6 px-4 py-10 ">

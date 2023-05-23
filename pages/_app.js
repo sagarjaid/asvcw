@@ -49,7 +49,8 @@ export default function App({ Component, pageProps }) {
         onLoad={() => {
           console.log('Ads Script has loaded');
         }}
-      >{`
+      >
+        {`
         (function() {
           function relaodAds() {
              console.log("reloadAds got called");
@@ -67,7 +68,7 @@ export default function App({ Component, pageProps }) {
           relaodAds();
         })();
       `}
-      </Script >
+      </Script>
     </>
   );
 }
