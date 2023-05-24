@@ -14,7 +14,8 @@ const Card = ({ pageObj }) => {
             <div>
               <svg
                 className="w-9 rounded-full bg-stone-100  p-2"
-                fill="currentColor"
+                // fill="currentColor"
+                fill="green"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
@@ -33,7 +34,7 @@ const Card = ({ pageObj }) => {
             <div className="text-sm font-extrabold text-rose-600">
               {el.name}
             </div>
-            <div className="text-left text-xs">{el.seoData.description}</div>
+            <div className="text-left text-xs font-thin">{el.seoData.description}</div>
             {/* <div className='text-xs bg-stone-800 text-white p-2 py-1 rounded-full'>Try this tool!</div> */}
             {/* <div className='text-xs underline'>try for free</div> */}
           </a>

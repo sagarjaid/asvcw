@@ -7,6 +7,7 @@ import { WindupChildren } from 'windups';
 import Nav from './Nav';
 import Menu from './Menu';
 import HelloBar from './HelloBar';
+import Footer from './Footer';
 
 const UI3 = ({
   prompt,
@@ -41,7 +42,7 @@ const UI3 = ({
       <main>
         <div className="m-auto flex flex-col items-center text-sm">
           <Nav />
-          <div className="flex w-full flex-col justify-around border-t sm:flex-row">
+          <div className="flex w-full flex-col justify-around border-y sm:flex-row">
             {hide && mobile && (
               <div className="mb-10 flex w-full flex-col gap-4 p-4">
                 {text.toolName && (
@@ -635,6 +636,7 @@ const UI3 = ({
               <Menu />
             </div>
           </div>
+          <Footer />
         </div>
       </main>
       <PouUp />

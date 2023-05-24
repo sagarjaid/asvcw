@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="flex justify-center gap-1 py-20 text-sm">
+    <div className="flex justify-center gap-1 py-10 text-sm">
       <a href="https://www.linkedin.com/in/sagarjaid/" target="_blank">
         by Sagar Jaid
       </a>

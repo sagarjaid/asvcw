@@ -12,14 +12,15 @@ const Home = () => {
   return (
     <>
       <SEOMeta
-        title="Scrip AI — AI TikTok, Reel & YT Shorts Script Writer [100% FREE - No Login required]"
-        description="10X faster & better way to write viral 30 sec short video script for Instagram Reel, TikTok and Youtube shorts powerd by AI"
+        title="Scrip AI - Free AI writer [100% FREE - No Login required]"
+        description="10X faster & free way to write AI content for 100+ use cases, try Free AI writer powerd by Scrip AI "
+        imgUrl="https://scripai.com/scrip-ai-cover.png"
       />
       <HelloBar />
       <main className="m-auto flex max-w-5xl flex-col">
         <Nav />
         <div className="flex flex-col items-center justify-center gap-6 p-4 py-20">
-          <div className="flex items-center gap-2 rounded-full bg-black px-3.5 py-2 text-xs text-white">
+          <div className="flex items-center gap-2 rounded-full bg-green-600 px-3.5 py-2 text-xs text-white">
             <svg
               className="w-3.5"
               fill="currentColor"
