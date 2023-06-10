@@ -1,15 +1,13 @@
 import React from 'react';
 import PouUp from './PouUp';
 import SEOMeta from '@/components/SEOMeta';
+import Tools from '@/components/Tools';
 import { useEffect, useState } from 'react';
 import { WindupChildren } from 'windups';
 import Nav from './Nav';
 import Menu from './Menu';
 import HelloBar from './HelloBar';
 import Footer from './Footer';
-import Card from './Card';
-import Stats from './Stats';
-import RelatedStatic from './RelatedStatic';
 
 const UI3 = ({
   prompt,
@@ -32,12 +30,7 @@ const UI3 = ({
   show,
   mobile,
   hide,
-  relatedArr,
-  numberOfWords,
-  moneySaved,
 }) => {
-  const relatedTools = relatedArr.length ? relatedArr : RelatedStatic;
-
   return (
     <div className="relative">
       <SEOMeta
@@ -54,9 +47,9 @@ const UI3 = ({
               <div className="mb-10 flex w-full flex-col gap-4 p-4">
                 {text.toolName && (
                   <div className="flex flex-col gap-3">
-                    <h1 className="w-full text-xl font-bold text-black ">
+                    <div className="w-full text-xl font-bold text-black ">
                       {text.toolName}
-                    </h1>
+                    </div>
                     <hr />
                   </div>
                 )}
@@ -314,7 +307,7 @@ const UI3 = ({
                     )}
                   </WindupChildren>
                 </div>
-                <div className="flex justify-center gap-2 p-2 text-xs sm:justify-end">
+                <div className="bottom-8 right-8 flex justify-center gap-2 pt-2 text-xs sm:absolute sm:justify-end">
                   <button
                     className="mb-1 cursor-pointer rounded-full border bg-gray-700 px-4 py-2 text-white"
                     onClick={handleCopyText}
@@ -348,9 +341,9 @@ const UI3 = ({
               <div className="flex w-full flex-col gap-4 p-4 sm:w-2/5 ">
                 {text.toolName && (
                   <div className="flex flex-col gap-3">
-                    <h1 className="w-full text-xl font-bold text-black ">
+                    <div className="w-full text-xl font-bold text-black ">
                       {text.toolName}
-                    </h1>
+                    </div>
                     <hr />
                   </div>
                 )}
@@ -558,11 +551,11 @@ const UI3 = ({
               </div>
             )}
             {!mobile && (
-              <div className="relative flex w-full flex-col gap-2 p-4 mdx:px-0">
+              <div className="relative flex w-full flex-col gap-2 p-4 sm:pl-0">
                 <div
                   id="copy"
                   contenteditable="true"
-                  className="h-[70vh] w-full overflow-y-scroll rounded-md border bg-white p-4 placeholder:text-[8px] placeholder:text-gray-600 focus:outline-none"
+                  className="h-[75vh] w-full overflow-y-scroll rounded-md border bg-white p-4 placeholder:text-[8px] placeholder:text-gray-600 focus:outline-none"
                 >
                   <WindupChildren>
                     {data?.length ? (
@@ -608,7 +601,7 @@ const UI3 = ({
                     )}
                   </WindupChildren>
                 </div>
-                <div className="flex justify-center gap-2 p-2 text-xs sm:justify-end">
+                <div className="bottom-8 right-8 flex justify-center gap-2 pt-2 text-xs sm:absolute sm:justify-end">
                   <button
                     className="mb-1 cursor-pointer rounded-full border bg-gray-700 px-4 py-2 text-white"
                     onClick={handleCopyText}
@@ -639,15 +632,10 @@ const UI3 = ({
               </div>
             )}
 
-            <div className="hidden h-[80vh] mdx:block mdx:w-2/5 mdx:overflow-y-scroll">
-              <Stats numberOfWords={numberOfWords} dollers={moneySaved} />
+            <div className="hidden h-[90vh] border-l mdx:block mdx:w-2/6 mdx:overflow-y-scroll">
               <Menu />
             </div>
           </div>
-          <div className="mdx:hidden">
-            <Stats numberOfWords={numberOfWords} dollers={moneySaved} />
-          </div>
-          {relatedTools?.length && <Card pageObj={relatedTools} />}
           <Footer />
         </div>
       </main>

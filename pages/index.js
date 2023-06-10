@@ -19,8 +19,8 @@ const Home = () => {
       <HelloBar />
       <main className="m-auto flex max-w-5xl flex-col">
         <Nav />
-        <div className="flex flex-col items-center justify-center gap-6 p-4 py-20">
-          <div className="flex items-center gap-2 rounded-full bg-green-600 px-3.5 py-2 text-xs text-white">
+        <div className="flex flex-col items-center justify-center gap-6 p-4 py-24">
+          {/* <div className="flex items-center gap-2 rounded-full bg-green-600 px-3.5 py-2 text-xs text-white">
             <svg
               className="w-3.5"
               fill="currentColor"
@@ -35,11 +35,12 @@ const Home = () => {
               />
             </svg>
             copy.ai but free!
-          </div>
-          {/* <div className='bg-black text-white text-sm py-1 px-3 rounded-full'>copy.ai but FREE!</div> */}
+          </div> */}
+          {/* <div className='bg-black text-white text-sm py-1 px-3 rounded-full'>ScripAI is FREE</div> */}
           <div className="line flex flex-col text-center text-base font-extrabold xs:text-2xl sdm:text-4xl sm:gap-3 md:text-5xl mdx:text-6xl ">
             {/* <span>copy.ai but FREE</span> */}
-            <span>10X faster & free way to </span>
+            <span>Save $60/m ScripAI is FREE</span>
+            {/* <span>10X faster & free way to </span> */}
             <span>write AI content for</span>
             {/* <span>to write anything with AI</span> */}
             <span className="text-rose-600">
@@ -60,7 +61,8 @@ const Home = () => {
             </span>
           </div>
           <p className="text-center text-xs sm:text-base">
-            Save $30 - $60 every month on all AI tools!
+            {/* Save $30 - $60 every month on all AI tools! */}
+            10X faster & free AI content tool!
           </p>
           <div className="flex w-fit items-center justify-around rounded-full bg-rose-600 p-2 px-4	text-white shadow-xl hover:bg-rose-700 ">
             <a href="/ai-tools">Try for Free!</a>

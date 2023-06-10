@@ -699,6 +699,12 @@ const pageObj = [
         'Write LinkedIn post Hook that make your LinkedIn conncetions stop scrolling. Try AI LinkedIn Post Hook generator by Scrip AI and watch your LinkedIn post go viral!.',
       slug: 'linkedin-post-hook',
     },
+    related: [
+      'linkedin-hashtag',
+      'linkedin-post',
+      'linkedin-story-post',
+      'twitter-tweet',
+    ],
   },
   {
     url: 'facebook-post',

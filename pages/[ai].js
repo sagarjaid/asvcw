@@ -3,7 +3,7 @@ import { useState } from 'react';
 import pageObj from '@/components/PageObj';
 import UI3 from '@/components/UI3';
 
-const ToolPage = ({ text }) => {
+const ToolPage = ({ text, relatedArr }) => {
   const [prompt, setPromptData] = useState(text?.initalState);
 
   const [data, setData] = useState();
@@ -13,6 +13,23 @@ const ToolPage = ({ text }) => {
   const [hide, setHide] = useState(true);
   const [textCopy, setTextCopy] = useState(false);
   const [isLoading, setLoading] = useState(false);
+
+  let initalNumberOfWords;
+  let initalNumberOfMoney;
+
+  const [numberOfWords, setNumberOfWords] = useState(initalNumberOfWords);
+  const [moneySaved, setMoneySaved] = useState(initalNumberOfMoney);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const localnumber = localStorage.getItem('numberOfWords');
+      initalNumberOfWords = Number(localnumber) || 0;
+      setNumberOfWords(initalNumberOfWords);
+      const localMoney = localStorage.getItem('moneySaved') || 30;
+      initalNumberOfMoney = Number(localMoney);
+      setMoneySaved(initalNumberOfMoney);
+    }
+  }, [numberOfWords, moneySaved, initalNumberOfWords, initalNumberOfMoney]);
 
   const handleCopyText = () => {
     let copyText = document.getElementById('copy');
@@ -77,6 +94,11 @@ const ToolPage = ({ text }) => {
     setLoading(false);
   };
 
+  const RandomNumberBetween = (min, max) => {
+    let delta = max - min;
+    return Math.round(min + Math.random() * delta);
+  };
+
   const handleApi = (e) => {
     if (!prompt.title) {
       setErr(true);
@@ -90,6 +112,17 @@ const ToolPage = ({ text }) => {
         setShow(true);
         setHide(false);
       }
+    }
+
+    let newNumber = Number(numberOfWords + RandomNumberBetween(49, 299));
+    let newMoney = Number(moneySaved + RandomNumberBetween(0.1, 0.9));
+
+    setNumberOfWords(newNumber);
+    setMoneySaved(newMoney);
+
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('numberOfWords', newNumber);
+      localStorage.setItem('moneySaved', newMoney);
     }
   };
 
@@ -127,6 +160,9 @@ const ToolPage = ({ text }) => {
       mobile={mobile}
       show={show}
       hide={hide}
+      relatedArr={relatedArr}
+      numberOfWords={numberOfWords}
+      moneySaved={moneySaved}
     />
   );
 };
@@ -143,8 +179,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   let text = pageObj.find((el) => context.params.ai === el.url);
+  let relatedArr = pageObj.filter((obj) => text.related?.includes(obj.url));
+
   return {
-    props: { text },
+    props: { text, relatedArr },
   };
 }
 
