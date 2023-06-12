@@ -6,6 +6,7 @@ import Typewriter from 'typewriter-effect';
 import { domainUrl } from '@/components/domainUrl';
 import HelloBar from '@/components/HelloBar';
 import Card from '@/components/Card';
+import Head from 'next/head';
 
 const Home = () => {
   return (
