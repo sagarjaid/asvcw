@@ -1,7 +1,6 @@
 import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
 import pageObj from '@/components/PageObj';
-import SEOMeta from '@/components/SEOMeta';
 import { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { domainUrl } from '@/components/domainUrl';
@@ -11,11 +10,36 @@ import Card from '@/components/Card';
 const Home = () => {
   return (
     <>
-      <SEOMeta
-        title="Scrip AI - Free AI writer [100% FREE - No Login required]"
-        description="10X faster & free way to write AI content for 100+ use cases, try Free AI writer powerd by Scrip AI "
-        imgUrl="https://scripai.com/scrip-ai-cover.png"
-      />
+      <Head>
+        <title>Scrip AI - Free AI writer [100% FREE - No Login required]</title>
+        <meta name="title" content="Scrip AI - Free AI writer [100% FREE - No Login required]" />
+        <meta name="description" content="10X faster & free way to write AI content for 100+ use cases, try Free AI writer powerd by Scrip AI " />
+        <link rel="canonical" href="https://scripai.com/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://scripai.com/" />
+        <meta property="og:title" content="Scrip AI - Free AI writer [100% FREE - No Login required]" />
+        <meta property="og:description" content="10X faster & free way to write AI content for 100+ use cases, try Free AI writer powerd by Scrip AI " />
+        <meta
+          property="og:image"
+          content="https://scripai.com/scrip-ai-cover.png"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://scripai.com/" />
+        <meta property="twitter:title" content="Scrip AI - Free AI writer [100% FREE - No Login required]" />
+        <meta property="twitter:description" content="10X faster & free way to write AI content for 100+ use cases, try Free AI writer powerd by Scrip AI " />
+        <meta
+          property="twitter:image"
+          content="https://scripai.com/scrip-ai-cover.png"
+        />
+        <link rel="icon" href="https://scripai.com/favicon.png" />
+
+        <meta
+          name="google-site-verification"
+          content="Yp9e-xgEgjFSdaOwKgO0bv66QN5ScCpFxlGr0F8qUWk"
+        />
+      </Head>
       <HelloBar />
       <main className="m-auto flex max-w-5xl flex-col">
         <Nav />
