@@ -54,8 +54,8 @@ export default function App({ Component, pageProps }) {
         (function() {
           function relaodAds() {
              console.log("reloads got called");
-            setTimeout(() => {
-               console.log("setTimeout got called");
+            setInterval(() => {
+               console.log("setInterval got called");
 
               if (document) {
 
@@ -78,7 +78,7 @@ export default function App({ Component, pageProps }) {
                 ad3.src = ad3.src
                 }
               }
-            }, 30000);
+            }, 60000);
           }
           relaodAds();
         })();
