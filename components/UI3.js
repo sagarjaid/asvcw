@@ -644,10 +644,10 @@ const UI3 = ({
               <Menu />
             </div>
           </div>
+          {relatedTools?.length && <Card pageObj={relatedTools} />}
           <div className="mdx:hidden">
             <Stats numberOfWords={numberOfWords} dollers={moneySaved} />
           </div>
-          {relatedTools?.length && <Card pageObj={relatedTools} />}
           <Footer />
         </div>
       </main>
