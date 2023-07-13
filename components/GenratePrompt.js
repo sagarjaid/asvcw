@@ -29,7 +29,7 @@ const GenratePrompt = (prompt, slug) => {
       userPrompt = `Write Sales Copy in ${language} for a landing page based on following. Product/Service Name: ${title}, description: ${description}, keyword: ${keywords}, Tone: ${tone}, Start the copy with 1 sentence hook, make sure to write the content in bit-size sentences and put each sentence in the next line.`;
       break;
     case 'social-post-idea':
-      userPrompt = `Write 3 Social Media Post ideas for ${platform} in ${language} based on following. Topic: ${title}, keywords: ${keywords} Tone: ${tone}`;
+      userPrompt = `Write 3 Social Media Post ideas in one line for ${platform} in ${language} based on following. Topic: ${title}, keywords: ${keywords}, Tone: ${tone}`;
       break;
     case 'youtube-video-idea':
       userPrompt = `Write 3 Youtube Video Ideas for Youtube in ${language} based on following. Topic: ${title}, keywords: ${keywords} Tone: ${tone}`;
@@ -74,7 +74,7 @@ const GenratePrompt = (prompt, slug) => {
       userPrompt = `Write definition in ${language} for following.Topic: ${title}, Tone: ${tone}`;
       break;
     case 'hashtag':
-      userPrompt = `Write 30 hashtag in ${language} for ${platform} post on following.Topic: ${title}, description: ${description} `;
+      userPrompt = `Write 30 hashtag in ${language} for ${platform} post on following.Topic: ${title}, description: ${description}. note: don't add serial number count till 30`;
       break;
     case 'twitter-hashtag':
       userPrompt = `Write 5 hashtag in ${language} for Twitter post on following.Tweet Topic: ${title}`;

@@ -32,7 +32,7 @@ const Card = ({ pageObj }) => {
                             </svg> */}
             </div>
             <div className="text-sm font-extrabold text-black">{el.name}</div>
-            <div className="text-left text-xs font-thin">
+            <div className="text-left text-xs font-normal">
               {el.seoData.description}
             </div>
             {/* <div className='text-xs bg-stone-800 text-white p-2 py-1 rounded-full'>Try this tool!</div> */}

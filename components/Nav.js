@@ -1,11 +1,47 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Menu from './Menu';
+import LoginWithGoogle from './LoginWithGoogle';
+
+import { signInWithPopup } from 'firebase/auth';
+import { auth, provider } from './firebase';
 
 const Nav = () => {
   const [toggle, setToogle] = useState(false);
+  const [user, setUser] = useState();
+
+  let Name;
+  let Email;
+
+  const [userName, setUserName] = useState();
+  const [userEmail, setUserEmail] = useState();
 
   const handleToogle = () => {
     setToogle(!toggle);
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      Name = window.localStorage.getItem('userName');
+      setUserName(Name);
+      Email = window.localStorage.getItem('userEmail');
+      setUserEmail(Email);
+    }
+  }, [user, Name, Email]);
+
+  const loginwithGoogle = async () => {
+    const result = await signInWithPopup(auth, provider);
+    console.log(result.user, 'Nav');
+    setUser(result.user);
+
+    window.localStorage.setItem('userName', `${result.user?.displayName}`);
+    window.localStorage.setItem('userEmail', `${result.user?.email}`);
+  };
+
+  const handleLogout = () => {
+    auth.signOut();
+    window.localStorage.setItem('userName', '');
+    window.localStorage.setItem('userEmail', '');
+    window.location.reload();
   };
 
   return (
@@ -14,46 +50,33 @@ const Nav = () => {
         <a href="/">
           <img src="/scrip.svg" className="w-[80px]" />
         </a>
+
         <div>
           <ul className="flex items-center gap-2 text-sm mdx:gap-4">
             <li className="hidden cursor-pointer sm:inline">
-              <a href="/new">What's New</a>
+              <a href="/ai-tools">All Tools</a>
             </li>
-            <li className="hidden sd:inline">
-              <a
-                href="https://www.producthunt.com/posts/scrip-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-scrip&#0045;ai"
-                target="_blank"
+
+            {userEmail && (
+              <li
+                onClick={handleLogout}
+                className="group relative flex cursor-pointer"
               >
-                <img
-                  className="w-36"
-                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384573&theme=light"
-                />
-              </a>
+                <span className="rounded-full border border-black px-4 py-1">
+                  {userEmail && userEmail}
+                </span>
+                <span class="absolute left-1/2 m-4 mx-auto -translate-x-1/2 translate-y-full rounded-md bg-gray-800 px-1 text-sm text-gray-100 opacity-0 transition-opacity group-hover:opacity-100">
+                  Logout
+                </span>
+              </li>
+            )}
+
+            <li>
+              {!userName && !userEmail && (
+                <LoginWithGoogle loginwithGoogle={loginwithGoogle} />
+              )}
             </li>
-            <ll className="relative rounded-md border border-rose-600 p-1 px-3 font-bold">
-              <span className=" absolute -top-1.5 right-1.5 h-3 w-3 animate-pulse rounded-full bg-rose-600 text-[9px]"></span>
-              <a href="/ai-tools">FREE AI TOOLS LIST</a>
-            </ll>
-            {/* <li className="hidden mdx:flex w-fit cursor-pointer items-center gap-1 rounded-full bg-rose-600 p-1 px-3 text-white shadow-sm ">
-              <a href="/">Home</a>
-              <a href="/">
-                <svg
-                  className="w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={1.5}
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                  />
-                </svg>
-              </a>
-            </li> */}
+
             <li
               onClick={handleToogle}
               className="flex w-fit cursor-pointer items-center gap-1 mdx:hidden "

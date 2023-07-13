@@ -40,9 +40,6 @@ module.exports = {
       xxl: '1536px',
       // => @media (min-width: 1280px) { ... }
     },
-    fontFamily: {
-      sans: ['Space Grotesk', 'sans-serif'],
-    },
     extend: {},
   },
   plugins: [require('prettier-plugin-tailwindcss')],
