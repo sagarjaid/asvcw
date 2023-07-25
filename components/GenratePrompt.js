@@ -133,6 +133,12 @@ const GenratePrompt = (prompt, slug) => {
     case 'blog-paragraph-writer':
       userPrompt = `Write 5-6 line blog paragraph in ${language} for Online blog on following. blog title/topic: ${title}, description: ${description} keyword: ${keywords}, Tone: ${tone}`;
       break;
+    case 'company-name-generator':
+      userPrompt = `Write 3 company name for a business-based on following. company description: ${title}, keyword: ${keywords},`;
+      break;
+    case 'blog-name-generator':
+      userPrompt = `Write 3 blog name for a blog-based on following. blog description: ${title}, keyword: ${keywords},`;
+      break;
     default:
       break;
   }

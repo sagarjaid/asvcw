@@ -1552,6 +1552,68 @@ const pageObj = [
       slug: 'blog-paragraph-writer',
     },
   },
+  {
+    url: 'blog-name-generator',
+    name: 'Blog Name Generator',
+    toolName: 'AI Blog Name Generator',
+    initalState: {
+      title: '',
+      keywords: '',
+      language: 'English',
+    },
+    title: {
+      name: 'Blog topic/Name',
+      maxLength: 300,
+      placeholder: 'Please enter blog topic...',
+      err: 'blog topic is required*',
+      rows: 5,
+      showOptional: false,
+    },
+    keywords: {
+      name: 'keywords',
+      maxLength: 50,
+      showOptional: true,
+    },
+    btnText: 'Generate 3 Blog Names',
+    seoData: {
+      title:
+        'AI Blog Name Generator [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Generate Blog Name, Find the Perfect Blog Name. Try AI Blog Name Generator by Scrip AI and Generator 10+ Ideas for your Blog Name',
+      slug: 'blog-name-generator',
+    },
+  },
+  {
+    url: 'company-name-generator',
+    name: 'Company Name Generator',
+    toolName: 'AI Company Name Generator',
+    initalState: {
+      title: '',
+      keywords: '',
+      language: 'English',
+    },
+    title: {
+      name: 'What is company about?',
+      maxLength: 300,
+      placeholder: 'Decribe your company in few words.',
+      err: 'This field is required',
+      rows: 5,
+      showOptional: false,
+    },
+    keywords: {
+      name: 'keywords',
+      maxLength: 50,
+      showOptional: true,
+    },
+    btnText: 'Generate 3 Company Names',
+    seoData: {
+      title:
+        'AI Company Name Generator [100% FREE - No Login required] — Scrip AI',
+      description:
+        'Company Name Generator, Find the Perfect Company Name for your next business. Try AI Company Name Generator by Scrip AI and Generator 10+ Company Name in 30sec',
+      slug: 'company-name-generator',
+    },
+  }
 ];
 
 export default pageObj;

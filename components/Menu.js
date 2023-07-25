@@ -509,8 +509,22 @@ const Menu = ({ handleToogle }) => {
             </div>
 
             <ul className="flex cursor-pointer list-disc flex-col gap-2 pl-4">
-              <li>Blog Name</li>
-              <li>Company Name</li>
+              <li>
+                <a
+                  className="text-blue-500 underline"
+                  href={`${domainUrl}/blog-name-generator`}
+                >
+                  Blog Name
+                </a>
+              </li>
+              <li>
+                <a
+                  className="text-blue-500 underline"
+                  href={`${domainUrl}/company-name-generator`}
+                >
+                  Company Name
+                </a>
+              </li>
               <li>Buisness Name</li>
               <li>Domain Name</li>
               <li>Book Name</li>
