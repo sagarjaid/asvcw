@@ -3,7 +3,8 @@ import Menu from './Menu';
 import LoginWithGoogle from './LoginWithGoogle';
 
 import { signInWithPopup } from 'firebase/auth';
-import { auth, provider } from './firebase';
+import { db, auth, provider } from './firebase';
+import { addUser } from './createUser';
 
 const Nav = () => {
   const [toggle, setToogle] = useState(false);
@@ -30,11 +31,24 @@ const Nav = () => {
 
   const loginwithGoogle = async () => {
     const result = await signInWithPopup(auth, provider);
-    console.log(result.user, 'Nav');
-    setUser(result.user);
+    console.log(result?.user, 'Nav');
+    setUser(result?.user);
+
+    let userData = {
+      uid: result?.user?.uid,
+      email: result?.user?.email,
+      name: result?.user?.displayName,
+      photoUrl: result?.user?.photoURL
+    }
+
+    const userAdded = await addUser(userData);
+
+    console.log(userAdded, ":: user has been added?" );
 
     window.localStorage.setItem('userName', `${result.user?.displayName}`);
     window.localStorage.setItem('userEmail', `${result.user?.email}`);
+
+
   };
 
   const handleLogout = () => {
