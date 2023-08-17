@@ -74,28 +74,28 @@ const GenratePrompt = (prompt, slug) => {
       userPrompt = `Write definition in ${language} for following.Topic: ${title}, Tone: ${tone}`;
       break;
     case 'hashtag':
-      userPrompt = `Write 30 hashtag in ${language} for ${platform} post on following.Topic: ${title}, description: ${description}. note: don't add serial number count till 30`;
+      userPrompt = `Write 30 hashtag all lowercase without bullet point in ${language} for ${platform} post on following.Topic: ${title}, description: ${description}. note: don't add serial number count till 30`;
       break;
     case 'twitter-hashtag':
-      userPrompt = `Write 5 hashtag in ${language} for Twitter post on following.Tweet Topic: ${title}`;
+      userPrompt = `Write 5 hashtag all lowercase without bullet point in ${language} for Twitter post on following.Tweet Topic: ${title}`;
       break;
     case 'linkedin-hashtag':
-      userPrompt = `Write 5 hashtag in ${language} for linkedin post on following. Topic: ${title}`;
+      userPrompt = `Write 5 hashtag all lowercase without bullet point in ${language} for linkedin post on following. Topic: ${title}`;
       break;
     case 'tiktok-hashtag':
-      userPrompt = `Write 5 hashtag in ${language} for tiktok video on following. video: ${title}`;
+      userPrompt = `Write 5 hashtag all lowercase without bullet point in ${language} for tiktok video on following. video: ${title}`;
       break;
     case 'youtube-hashtag':
-      userPrompt = `Write 5 hashtag in ${language} for youtube video on following. video: ${title}`;
+      userPrompt = `Write 10 hashtag all lowercase without bullet point in ${language} for youtube video on following. video: ${title}`;
       break;
-    case 'youtube-tags':
+    case 'youtube-tag':
       userPrompt = `Write 5  youtube video tags in ${language} for following. video: ${title}`;
       break;
     case 'facebook-hashtag':
-      userPrompt = `Write 20 hashtag in ${language} for facebook post on following. Topic: ${title}`;
+      userPrompt = `Write 20 hashtag all lowercase without bullet point in ${language} for facebook post on following. Topic: ${title}`;
       break;
     case 'instagram-hashtag':
-      userPrompt = `Write 30 hashtag in ${language} for instagram post on following. Topic: ${title}`;
+      userPrompt = `Write 30 hashtag all lowercase without bullet point in ${language} for instagram post on following. Topic: ${title},`;
       break;
     case 'youtube-intro':
       userPrompt = `Assume you are youtube content creator. Write 2 sentence hook intro so that people will want to stop scrolling. Write in ${language} for a Youtube video on following. Topic: ${title}, description: ${description}, keyword: ${keywords}, Tone: ${tone}`;

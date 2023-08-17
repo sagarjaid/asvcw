@@ -884,7 +884,6 @@ const pageObj = [
       showOptional: true,
     },
     platform: 'Social media platform',
-    language: 'Language',
     btnText: 'Generate Hashtags',
     seoData: {
       title: 'AI Hashtag Generator [100% FREE - No Login required] — Scrip AI',
@@ -910,7 +909,6 @@ const pageObj = [
       rows: 5,
       showOptional: false,
     },
-    language: 'Language',
     btnText: 'Generate Twitter Hashtags',
     seoData: {
       title:
@@ -937,7 +935,6 @@ const pageObj = [
       rows: 5,
       showOptional: false,
     },
-    language: 'Language',
     btnText: 'Generate Linkedin Hashtags',
     seoData: {
       title:
@@ -964,7 +961,6 @@ const pageObj = [
       rows: 5,
       showOptional: false,
     },
-    language: 'Language',
     btnText: 'Generate Tiktok Hashtags',
     seoData: {
       title:
@@ -991,7 +987,6 @@ const pageObj = [
       rows: 5,
       showOptional: false,
     },
-    language: 'Language',
     btnText: 'Generate Facebook Hashtags',
     seoData: {
       title:
@@ -1018,7 +1013,6 @@ const pageObj = [
       rows: 5,
       showOptional: false,
     },
-    language: 'Language',
     btnText: 'Generate Instagram Hashtags',
     seoData: {
       title:
@@ -1045,7 +1039,6 @@ const pageObj = [
       rows: 5,
       showOptional: false,
     },
-    language: 'Language',
     btnText: 'Generate Youtube Hashtags',
     seoData: {
       title:
@@ -1072,7 +1065,6 @@ const pageObj = [
       rows: 5,
       showOptional: false,
     },
-    language: 'Language',
     btnText: 'Generate Youtube Tags',
     seoData: {
       title:
