@@ -353,6 +353,15 @@ const Tools = () => {
                   Content Ideas
                 </a>
               </li>
+              <li>
+                <a
+                  className="text-blue-500 underline"
+                  target="_blank"
+                  href="https://writeseed.com/"
+                >
+                  AI Writing Generator
+                </a>
+              </li>
             </ul>
           </div>
 

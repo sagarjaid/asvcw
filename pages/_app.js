@@ -1,5 +1,4 @@
 import '@/styles/globals.css';
-import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
 import { useEffect } from 'react';
 
@@ -19,7 +18,6 @@ export default function App({ Component, pageProps }) {
   `}
       </Script>
       <Component {...pageProps} />
-      <Analytics />
 
       <Script
         async={true}
@@ -82,7 +80,7 @@ export default function App({ Component, pageProps }) {
           }
           relaodAds();
         })();
-      `}</Script >
+      `}</Script>
     </>
   );
 }
